@@ -283,7 +283,7 @@ body {
     padding: 40px 20px;
     border-radius: 15px;
     position: relative;
-    z-index: 10;
+    z-index: 2;
 }
 
 .cta-card h2 {
