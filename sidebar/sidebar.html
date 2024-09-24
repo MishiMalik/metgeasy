@@ -66,13 +66,13 @@
 
         /* Change background color of buttons on hover */
         .tab button:hover {
-            border-bottom: 2px solid purple;
-            color: black;
+            border-bottom: 2px solid rgb(250, 129, 149);
+            color: rgb(250, 129, 149) !important;
         }
 
         /* Create an active/current tablink class */
         .tab button.active {
-            border-bottom: 2px solid purple;
+            border-bottom: 2px solid rgb(250, 129, 149);
             color: black;
         }
 
@@ -94,7 +94,7 @@
         .searchbar:active {
             outline: none !important;
             box-sizing: none !important;
-            border: 1px solid purple;
+            border: 1px solid rgb(250, 129, 149);
 
         }
 
@@ -160,6 +160,10 @@
             padding: 7px;
             width: fit-content;
             border-radius: 4px;
+        }
+        .upgrade-btn:hover{
+            background-color:rgb(252, 151, 167) ;
+            color: white !important;
         }
 
         iframe#userHtmlFrame::-webkit-scrollbar {
@@ -233,17 +237,27 @@
         }
 
         .prize {
+            font-size: 12px;
+            text-decoration: none;
+            color: gray;
+        }
+        .prize span{
             font-size: 16px;
             text-decoration: none;
+            color: gray;
         }
-
+        .prize:hover{
+            text-decoration: none;
+            color: rgb(250, 129, 149);
+        }
         .fav {
             position: absolute;
             top: -3px;
             right: 3px;
             color: rgb(218, 218, 0);
         }
-        .credit-number{
+
+        .credit-number {
             display: flex;
             align-items: center;
             font-size: 12px;
@@ -252,24 +266,27 @@
             border-radius: 3px;
             text-align: center;
             justify-content: center;
-            padding:0px 5px;
-            margin-top: -3px
-       
+            padding: 0px 5px;
+            margin-top: -2px
         }
-        .credit-number img{
-         height: 14px;
-         width: 14px;
-         object-fit: contain;
+
+        .credit-number img {
+            height: 14px;
+            width: 14px;
+            object-fit: contain;
         }
-        .heading-secondry2{
+
+        .heading-secondry2 {
             width: 85%;
         }
+
         .fav i.active {
             color: gold;
         }
 
         .templates-list .card-bg.active {
-            order: -1; /* Move to the top */
+            order: -1;
+            /* Move to the top */
         }
     </style>
 </head>
@@ -323,236 +340,188 @@
                 </div>
 
                 <div class="features-list mt-2 ">
-             
-                    <div class="card-bg mb-3 shadow-sm">
+
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
                                         <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
                                             class="feature-icon">
-                                     
+
                                     </div>
                                     <div class="">
-                                        <div class="d-flex align-items-start">
-                                            <h3 class="heading-secondry heading-secondry2">ChatGPT custom prompt</h3>
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
                                             <div class="credit-number ">
-                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;<span>3</span>
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
                                             </div>
                                         </div>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur adipisicing.</p>
+                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
+                                            adipisicing.</p>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </a>
-                        
+
                     </div>
-                    <div class="card-bg mb-3 shadow-sm">
+
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
                                         <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
                                             class="feature-icon">
-                                     
+
                                     </div>
                                     <div class="">
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur adipisicing.</p>
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
+                                            <div class="credit-number ">
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
+                                            </div>
+                                        </div>
+                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
+                                            adipisicing.</p>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
+
                     </div>
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
                                         <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
                                             class="feature-icon">
-                                     
+
                                     </div>
                                     <div class="">
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur adipisicing.</p>
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
+                                            <div class="credit-number ">
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
+                                            </div>
+                                        </div>
+                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
+                                            adipisicing.</p>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
+
                     </div>
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
                                         <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
                                             class="feature-icon">
-                                     
+
                                     </div>
                                     <div class="">
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur adipisicing.</p>
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
+                                            <div class="credit-number ">
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
+                                            </div>
+                                        </div>
+                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
+                                            adipisicing.</p>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
+
                     </div>
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
                                         <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
                                             class="feature-icon">
-                                     
+
                                     </div>
                                     <div class="">
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur adipisicing.</p>
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
+                                            <div class="credit-number ">
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
+                                            </div>
+                                        </div>
+                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
+                                            adipisicing.</p>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
+
                     </div>
-                  
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
                                         <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
                                             class="feature-icon">
+
                                     </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom os is  dolor sit prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
+                                    <div class="">
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
+                                            <div class="credit-number ">
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
+                                            </div>
+                                        </div>
+                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
+                                            adipisicing.</p>
                                     </div>
                                 </div>
+
+                            </div>
                         </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
+
                     </div>
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom os is  dolor sit prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
-                                    </div>
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon-div">
+                                    <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
+                                        class="feature-icon">
                                 </div>
-                        </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
-                    </div>
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
+                                <div>
+                                    <div class="d-flex align-items-start">
+                                        <h3 class="heading-secondry ">ChatGPT custom os is sit dolor
+                                            prompt
+                                        </h3>
+                                        <div class="credit-number ">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                alt="">&nbsp;<span>3</span>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom os is  dolor sit prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
-                                    </div>
+                                    <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
                                 </div>
+                            </div>
                         </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
+
                     </div>
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom os is  dolor sit prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
-                                    </div>
-                                </div>
-                        </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
-                    </div>
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom os is  dolor sit prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
-                                    </div>
-                                </div>
-                        </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
-                    </div>
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom os is  dolor sit prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
-                                    </div>
-                                </div>
-                        </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
-                    </div>
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2">ChatGPT custom os is  dolor sit prompt</h3>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
-                                    </div>
-                                </div>
-                        </a>
-                        <div class="credit-number shadow-sm">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp; <span>3</span>
-                        </div>
-                    </div>
-         
+
                     <!-- <div class="card-bg  mb-3 shadow-sm ">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center">
@@ -588,7 +557,7 @@
                     <input type="search" name="" id="" class="w-100 searchbar" placeholder="Search or ask anything...">
                 </div>
                 <div class="templates-list mt-3">
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center position-relative">
                                 <div class="d-flex align-items-start">
@@ -597,33 +566,9 @@
                                             class="feature-icon">
                                     </div>
                                     <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website 1</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website 2</h3>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website 1</h3>
 
                                         <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
                                             use GPT to
@@ -640,7 +585,7 @@
                         </a>
                     </div>
 
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center position-relative">
                                 <div class="d-flex align-items-start">
@@ -649,33 +594,9 @@
                                             class="feature-icon">
                                     </div>
                                     <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website 3</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website 4</h3>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website 2</h3>
 
                                         <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
                                             use GPT to
@@ -692,7 +613,7 @@
                         </a>
                     </div>
 
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center position-relative">
                                 <div class="d-flex align-items-start">
@@ -701,33 +622,9 @@
                                             class="feature-icon">
                                     </div>
                                     <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website 5</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="card-bg mb-3 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website 6</h3>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website 3</h3>
 
                                         <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
                                             use GPT to
@@ -744,7 +641,7 @@
                         </a>
                     </div>
 
-                    <div class="card-bg mb-3 shadow-sm">
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center position-relative">
                                 <div class="d-flex align-items-start">
@@ -753,7 +650,9 @@
                                             class="feature-icon">
                                     </div>
                                     <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website</h3>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website 4</h3>
 
                                         <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
                                             use GPT to
@@ -769,8 +668,8 @@
                             </div>
                         </a>
                     </div>
-                    
-                    <div class="card-bg mb-3 shadow-sm">
+
+                    <div class="card-bg mb-2 shadow-sm">
                         <a href="" class="text-decoration-none">
                             <div class="d-flex align-items-center position-relative">
                                 <div class="d-flex align-items-start">
@@ -779,7 +678,9 @@
                                             class="feature-icon">
                                     </div>
                                     <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based on a Website</h3>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website 5</h3>
 
                                         <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
                                             use GPT to
@@ -795,21 +696,116 @@
                             </div>
                         </a>
                     </div>
-                    
+
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+                                <div class="d-flex align-items-start">
+                                    <div class="feature-icon-div">
+                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
+                                            class="feature-icon">
+                                    </div>
+                                    <div>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website 6</h3>
+
+                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
+                                            use GPT to
+                                            generate a an icebreaker</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="h-100 mt-3">
+                                    <i class="bi bi-chevron-right go-arrow "></i>
+                                </div> -->
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+                                <div class="d-flex align-items-start">
+                                    <div class="feature-icon-div">
+                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
+                                            class="feature-icon">
+                                    </div>
+                                    <div>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website</h3>
+
+                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
+                                            use GPT to
+                                            generate a an icebreaker</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="h-100 mt-3">
+                                    <i class="bi bi-chevron-right go-arrow "></i>
+                                </div> -->
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+                                <div class="d-flex align-items-start">
+                                    <div class="feature-icon-div">
+                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
+                                            class="feature-icon">
+                                    </div>
+                                    <div>
+                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
+                                            on
+                                            a Website</h3>
+
+                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
+                                            use GPT to
+                                            generate a an icebreaker</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="h-100 mt-3">
+                                    <i class="bi bi-chevron-right go-arrow "></i>
+                                </div> -->
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
 
                 </div>
             </div>
         </div>
 
         <hr>
+       <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center">
             <div class="upgrade-icon">
                 <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp;
             </div>
             <div class="upgrade-text ">
-                1000/100 monthly credits left. <a href="" class="prize">🎁</a>
+             1000/100 Credits left
             </div>
         </div>
+        <div class="d-flex align-items-center " >
+            <div class="upgrade-text ">
+                Free Credits
+            </div>
+            <div class="upgrade-icon">
+                <img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt="">&nbsp;&nbsp;
+            </div>
+        </div>
+     
+       </div>
         <div class="">
             <button class="w-100 mt-2 upgrade-btn">UPGRADE</button>
         </div>
@@ -841,9 +837,10 @@
                 e.preventDefault();  // Prevent the link from navigating
                 $(this).toggleClass('bi-star bi-star-fill');
             });
+            
         });
     </script>
-     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const stars = document.querySelectorAll('.toggle-star');
 
