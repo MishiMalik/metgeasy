@@ -60,7 +60,9 @@ body {
 .nav-link {
     font-size: 18px !important;
 }
-
+.active-nav{
+    color: var(--primary) !important;
+}
 /* ===========================================why choose */
 .text-primary {
     color: var(--primary) !important;
@@ -312,16 +314,16 @@ body {
 }
 
 .banner-video-b {
-    position: absolute;
+    /* position: absolute;
     top: 2%;
     left: 10px;
-    right: 10px;
-    margin: 0 auto;
-    max-width: 60%;
+    right: 10px; */
+    /* max-width: 60%; */
     height: auto;
-    z-index: 1;
-    height: 79%;
-    bottom: 0;
+    /* z-index: 1; */
+    /* height: 81%; */
+    /* bottom: 0; */
+    width: 90%;
 }
 
 
