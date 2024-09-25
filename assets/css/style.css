@@ -332,18 +332,23 @@ body {
 }
 
 .dropdownMenu {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     position: absolute;
     top: 50px;
     left: 0;
-    padding: 30px 30px;
-    transition: all .5s;
+    padding: 20px 20px;
+    transition: all .5;
     border-radius: 20px;
 }
-
+.dropdownMenu2 {
+    padding: 15px;
+}
 .nav-item:hover .dropdownMenu {
+    display: block;
     top: 40px;
-    opacity: 1;
+    /* opacity: 1; */
+   
 }
 
 .arrow-icon {
@@ -384,7 +389,76 @@ body {
 .nav-icon {
     width: 26px;
 }
+.nav-icon2{
+    width: 22px;
+   text-align: left;
+}
+.nav-icon2 i{
+    font-size: 20px
+}
+.partner-img{
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.partner .item{
+    width: 200px;
+    padding:20px 15px;
+    /* background-color: #F5F6F7; */
+    background-color: white;
+    border-radius: 4px;
+}
+/* =============================================tabs */
 
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color:#F8F9FA;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    color:black;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+
+  @media only screen and (max-width:1200px){
+    
+    .navbar-nav {
+        text-align: center;
+    }
+  }
 @media only screen and (max-width:991px) {
 
     .services-title {
@@ -467,9 +541,6 @@ body {
         font-size: 22px;
     }
 
-    .navbar-nav {
-        text-align: center;
-    }
 
 
 
@@ -519,5 +590,10 @@ body {
     .testimonials .testi .item .icon i {
         font-size: 26px;
         color: #FFD832;
+    }
+}
+@media only screen and (max-width:560px){
+    .partner .item{
+        width: 100%;
     }
 }
