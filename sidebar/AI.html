@@ -32,13 +32,25 @@
         }
 
         .feature-icon {
-            height: 30px;
-            width: 30px;
+            height: auto;
+            width: 35px;
+            object-fit: contain;
+        }
+
+        .feature-icon2 {
+            height: auto;
+            width: 40px;
+            object-fit: contain;
         }
 
         .feature-icon-div {
             margin-right: 10px;
-            padding: 7px;
+            padding: 0px 3px 0 3px;
+        }
+
+        .feature-icon-div2 {
+            margin-right: 10px;
+            padding: 0px 3px 0 3px;
         }
 
         .setting-icon {
@@ -95,6 +107,13 @@
             outline: none !important;
             box-sizing: none !important;
             border: 1px solid rgb(250, 129, 149);
+
+        }
+
+        .heading-primary {
+            font-size: 14px !important;
+            font-weight: 500;
+            color: black;
 
         }
 
@@ -173,9 +192,63 @@
             border-radius: 4px;
         }
 
-        .upgrade-btn:hover {
+        .megic-btn {
+            background-color: rgb(252, 151, 167);
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            padding: 7px;
+            width: fit-content;
+            border-radius: 4px;
+        }
+        
+        .megic-btn:hover, 
+        .megic-btn:focus,
+        .megic-btn:active{
+            background-color: rgb(245, 115, 137);
+            color: white !important;
+            outline: none;
+        }
+
+        /* Button Style */
+        /* .megic-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        } */
+
+        /* Progress Bar Container */
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+            /* Hidden initially */
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            width: 0;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 10px;
+            transition: width 2s;
+            /* Controls the speed of progress bar filling */
+        }
+
+        .upgrade-btn:hover, 
+        .upgrade-btn:focus,
+        .upgrade-btn:active{
             background-color: rgb(252, 151, 167);
             color: white !important;
+            outline: none;
         }
 
         iframe#userHtmlFrame::-webkit-scrollbar {
@@ -310,19 +383,52 @@
         }
 
         .go-back {
-            display: none ;
+            display: none;
             margin-top: 0px;
             background-color: transparent;
             border: none;
             padding: 0px !important;
         }
-        .go-back i{
+
+        .go-back i {
             font-size: 16px;
         }
+
         .go-back:active,
-        .go-back:focus{
+        .go-back:focus {
             outline: none;
             box-shadow: none;
+        }
+
+        .tutorial {
+            font-size: 12px;
+            font-weight: 500;
+            color: #916E9C;
+        }
+
+        .prompt-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .prompt-list::-webkit-scrollbar {
+            width: 7px;
+        }
+
+
+
+        .prompt-list::-webkit-scrollbar-thumb {
+            background-color: rgb(202, 199, 199);
+            border-radius: 4px
+        }
+
+        [type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 10px;
+            width: 10px;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" viewBox="0 0 16 16"%3E%3Cpath d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/%3E%3C/svg%3E');
+            background-size: 10px 10px;
         }
     </style>
 </head>
@@ -331,7 +437,8 @@
     <div class="sidebar ">
         <div class="d-flex align-items-center justify-content-between px-1">
             <div class="d-flex align-items-center">
-                <button onclick="goBack()" class="go-back"><i class="bi bi-arrow-left"></i></button>&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/logo.png" alt="" class="logo">
+                <button onclick="goBack()" class="go-back"><i class="bi bi-arrow-left"></i></button>&nbsp;<img
+                    src="https://mergeasy123.netlify.app/sidebar/logo.png" alt="" class="logo">
             </div>
             <div class="pe-2">
                 <a href="" class="text-dark mb-0 pb-0"><i class="bi bi-gear setting-icon mt-1"></i></a>
@@ -385,8 +492,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                                class="feature-icon">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                                alt="chatgpt" class="feature-icon">
 
                                         </div>
                                         <div class="">
@@ -412,8 +519,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                                class="feature-icon">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                                alt="chatgpt" class="feature-icon">
 
                                         </div>
                                         <div class="">
@@ -439,8 +546,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                                class="feature-icon">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                                alt="chatgpt" class="feature-icon">
 
                                         </div>
                                         <div class="">
@@ -466,8 +573,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                                class="feature-icon">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                                alt="chatgpt" class="feature-icon">
 
                                         </div>
                                         <div class="">
@@ -493,8 +600,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                                class="feature-icon">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                                alt="chatgpt" class="feature-icon">
 
                                         </div>
                                         <div class="">
@@ -520,8 +627,8 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                                class="feature-icon">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                                alt="chatgpt" class="feature-icon">
 
                                         </div>
                                         <div class="">
@@ -546,8 +653,8 @@
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                            class="feature-icon">
+                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                            alt="chatgpt" class="feature-icon">
                                     </div>
                                     <div>
                                         <div class="d-flex align-items-start">
@@ -875,31 +982,218 @@
         <div id="details-screen" class="details">
             <button onclick="goBack()" class="go-back">Go Back</button>
             <div id="details-content">
-                <div class="card-bg mb-2 shadow-sm" onclick="showDetailsPage()">
+                <div class=" mb-2 " onclick="showDetailsPage()">
                     <a class="text-decoration-none">
                         <div class="d-flex align-items-center">
                             <div class="d-flex align-items-start">
                                 <div class="feature-icon-div">
                                     <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png" alt="chatgpt"
-                                        class="feature-icon">
-
+                                        class="feature-icon2">
                                 </div>
                                 <div class="">
                                     <div class="d-flex align-items-start justify-content-between">
-                                        <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
+                                        <h3 class="heading-secondry">ChatGPT custom prompt</h3>
                                         <div class="credit-number ">
                                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
                                                 alt="">&nbsp;<span>3</span>
                                         </div>
                                     </div>
                                     <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                        adipisicing.</p>
+                                        adipisicing. Lorem ipsum dolor sit amet.</p>
+                                    <a href="" class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch Full
+                                        Tutorial</a>
                                 </div>
                             </div>
 
                         </div>
                     </a>
 
+                </div>
+                <hr>
+                <h2 class="heading-primary">
+                    Water Prompt
+                </h2>
+                <textarea name="" id="" class="w-100 searchbar" placeholder="Write Prompt"></textarea>
+                <p class="text mb-0 ">Press # to select a variable cell</p>
+                <h2 class="heading-primary mt-3">
+                    Search  Prompt Library
+                </h2>
+                <div class="search-input ">
+                    <input type="search" name="" id="" class="w-100 searchbar" placeholder="Search or ask anything...">
+
+                </div>
+                <div class="prompt-list mt-3">
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+
+                                <div class="pl-1">
+                                    <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker
+                                        Based
+                                        on
+                                        a Website 1</h3>
+
+                                    <p class="text mb-0 pb-0">Input company websites, we'll scrape the content
+                                        and
+                                        use GPT to
+                                        generate a an icebreaker</p>
+                                </div>
+
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+
+                                <div class="pl-1">
+                                    <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker
+                                        Based
+                                        on
+                                        a Website 1</h3>
+
+                                    <p class="text mb-0 pb-0">Input company websites, we'll scrape the content
+                                        and
+                                        use GPT to
+                                        generate a an icebreaker</p>
+                                </div>
+
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+
+                                <div class="pl-1">
+                                    <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker
+                                        Based
+                                        on
+                                        a Website 1</h3>
+
+                                    <p class="text mb-0 pb-0">Input company websites, we'll scrape the content
+                                        and
+                                        use GPT to
+                                        generate a an icebreaker</p>
+                                </div>
+
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+
+                                <div class="pl-1">
+                                    <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker
+                                        Based
+                                        on
+                                        a Website 1</h3>
+
+                                    <p class="text mb-0 pb-0">Input company websites, we'll scrape the content
+                                        and
+                                        use GPT to
+                                        generate a an icebreaker</p>
+                                </div>
+
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+
+                                <div class="pl-1">
+                                    <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker
+                                        Based
+                                        on
+                                        a Website 1</h3>
+
+                                    <p class="text mb-0 pb-0">Input company websites, we'll scrape the content
+                                        and
+                                        use GPT to
+                                        generate a an icebreaker</p>
+                                </div>
+
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-bg mb-2 shadow-sm">
+                        <a href="" class="text-decoration-none">
+                            <div class="d-flex align-items-center position-relative">
+
+                                <div class="pl-1">
+                                    <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker
+                                        Based
+                                        on
+                                        a Website 1</h3>
+
+                                    <p class="text mb-0 pb-0">Input company websites, we'll scrape the content
+                                        and
+                                        use GPT to
+                                        generate a an icebreaker</p>
+                                </div>
+
+                                <div class="fav">
+                                    <i class="bi bi-star  toggle-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Output
+                </h2>
+                <div class="search-input  output-div">
+                    <input type="text" name="" id="" class="w-100 searchbar">
+                    <p class="text mb-0 ">Press # to select a variable cell</p>
+                </div>
+
+                <!-- <div class="">
+                    <button class="w-100 mt-2 megic-btn">Let the magic begin ✨</button>
+                </div> -->
+                <div class="">
+                    <button id="magic-btn" class="w-100 mt-2 megic-btn">Let the magic begin ✨</button>
+                </div>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="d-flex align-items-center">
+                        <div class="upgrade-icon">
+                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp;
+                        </div>
+                        <div class="upgrade-text ">
+                            100/100 Credits left
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <div class="upgrade-text ">
+                            <a href="" class="">Free Credits</a>
+                        </div>
+                        <div class="upgrade-icon2">
+                            &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="">
+                    <button class="w-100  upgrade-btn">UPGRADE</button>
                 </div>
             </div>
         </div>
@@ -965,14 +1259,37 @@
             document.getElementById('home-screen').style.display = 'none'; // Hide home screen
             document.getElementById('details-screen').style.display = 'block'; // Show details page
             document.querySelector('.go-back').style.display = 'block'; // Show go back button
+            document.querySelector('.logo').style.display = 'none';
         }
 
         // Function to go back to the home screen
         function goBack() {
             document.getElementById('details-screen').style.display = 'none'; // Hide details page
             document.getElementById('home-screen').style.display = 'block'; // Show home screen
-            document.querySelector('.go-back').style.display='none';
+            document.querySelector('.go-back').style.display = 'none';
+            document.querySelector('.logo').style.display = 'block';
         }
+    </script>
+    <script>
+   document.getElementById('magic-btn').addEventListener('click', function() {
+  // Show the progress bar
+  const progressContainer = document.querySelector('.progress-container');
+  const progressBar = document.getElementById('progress-bar');
+  
+  progressContainer.style.display = 'block';
+  progressBar.style.width = '0%';  // Reset the progress bar before starting
+  
+  // Start filling the progress bar
+  setTimeout(() => {
+    progressBar.style.width = '100%'; // Fills the bar
+  }, 100); // Small delay for UX
+  
+  // Hide the progress bar after it fills
+  setTimeout(() => {
+    progressContainer.style.display = 'none';
+  }, 2100); // Timeout matches the transition duration (2s) + small buffer
+});
+
     </script>
 </body>
 

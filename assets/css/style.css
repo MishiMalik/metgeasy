@@ -455,6 +455,90 @@ body {
     border-top: none;
   }
 
+  .faq-list {
+    padding: 0 100px;
+  }
+  
+  .faq-list ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .faq-list li+li {
+    margin-top: 15px;
+  }
+  
+  .faq-list li {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .faq-list a {
+    display: block;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 0 30px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary);
+  }
+  
+  .faq-list .icon-help {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    left: 20px;
+    color: var(--primary);
+  }
+  
+  .faq-list .icon-show,
+  .faq-list .icon-close {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .faq-list p {
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    padding: 10px 20px 0px 20px;
+  }
+  
+  .faq-list .icon-show {
+    display: none;
+  }
+  
+  .faq-list a.collapsed {
+    color: black;
+    transition: 0.3s;
+  }
+  
+  .faq-list a.collapsed:hover {
+    color: var(--primary) !important;
+  }
+  
+  .faq-list a.collapsed .icon-show {
+    display: inline-block;
+  }
+  
+  .faq-list a.collapsed .icon-close {
+    display: none;
+  }
+  
+  @media (max-width: 1200px) {
+    .faq-list {
+      padding: 0;
+    }
+  }
+
   @media only screen and (max-width:1200px){
     
     .navbar-nav {
