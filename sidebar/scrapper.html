@@ -193,6 +193,7 @@
             border-radius: 4px;
         }
 
+        .addSmartlead-variable,
         .add-variable {
             background-color: rgb(233, 233, 233);
             border: none;
@@ -204,6 +205,7 @@
             border-radius: 4px;
         }
 
+        .addSmartlead-variable:hover,
         .add-variable:hover {
             background-color: rgb(206, 206, 206);
         }
@@ -620,6 +622,26 @@
             color: rgb(187, 7, 7);
             cursor: pointer;
         }
+
+        .Smartvariable-card {
+            background-color: #e3ebf8;
+            border-radius: 7px;
+            padding: 10px 15px;
+        }
+
+        .Smartvariable-card h3 {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .Smartvariable-card i {
+            color: red;
+        }
+
+        .Smartvariable-card i:hover {
+            color: rgb(187, 7, 7);
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -791,7 +813,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/compaign.png"
+                                            <img src="https://mergeasy123.netlify.app/sidebar/smartlead.jpeg"
                                                 alt="chatgpt" class="feature-icon">
 
                                         </div>
@@ -813,25 +835,25 @@
                             </a>
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showAiPage()">
+                        <div class="card-bg mb-2 shadow-sm" onclick="showValidateEmailPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
-                                                alt="chatgpt" class="feature-icon">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/email.jog" alt="chatgpt"
+                                                class="feature-icon">
 
                                         </div>
                                         <div class="">
                                             <div class="d-flex align-items-start justify-content-between">
-                                                <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
+                                                <h3 class="heading-secondry ">Validate Email </h3>
                                                 <div class="credit-number ">
                                                     <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
                                                         alt="">&nbsp;<span>3</span>
                                                 </div>
                                             </div>
-                                            <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                                adipisicing.</p>
+                                            <p class="text mb-0 pb-0">Determine if an email address has a valid inbox (+
+                                                catchall verification)</p>
                                         </div>
                                     </div>
 
@@ -1528,11 +1550,6 @@
 
                 </div>
                 <hr>
-                <!-- <h2 class="heading-primary">
-                        Water Prompt
-                    </h2> -->
-                <!-- <textarea name="" id="" class="w-100 searchbar" placeholder="Write Prompt"></textarea> -->
-                <!-- <p class="text mb-0 ">Press # to select a variable cell</p> -->
 
 
                 <h2 class="heading-primary mt-3">
@@ -1584,7 +1601,7 @@
                 </div>
             </div>
         </div>
-        <!--Scrapper Screen -->
+        <!--lead Screen -->
         <div id="compaign-screen" class="details">
             <button onclick="goBack()" class="go-back">Go Back</button>
             <div id="details-content">
@@ -1737,27 +1754,7 @@
                             <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
                                 data-bs-parent="#accordionExample">
                                 <div class="variables-wrapper">
-                                    <div class="variable-card mb-2">
-                                        <div class="d-flex justify-content-between align-items-center mb-1">
-                                            <div>
-                                                <h3>Pair <span>1</span></h3>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-trash-fill"></i>
-                                            </div>
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for="" class="form-label text mb-0">Variable Name</label>
-                                            <input type="text" class="w-100 searchbar" name="" id=""
-                                                placeholder="Enter Variable Name..." />
-                                        </div>
-                                        <div class="">
-                                            <label for="" class="form-label text mb-0">Variable Value</label>
-                                            <input type="text" class="w-100 searchbar" name="" id=""
-                                                placeholder="Enter Variable Value..." />
-                                        </div>
 
-                                    </div>
                                 </div>
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <button class="w-100  add-variable">+ Add New Variable Name and Variable Value
@@ -1770,6 +1767,285 @@
                 </div>
                 <button class="megic-btn mt-3" id="leadBtn">
                     <span>Add Leads ✨</span>
+                    <div class="progress-bar"></div>
+                </button>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="d-flex align-items-center">
+                        <div class="upgrade-icon">
+                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp;
+                        </div>
+                        <div class="upgrade-text ">
+                            100/100 Credits left
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <div class="upgrade-text ">
+                            <a href="" class="">Free Credits</a>
+                        </div>
+                        <div class="upgrade-icon2">
+                            &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="">
+                    <button class="w-100  upgrade-btn">UPGRADE</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Smartlead Screen -->
+        <div id="email-screen" class="details">
+            <button onclick="goBack()" class="go-back">Go Back</button>
+            <div id="details-content">
+                <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon-div">
+                                    <img src="https://mergeasy123.netlify.app/sidebar/smartlead.jpeg" alt="chatgpt"
+                                        class="feature-icon2">
+                                </div>
+                                <div class="">
+                                    <div class="d-flex align-items-start justify-content-between">
+                                        <h3 class="heading-secondry"> Add lead to Campaign
+
+                                        </h3>
+                                        <div class="credit-number ">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                alt="">&nbsp;<span>3</span>
+                                        </div>
+                                    </div>
+                                    <p class="text mb-0 pb-0">Add a lead to a campaign in Smartlead
+                                        .</p>
+                                    <a href="" class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch Full
+                                        Tutorial</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+                <hr>
+                <h2 class="heading-primary mt-3">
+                    Enter Your API Key
+                </h2>
+                <div class="search-input ">
+                    <input type="text" name="" id="" class="w-100 searchbar" placeholder="Enter Key...">
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Select Copaign ID
+                </h2>
+                <div class="search-input  output-div w-100">
+                    <!-- <input type="text" name="" id="" class="w-100 searchbar" placeholder="B1:B3"> -->
+                    <select class="form-select form-select searchbar w-100" name="" id="">
+                        <option selected>Select ID</option>
+                        <option value="">ID 1</option>
+                        <option value="">ID 2</option>
+                        <option value="">ID 3</option>
+                    </select>
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <div>
+                            <p class="text mb-0  pb-0">Skip if the key is in workpace</p>
+                        </div>
+                        <div>
+                            <label class="switch mt-1">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <h2 class="heading-primary mt-2">
+                    Email
+                </h2>
+                <div class="search-input ">
+                    <input type="email" name="" id="" class="w-100 searchbar" placeholder="Enter Email...">
+                    <p class="text mb-0  pb-0">Press # to select a variable cell</p>
+                </div>
+                <div>
+
+                    <div class="accordion mt-3 mb-2" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    First Name
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0 mb-2 mt-1">
+                                    <div class="search-input ">
+                                        <input type="text" name="" id="" class="w-100 searchbar"
+                                            placeholder="Enter First Name...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-1">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Last Name
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0 mb-2 mt-1">
+                                    <div class="search-input ">
+                                        <input type="text" name="" id="" class="w-100 searchbar"
+                                            placeholder="Enter Last Name...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-1">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Company Name
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0 mb-2 mt-1">
+                                    <div class="search-input ">
+                                        <input type="text" name="" id="" class="w-100 searchbar"
+                                            placeholder="Enter Company Name...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-1">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Personalization
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0 mb-2 mt-1">
+                                    <div class="search-input ">
+                                        <input type="text" name="" id="" class="w-100 searchbar"
+                                            placeholder="Enter ...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-1">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    Custom Variables
+                                </button>
+                            </h2>
+
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                data-bs-parent="#accordionExample">
+                                <div class="Smartleadvariables-wrapper">
+
+                                </div>
+                                <div class="accordion-body p-0 mb-2 mt-1">
+                                    <button class="w-100  addSmartlead-variable">+ Add New Variable Name and Variable
+                                        Value
+                                        Pair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="megic-btn mt-3" id="SmartleadBtn">
+                    <span>Add Leads ✨</span>
+                    <div class="progress-bar"></div>
+                </button>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <div class="d-flex align-items-center">
+                        <div class="upgrade-icon">
+                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp;
+                        </div>
+                        <div class="upgrade-text ">
+                            100/100 Credits left
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <div class="upgrade-text ">
+                            <a href="" class="">Free Credits</a>
+                        </div>
+                        <div class="upgrade-icon2">
+                            &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="">
+                    <button class="w-100  upgrade-btn">UPGRADE</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Scrapper Screen -->
+        <div id="scrapper-screen" class="details">
+            <button onclick="goBack()" class="go-back">Go Back</button>
+            <div id="details-content">
+                <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon-div">
+                                    <img src="https://mergeasy123.netlify.app/sidebar/google.png" alt="chatgpt"
+                                        class="feature-icon2">
+                                </div>
+                                <div class="">
+                                    <div class="d-flex align-items-start justify-content-between">
+                                        <h3 class="heading-secondry">Scrapper ipsum dolor sit. </h3>
+                                        <div class="credit-number ">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                alt="">&nbsp;<span>3</span>
+                                        </div>
+                                    </div>
+                                    <p class="text mb-0 pb-0">Perform any kind of search query using
+                                        Google’s search engine.</p>
+                                    <a href="" class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch Full
+                                        Tutorial</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+                <hr>
+
+
+                <h2 class="heading-primary mt-3">
+                    Scrapper (Cell Range)
+                </h2>
+                <div class="search-input ">
+                    <input type="text" name="" id="" class="w-100 searchbar" placeholder="A1:A3">
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Output (Cell Range)
+                </h2>
+                <div class="search-input  output-div">
+                    <input type="text" name="" id="" class="w-100 searchbar" placeholder="B1:B3">
+                    <!-- <p class="text mb-0 ">Press # to select a variable cell</p> -->
+                </div>
+
+                <!-- <div class="">
+                            <button class="w-100 mt-2 megic-btn">Let the magic begin ✨</button>
+                        </div> -->
+                <!-- <div class="">
+                        <button id="ScrapBtn" class="w-100 mt-2 megic-btn">Search ✨</button>
+                    </div> -->
+                <button class="megic-btn mt-3" id="ScrapBtn">
+                    <span>Scrap ✨</span>
                     <div class="progress-bar"></div>
                 </button>
 
@@ -1873,6 +2149,8 @@
             document.getElementById('google-screen').style.display = 'none';
             document.getElementById('scrapper-screen').style.display = 'none';
             document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'none';
         }
         // Function to show the details page and hide the home screen
         function showGooglePage() {
@@ -1883,6 +2161,8 @@
             document.querySelector('.logo').style.display = 'none';
             document.getElementById('scrapper-screen').style.display = 'none';
             document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'none';
         }
 
         // Function to show the details page and hide the home screen
@@ -1894,6 +2174,8 @@
             document.querySelector('.logo').style.display = 'none';
             document.getElementById('google-screen').style.display = 'none';
             document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'none';
         }
         // Function to show the details page and hide the home screen
         function showCompaignPage() {
@@ -1904,17 +2186,35 @@
             document.querySelector('.logo').style.display = 'none';
             document.getElementById('google-screen').style.display = 'none';
             document.getElementById('compaign-screen').style.display = 'block';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'none';
         }
 
-          // Function to show the details page and hide the home screen
-          function showCompaignSmartleadPage() {
+        // Function to show the details page and hide the home screen
+        function showCompaignSmartleadPage() {
             document.getElementById('home-screen').style.display = 'none'; // Hide home screen
             document.getElementById('ai-screen').style.display = 'none';
             document.getElementById('scrapper-screen').style.display = 'none'; // Show details page
             document.querySelector('.go-back').style.display = 'block'; // Show go back button
             document.querySelector('.logo').style.display = 'none';
             document.getElementById('google-screen').style.display = 'none';
-            document.getElementById('compaign-screen').style.display = 'block';
+            document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'block';
+            document.getElementById('email-screen').style.display = 'none';
+        }
+
+
+        // Function to show the details page and hide the home screen
+        function showValidateEmailPage() {
+            document.getElementById('home-screen').style.display = 'none'; // Hide home screen
+            document.getElementById('ai-screen').style.display = 'none';
+            document.getElementById('scrapper-screen').style.display = 'none'; // Show details page
+            document.querySelector('.go-back').style.display = 'block'; // Show go back button
+            document.querySelector('.logo').style.display = 'none';
+            document.getElementById('google-screen').style.display = 'none';
+            document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'block';
         }
 
         // Function to go back to the home screen
@@ -2054,6 +2354,32 @@
 
     </script>
     <script>
+        document.getElementById("SmartleadBtn").addEventListener("click", function () {
+            const btn = this;
+            const progressBar = btn.querySelector(".progress-bar");
+
+
+            // Show progress and disable button
+            btn.classList.add("submitting");
+            btn.querySelector("span").textContent = "Addling...";
+
+            // Animate the progress bar
+            setTimeout(() => {
+                progressBar.style.width = "100%";
+            }, 100);
+
+            // After 2 seconds, mark as completed
+            setTimeout(() => {
+                btn.classList.remove("submitting");
+                btn.classList.add("completed");
+                btn.querySelector("span").textContent = "Added 👍🏻";
+            }, 2100);
+        });
+
+
+
+    </script>
+    <script>
         $(document).ready(function () {
             // Function to update the numbers of each Pair
             function updatePairNumbers() {
@@ -2102,6 +2428,58 @@
 
                 // Update the pair numbers after removal
                 updatePairNumbers();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Function to update the numbers of each Pair
+            function updatePairNumbers2() {
+                $('.Smartvariable-card').each(function (index) {
+                    $(this).find('h3 span').text(index + 1);
+                });
+            }
+
+            // Event handler for adding new variable cards
+            $('.addSmartlead-variable').on('click', function (e) {
+                e.preventDefault();
+
+                // Create new variable card HTML structure
+                const newVariableCard2 = `
+                    <div class="Smartvariable-card mb-2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <div>
+                                <h3>Pair <span></span></h3>
+                            </div>
+                            <div>
+                                <i class="bi bi-trash-fill"></i>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="" class="form-label text mb-0">Variable Name</label>
+                            <input type="text" class="w-100 searchbar" name="" id="" placeholder="Enter Variable Name..." />
+                        </div>
+                        <div class="">
+                            <label for="" class="form-label text mb-0">Variable Value</label>
+                            <input type="text" class="w-100 searchbar" name="" id="" placeholder="Enter Variable Value..." />
+                        </div>
+                    </div>
+                `;
+
+                // Append the new variable card to the .variables-wrapper
+                $('.Smartleadvariables-wrapper').append(newVariableCard2);
+
+                // Update the pair numbers
+                updatePairNumbers2();
+            });
+
+            // Event handler for removing variable cards
+            $(document).on('click', '.bi-trash-fill', function () {
+                // Remove the parent .variable-card
+                $(this).closest('.Smartvariable-card').remove();
+
+                // Update the pair numbers after removal
+                updatePairNumbers2();
             });
         });
     </script>
