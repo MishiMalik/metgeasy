@@ -870,16 +870,68 @@
                                             alt="chatgpt" class="feature-icon">
                                     </div>
                                     <div>
-                                        <div class="d-flex align-items-start">
+                                        <div class="d-flex align-items-start justify-content-between">
                                             <h3 class="heading-secondry ">Find Work Email
 
                                             </h3>
+
                                             <div class="credit-number ">
                                                 <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
                                                     alt="">&nbsp;<span>3</span>
                                             </div>
                                         </div>
                                         <p class="text mb-0 pb-0">Access over 5 data providers (including Findymail, Prospeo, Leadmagic, and more) to find work emails using a waterfall enrichment process</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        
+                        <div class="card-bg mb-2 shadow-sm" onclick="showWorkLinkedinProfilePage()">
+                            <a class="text-decoration-none">
+                                <div class="d-flex align-items-start">
+                                    <div class="feature-icon-div">
+                                        <img src="https://mergeasy123.netlify.app/sidebar/LinkedIn_logo_initials.png"
+                                            alt="chatgpt" class="feature-icon">
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">Enrich Linkedin Profile URL</h3>
+
+                                            <div class="credit-number ">
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
+                                            </div>
+                                        </div>
+                                        <p class="text mb-0 pb-0">
+                                            Enrich a person's data using their LinkedIn profile URL
+</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="card-bg mb-2 shadow-sm" onclick="showWorkLinkedinCompanyPage()">
+                            <a class="text-decoration-none">
+                                <div class="d-flex align-items-start">
+                                    <div class="feature-icon-div">
+                                        <img src="https://mergeasy123.netlify.app/sidebar/LinkedIn_logo_initials.png"
+                                            alt="chatgpt" class="feature-icon">
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-start justify-content-between">
+                                            <h3 class="heading-secondry ">Enrich Linkedin Company URL                                            </h3>
+
+                                            <div class="credit-number ">
+                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                    alt="">&nbsp;<span>3</span>
+                                            </div>
+                                        </div>
+                                        <p class="text mb-0 pb-0">
+                                            Enrich a company's data using their LinkedIn company URL
+</p>
                                     </div>
                                 </div>
                             </a>
@@ -2091,6 +2143,7 @@
                                     <div class="d-flex align-items-start justify-content-between">
                                         <h3 class="heading-secondry">Find Work Email
                                         </h3>
+                                        
                                         <div class="credit-number ">
                                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
                                                 alt="">&nbsp;<span>3</span>
@@ -2238,6 +2291,8 @@
             document.getElementById('smartlead-screen').style.display = 'none';
             document.getElementById('email-screen').style.display = 'none';
             document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
         }
         // Function to show the details page and hide the home screen
         function showGooglePage() {
@@ -2251,6 +2306,8 @@
             document.getElementById('smartlead-screen').style.display = 'none';
             document.getElementById('email-screen').style.display = 'none';
             document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
         }
 
         // Function to show the details page and hide the home screen
@@ -2265,6 +2322,8 @@
             document.getElementById('smartlead-screen').style.display = 'none';
             document.getElementById('email-screen').style.display = 'none';
             document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
         }
         // Function to show the details page and hide the home screen
         function showCompaignPage() {
@@ -2278,6 +2337,8 @@
             document.getElementById('smartlead-screen').style.display = 'none';
             document.getElementById('email-screen').style.display = 'none';
             document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
         }
 
         // Function to show the details page and hide the home screen
@@ -2292,6 +2353,8 @@
             document.getElementById('smartlead-screen').style.display = 'block';
             document.getElementById('email-screen').style.display = 'none';
             document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
         }
 
 
@@ -2307,6 +2370,8 @@
             document.getElementById('smartlead-screen').style.display = 'none';
             document.getElementById('email-screen').style.display = 'block';
             document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
         }
 
            // Function to show the details page and hide the home screen
@@ -2321,6 +2386,39 @@
             document.getElementById('smartlead-screen').style.display = 'none';
             document.getElementById('email-screen').style.display = 'none';
             document.getElementById('work-email-screen').style.display = 'block';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
+        }
+
+            // Function to show the details page and hide the home screen
+            function showWorkLinkedinCompanyPage() {
+            document.getElementById('home-screen').style.display = 'none'; // Hide home screen
+            document.getElementById('ai-screen').style.display = 'none';
+            document.getElementById('scrapper-screen').style.display = 'none'; // Show details page
+            document.querySelector('.go-back').style.display = 'block'; // Show go back button
+            document.querySelector('.logo').style.display = 'none';
+            document.getElementById('google-screen').style.display = 'none';
+            document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'none';
+            document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'block';
+            document.getElementById('linkedin-profile-screen').style.display = 'none';   
+        }
+            // Function to show the details page and hide the home screen
+            function  showWorkLinkedinProfilePage(){
+            document.getElementById('home-screen').style.display = 'none'; // Hide home screen
+            document.getElementById('ai-screen').style.display = 'none';
+            document.getElementById('scrapper-screen').style.display = 'none'; // Show details page
+            document.querySelector('.go-back').style.display = 'block'; // Show go back button
+            document.querySelector('.logo').style.display = 'none';
+            document.getElementById('google-screen').style.display = 'none';
+            document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'none';
+            document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('linkedin-company-screen').style.display = 'none';
+            document.getElementById('linkedin-profile-screen').style.display = 'block';
         }
 
         // Function to go back to the home screen
@@ -2328,9 +2426,15 @@
             document.getElementById('ai-screen').style.display = 'none'; // Hide details page
             document.getElementById('google-screen').style.display = 'none'; // Hide details page
             document.getElementById('home-screen').style.display = 'block'; // Show home screen
-            document.getElementById('scrapper-screen').style.display = 'block'; // Show home screen
+            document.getElementById('scrapper-screen').style.display = 'none'; // Show home screen
             document.querySelector('.go-back').style.display = 'none';
             document.querySelector('.logo').style.display = 'block';
+            document.getElementById('work-email-screen').style.display = 'none';
+            document.getElementById('compaign-screen').style.display = 'none';
+            document.getElementById('smartlead-screen').style.display = 'none';
+            document.getElementById('email-screen').style.display = 'none';    
+            document.getElementById('linkedin-company-screen').style.display = 'none';    
+            document.getElementById('linkedin-profile-screen').style.display = 'none';                     
         }
     </script>
     <!-- <script>
