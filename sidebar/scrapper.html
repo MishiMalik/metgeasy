@@ -38,10 +38,21 @@
             object-fit: contain;
             border-radius: 3px;
         }
+        .feature-icon4{
+            height: auto;
+            width: 40px;
+            object-fit: contain;
+            border-radius: 3px;
+        }
 
         .feature-icon2 {
             height: auto;
             width: 40px;
+            object-fit: contain;
+        }
+        .feature-icon3 {
+            height: auto;
+            width: 50px;
             object-fit: contain;
         }
 
@@ -49,7 +60,10 @@
             margin-right: 10px;
             padding: 0px 3px 0 3px;
         }
-
+.feature-icon-div4{
+    margin-right: 6px;
+    padding: 0px 3px 0 3px;
+}
         .feature-icon-div2 {
             margin-right: 10px;
             padding: 0px 3px 0 3px;
@@ -184,15 +198,25 @@
         }
 
         .upgrade-btn {
-            background-color: #FEF1FF;
+            /* background-color: #FEF1FF; */
             border: none;
             font-size: 14px;
             font-weight: 500;
-            color: #C78CE9;
+            color: white;
+            background-color: #030229;
             padding: 7px;
             width: fit-content;
             border-radius: 4px;
         }
+        .upgrade-btn:hover,
+        .upgrade-btn:focus,
+        .upgrade-btn:active {
+            /* background-color: rgb(252, 151, 167); */
+            color: white !important;
+            background-color: #FFE500;
+            outline: none;
+        }
+
 
         .add-more,
         .addSmartlead-variable,
@@ -265,14 +289,7 @@
             /* Controls the speed of progress bar filling */
         }
 
-        .upgrade-btn:hover,
-        .upgrade-btn:focus,
-        .upgrade-btn:active {
-            background-color: rgb(252, 151, 167);
-            color: white !important;
-            outline: none;
-        }
-
+      
         iframe#userHtmlFrame::-webkit-scrollbar {
             width: 1em;
         }
@@ -664,7 +681,7 @@
                 <a href class="text-dark mb-0 pb-0"><i class="bi bi-gear setting-icon mt-1"></i></a>
             </div>
         </div>
-        <hr>
+        <hr id="top-line">
         <!-- home Screen -->
         <div id="home-screen">
             <div class="tab mx-2">
@@ -772,7 +789,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
                                         <div class="feature-icon-div">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/scrapper.jpg"
+                                            <img src="https://mergeasy123.netlify.app/sidebar/scrap.png"
                                                 alt="chatgpt" class="feature-icon">
 
                                         </div>
@@ -888,9 +905,9 @@
                         <div class="card-bg mb-2 shadow-sm" onclick="showWorkEmailPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
+                                    <div class="feature-icon-div4">
                                         <img src="https://mergeasy123.netlify.app/sidebar/work-email.png" alt="chatgpt"
-                                            class="feature-icon">
+                                            class="feature-icon feature-icon4">
                                     </div>
                                     <div>
                                         <div class="d-flex align-items-start justify-content-between">
@@ -1304,23 +1321,24 @@
             </div>
 
             <hr>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
+           
+            <div class="d-flex justify-content-between mt-3">
+                <a href="" class="d-flex align-items-center text-decoration-none">
                     <div class="upgrade-icon">
                         <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                     </div>
                     <div class="upgrade-text ">
-                        1000/100 Credits left
+                        100/100 Credits left
                     </div>
-                </div>
-                <div class="d-flex align-items-center ">
+                </a>
+                <a href="" class="d-flex align-items-center text-decoration-none">
                     <div class="upgrade-text ">
-                        <a href class>Free Credits </a>
+                        <div>Free Credits</div>
                     </div>
                     <div class="upgrade-icon2">
                         &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                     </div>
-                </div>
+                </a>
 
             </div>
             <div class>
@@ -1546,22 +1564,22 @@
                     <div id="progress-bar" class="progress-bar"></div>
                 </div>
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -1654,22 +1672,22 @@
                     <div id="progress-bar" class="progress-bar"></div>
                 </div> -->
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -1687,7 +1705,7 @@
                         <div class="d-flex align-items-center">
                             <div class="d-flex align-items-start">
                                 <div class="feature-icon-div">
-                                    <img src="https://mergeasy123.netlify.app/sidebar/scrapper.jpg" alt="chatgpt"
+                                    <img src="https://mergeasy123.netlify.app/sidebar/scrap.png" alt="chatgpt"
                                         class="feature-icon2">
                                 </div>
                                 <div class>
@@ -1738,22 +1756,22 @@
                 </button>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -1938,22 +1956,22 @@
                 </button>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -2138,22 +2156,22 @@
                 </button>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -2219,22 +2237,22 @@
                 </button>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -2253,7 +2271,7 @@
                             <div class="d-flex align-items-start">
                                 <div class="feature-icon-div">
                                     <img src="https://mergeasy123.netlify.app/sidebar/work-email.png" alt="chatgpt"
-                                        class="feature-icon2">
+                                        class="feature-icon3">
                                 </div>
                                 <div class>
                                     <div class="d-flex align-items-start justify-content-between">
@@ -2335,22 +2353,22 @@
                 </button>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -2594,24 +2612,23 @@
                     <span>Enrich ✨</span>
                     <div class="progress-bar"></div>
                 </button>
-
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -2854,22 +2871,22 @@
                 </button>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
                         <div class="upgrade-text ">
                             100/100 Credits left
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center ">
+                    </a>
+                    <a href="" class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
+                            <div>Free Credits</div>
                         </div>
                         <div class="upgrade-icon2">
                             &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
                 <div class>
@@ -2971,25 +2988,24 @@
                         <span>Launch ✨</span>
                         <div class="progress-bar"></div>
                     </button>
-
                     <div class="d-flex justify-content-between mt-3">
-                        <div class="d-flex align-items-center">
+                        <a href="" class="d-flex align-items-center text-decoration-none">
                             <div class="upgrade-icon">
                                 <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                             </div>
                             <div class="upgrade-text ">
                                 100/100 Credits left
                             </div>
-                        </div>
-                        <div class="d-flex align-items-center ">
+                        </a>
+                        <a href="" class="d-flex align-items-center text-decoration-none">
                             <div class="upgrade-text ">
-                                <a href class>Free Credits</a>
+                                <div>Free Credits</div>
                             </div>
                             <div class="upgrade-icon2">
                                 &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                             </div>
-                        </div>
-
+                        </a>
+    
                     </div>
                     <div class>
                         <button class="w-100  upgrade-btn">UPGRADE</button>
@@ -3077,6 +3093,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
         // Function to show the details page and hide the home screen
         function showGooglePage() {
@@ -3093,6 +3110,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
 
         // Function to show the details page and hide the home screen
@@ -3110,6 +3128,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
         // Function to show the details page and hide the home screen
         function showCompaignPage() {
@@ -3126,6 +3145,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
 
 
@@ -3144,6 +3164,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
 
 
@@ -3162,6 +3183,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
 
         // Function to show the details page and hide the home screen
@@ -3179,6 +3201,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
 
         // Function to show the details page and hide the home screen
@@ -3196,6 +3219,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'block';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
         // Function to show the details page and hide the home screen
         function showLinkedinProfilePage() {
@@ -3212,6 +3236,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'block';
             document.getElementById('apify-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
 
         // Function to show the details page and hide the home screen
@@ -3229,6 +3254,7 @@
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
             document.getElementById('apify-screen').style.display = 'block';
+            document.getElementById('top-line').style.margin = '5px 0 18px 0';
         }
 
 
@@ -3247,6 +3273,7 @@
             document.getElementById('email-screen').style.display = 'none';
             document.getElementById('linkedin-company-screen').style.display = 'none';
             document.getElementById('linkedin-profile-screen').style.display = 'none';
+            document.getElementById('top-line').style.margin = '1rem 0';
         }
     </script>
 
