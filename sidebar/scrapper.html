@@ -626,12 +626,14 @@
             cursor: pointer;
         }
 
+        .Smartvariable-card2,
         .Smartvariable-card {
             background-color: #e3ebf8;
             border-radius: 7px;
             padding: 10px 15px;
         }
 
+        .Smartvariable-card2 h3,
         .Smartvariable-card h3 {
             font-size: 14px;
             font-weight: 500;
@@ -998,6 +1000,7 @@
                                 </div>
                             </a>
                         </div>
+
 
                         <!-- <div class="card-bg  mb-3 shadow-sm ">
                         <a href="" class="text-decoration-none">
@@ -2523,7 +2526,7 @@
                                     <div class="accordion-body p-0 mb-2 mt-1">
                                         <div class="more-m-wrapper">
                                             <div class="more-m mb-2">
-                                                <div class="Smartvariable-card">
+                                                <div class="Smartvariable-card2">
                                                     <div class="d-flex justify-content-between align-items-center mb-1">
                                                         <div>
                                                             <h3>Pair
@@ -2531,7 +2534,7 @@
                                                             </h3>
                                                         </div>
                                                         <div>
-                                                            <i class="bi bi-trash-fill remove-m"></i>
+                                                            <i class="bi bi-trash-fill remove-more remove-m"></i>
                                                         </div>
                                                     </div>
                                                     <div class="mb-2">
@@ -2588,256 +2591,377 @@
             </div>
         </div>
 
-     <!--LinkedIn_logo_initials.png Screen -->
-     <div id="linkedin-company-screen" class="details">
-        <button onclick="goBack()" class="go-back">Go Back</button>
-       
-        <div id="details-content">
-            <div class=" mb-2 ">
-                <a class="text-decoration-none">
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex align-items-start">
-                            <div class="feature-icon-div">
-                                <img src="https://mergeasy123.netlify.app/sidebar/LinkedIn_logo_initials.png"
-                                    alt="chatgpt" class="feature-icon2">
-                            </div>
-                            <div class>
-                                <div class="d-flex align-items-start justify-content-between">
-                                    <h3 class="heading-secondry">Enrich Linkedin Company URL
+        <!--LinkedIn_logo_initials.png Screen -->
+        <div id="linkedin-company-screen" class="details">
+            <button onclick="goBack()" class="go-back">Go Back</button>
 
-
-                                    </h3>
-
-                                    <div class="credit-number ">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                            alt>&nbsp;<span>3</span>
-                                    </div>
+            <div id="details-content">
+                <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon-div">
+                                    <img src="https://mergeasy123.netlify.app/sidebar/LinkedIn_logo_initials.png"
+                                        alt="chatgpt" class="feature-icon2">
                                 </div>
-                                <p class="text mb-0 pb-0"> Enrich a company's data using their LinkedIn company URL
-                                </p>
-                                <a href class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch
-                                    Full
-                                    Tutorial</a>
-                            </div>
-                        </div>
+                                <div class>
+                                    <div class="d-flex align-items-start justify-content-between">
+                                        <h3 class="heading-secondry">Enrich Linkedin Company URL
 
-                    </div>
-                </a>
 
-            </div>
-            <hr>
-            <h2 class="heading-primary mt-3">
-                Enter LinkedIn Company URL
-            </h2>
-            <div class="search-input ">
-                <input type="text" name id class="w-100 searchbar" placeholder="Enter URL...">
-            </div>
+                                        </h3>
 
-            <div>
-
-                <div class="accordion mt-3 mb-2" id="accordionExample2">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                First Name
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample2">
-                            <div class="accordion-body p-0 mb-2 mt-1">
-                                <div class="more-f-wrapper2">
-                                    <div class="more-f-name2 mb-2">
-                                        <div class="mb-2">
-                                            <div class="d-flex justify-content-between">
-                                                <label for class="form-label text mb-0">Output
-                                                    <span>1</span></label>
-                                                <div>
-                                                    <i class="bi bi-trash-fill remove-more remove-more-f2"></i>
-                                                </div>
-                                            </div>
-                                            <input type="text" class="w-100 searchbar" name id
-                                                placeholder="Enter First Name..." />
+                                        <div class="credit-number ">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                alt>&nbsp;<span>3</span>
                                         </div>
                                     </div>
-
+                                    <p class="text mb-0 pb-0"> Enrich a company's data using their LinkedIn company URL
+                                    </p>
+                                    <a href class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch
+                                        Full
+                                        Tutorial</a>
                                 </div>
-                                <button class="w-100  add-more add-more-f2">+
-                                    Add More</button>
                             </div>
+
                         </div>
-                        <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading2">
+                    </a>
+
+                </div>
+                <hr>
+                <h2 class="heading-primary mt-3">
+                    Enter LinkedIn Company URL
+                </h2>
+                <div class="search-input ">
+                    <input type="text" name id class="w-100 searchbar" placeholder="Enter URL...">
+                </div>
+
+                <div>
+
+                    <div class="accordion mt-3 mb-2" id="accordionExample2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    Last Name
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    First Name
                                 </button>
                             </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                            <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample2">
                                 <div class="accordion-body p-0 mb-2 mt-1">
-                                    <div class="more-l-wrapper2">
-                                        <div class="more-l-name2 mb-2">
+                                    <div class="more-f-wrapper2">
+                                        <div class="more-f-name2 mb-2">
                                             <div class="mb-2">
                                                 <div class="d-flex justify-content-between">
                                                     <label for class="form-label text mb-0">Output
                                                         <span>1</span></label>
                                                     <div>
-                                                        <i class="bi bi-trash-fill remove-more remove-more-l2"></i>
+                                                        <i class="bi bi-trash-fill remove-more remove-more-f2"></i>
                                                     </div>
                                                 </div>
                                                 <input type="text" class="w-100 searchbar" name id
-                                                    placeholder="Enter Last Name..." />
+                                                    placeholder="Enter First Name..." />
                                             </div>
                                         </div>
 
                                     </div>
-                                    <button class="w-100  add-more add-more-l2">+
+                                    <button class="w-100  add-more add-more-f2">+
                                         Add More</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    Job Title
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                                data-bs-parent="#accordionExample2">
-                                <div class="accordion-body p-0 mb-2 mt-1">
-                                    <div class="more-j-wrapper2">
-                                        <div class="more-j-name2 mb-2">
-                                            <div class="mb-2">
-                                                <div class="d-flex justify-content-between">
-                                                    <label for class="form-label text mb-0">Output
-                                                        <span>1</span></label>
-                                                    <div>
-                                                        <i class="bi bi-trash-fill remove-more remove-more-j2"></i>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="w-100 searchbar" name id
-                                                    placeholder="Enter Job Title Name..." />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <button class="w-100  add-more add-more-j2">+
-                                        Add More</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Company
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                                data-bs-parent="#accordionExample2">
-                                <div class="accordion-body p-0 mb-2 mt-1">
-                                    <div class="more-c-wrapper2">
-                                        <div class="more-c-name2 mb-2">
-                                            <div class="mb-2">
-                                                <div class="d-flex justify-content-between">
-                                                    <label for class="form-label text mb-0">Output
-                                                        <span>1</span></label>
-                                                    <div>
-                                                        <i class="bi bi-trash-fill remove-more remove-more-c2"></i>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="w-100 searchbar" name id
-                                                    placeholder="Enter Company..." />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <button class="w-100  add-more add-more-c2">+
-                                        Add More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    Add More
-                                </button>
-                            </h2>
-
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
-                                data-bs-parent="#accordionExample2">
-
-                                <div class="accordion-body p-0 mb-2 mt-1">
-                                    <div class="more-m-wrapper2">
-                                        <div class="more-m2 mb-2">
-                                            <div class="Smartvariable-card">
-                                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                                    <div>
-                                                        <h3>Pair
-                                                            <span>1</span>
-                                                        </h3>
-                                                    </div>
-                                                    <div>
-                                                        <i class="bi bi-trash-fill remove-m2"></i>
-                                                    </div>
-                                                </div>
+                            <div class="accordion-item mt-1">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        Last Name
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                    data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body p-0 mb-2 mt-1">
+                                        <div class="more-l-wrapper2">
+                                            <div class="more-l-name2 mb-2">
                                                 <div class="mb-2">
-                                                    <label for class="form-label text mb-0">Field</label>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label for class="form-label text mb-0">Output
+                                                            <span>1</span></label>
+                                                        <div>
+                                                            <i class="bi bi-trash-fill remove-more remove-more-l2"></i>
+                                                        </div>
+                                                    </div>
                                                     <input type="text" class="w-100 searchbar" name id
-                                                        placeholder="Enter Field..." />
-                                                </div>
-                                                <div class>
-                                                    <label for class="form-label text mb-0">Output</label>
-                                                    <input type="text" class="w-100 searchbar" name id
-                                                        placeholder="Enter Output..." />
+                                                        placeholder="Enter Last Name..." />
                                                 </div>
                                             </div>
+
+                                        </div>
+                                        <button class="w-100  add-more add-more-l2">+
+                                            Add More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mt-1">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        Job Title
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                    data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body p-0 mb-2 mt-1">
+                                        <div class="more-j-wrapper2">
+                                            <div class="more-j-name2 mb-2">
+                                                <div class="mb-2">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label for class="form-label text mb-0">Output
+                                                            <span>1</span></label>
+                                                        <div>
+                                                            <i class="bi bi-trash-fill remove-more remove-more-j2"></i>
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="w-100 searchbar" name id
+                                                        placeholder="Enter Job Title Name..." />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <button class="w-100  add-more add-more-j2">+
+                                            Add More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mt-1">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Company
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                    data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body p-0 mb-2 mt-1">
+                                        <div class="more-c-wrapper2">
+                                            <div class="more-c-name2 mb-2">
+                                                <div class="mb-2">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label for class="form-label text mb-0">Output
+                                                            <span>1</span></label>
+                                                        <div>
+                                                            <i class="bi bi-trash-fill remove-more remove-more-c2"></i>
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="w-100 searchbar" name id
+                                                        placeholder="Enter Company..." />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <button class="w-100  add-more add-more-c2">+
+                                            Add More</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-1">
+                                <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        Add More
+                                    </button>
+                                </h2>
+
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                    data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body p-0 mb-2 mt-1">
+                                        <div class="more-m-wrapper2">
+                                            <div class="more-m2 mb-2">
+                                                <div class="Smartvariable-card2">
+                                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                                        <div>
+                                                            <h3>Pair
+                                                                <span>1</span>
+                                                            </h3>
+                                                        </div>
+                                                        <div>
+                                                            <i class="bi bi-trash-fill remove-more remove-m2"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <label for class="form-label text mb-0">Field</label>
+                                                        <input type="text" class="w-100 searchbar" name id
+                                                            placeholder="Enter Field..." />
+                                                    </div>
+                                                    <div class>
+                                                        <label for class="form-label text mb-0">Output</label>
+                                                        <input type="text" class="w-100 searchbar" name id
+                                                            placeholder="Enter Output..." />
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
 
+                                        <button class="w-100 add-more add-m-more2 ">+
+                                            Add More</button>
                                     </div>
-
-                                    <button class="w-100 add-more add-m-more2 ">+
-                                        Add More</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <button class="megic-btn mt-3" id="linkedinBtn2">
-                    <span>Enrich ✨</span>
-                    <div class="progress-bar"></div>
-                </button>
-
-                <div class="d-flex justify-content-between mt-3">
-                    <div class="d-flex align-items-center">
-                        <div class="upgrade-icon">
-                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
-                        </div>
-                        <div class="upgrade-text ">
-                            100/100 Credits left
-                        </div>
                     </div>
-                    <div class="d-flex align-items-center ">
-                        <div class="upgrade-text ">
-                            <a href class>Free Credits</a>
-                        </div>
-                        <div class="upgrade-icon2">
-                            &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt>
-                        </div>
-                    </div>
+                    <button class="megic-btn mt-3" id="linkedinBtn2">
+                        <span>Enrich ✨</span>
+                        <div class="progress-bar"></div>
+                    </button>
 
-                </div>
-                <div class>
-                    <button class="w-100  upgrade-btn">UPGRADE</button>
+                    <div class="d-flex justify-content-between mt-3">
+                        <div class="d-flex align-items-center">
+                            <div class="upgrade-icon">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
+                            </div>
+                            <div class="upgrade-text ">
+                                100/100 Credits left
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <div class="upgrade-text ">
+                                <a href class>Free Credits</a>
+                            </div>
+                            <div class="upgrade-icon2">
+                                &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class>
+                        <button class="w-100  upgrade-btn">UPGRADE</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!--apify Screen -->
+        <div id="apify-screen" class="details">
+
+            <div id="details-content">
+                <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-start">
+                                <div class="feature-icon-div">
+                                    <img src="https://mergeasy123.netlify.app/sidebar/apify.jpg" alt="chatgpt"
+                                        class="feature-icon2">
+                                </div>
+                                <div class>
+                                    <div class="d-flex align-items-start justify-content-between">
+                                        <h3 class="heading-secondry">Get Data from Apify
+
+
+
+                                        </h3>
+
+                                        <div class="credit-number ">
+                                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                alt>&nbsp;<span>3</span>
+                                        </div>
+                                    </div>
+                                    <p class="text mb-0 pb-0"> ERetrieve dataset details from an Apify actor and export
+                                        the results directly to your Google Sheet
+                                    </p>
+                                    <a href class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch
+                                        Full
+                                        Tutorial</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+                <hr>
+                <h2 class="heading-primary mt-3">
+                    Enter Your API Key
+                </h2>
+                <div class="search-input mb-2">
+                    <input type="text" name id class="w-100 searchbar" placeholder="Enter Key...">
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Select Apify Task
+                </h2>
+                <div class="search-input  output-div w-100">
+                    <!-- <input type="text" name="" id="" class="w-100 searchbar" placeholder="B1:B3"> -->
+                    <select class="form-select form-select searchbar w-100" name id>
+                        <option selected>Select ID</option>
+                        <option value>Task 1</option>
+                        <option value>Task 2</option>
+                        <option value>Task 3</option>
+                    </select>
+                
+                </div>
+                <div>
+                    <h2 class="heading-primary mt-3">
+                        Output Fields
+                    </h2>
+                    <div class="more-m-wrapper3">
+                        <div class="more-m3 mb-2">
+                            <div class="Smartvariable-card2">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <div>
+                                        <h3>Pair
+                                            <span>1</span>
+                                        </h3>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-trash-fill remove-more  remove-m3"></i>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label for class="form-label text mb-0">Field</label>
+                                    <input type="text" class="w-100 searchbar" name id placeholder="Enter Field..." />
+                                </div>
+                                <div class>
+                                    <label for class="form-label text mb-0">Output</label>
+                                    <input type="text" class="w-100 searchbar" name id placeholder="Enter Output..." />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-100 add-more add-m-more3 ">+
+                        Add More</button>
+
+                    <button class="megic-btn mt-3" id="apify-btn">
+                        <span>Enrich ✨</span>
+                        <div class="progress-bar"></div>
+                    </button>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <div class="d-flex align-items-center">
+                            <div class="upgrade-icon">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
+                            </div>
+                            <div class="upgrade-text ">
+                                100/100 Credits left
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <div class="upgrade-text ">
+                                <a href class>Free Credits</a>
+                            </div>
+                            <div class="upgrade-icon2">
+                                &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class>
+                        <button class="w-100  upgrade-btn">UPGRADE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -2918,6 +3042,7 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
             // Function to show the details page and hide the home screen
             function showGooglePage() {
@@ -2933,6 +3058,7 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
 
             // Function to show the details page and hide the home screen
@@ -2949,6 +3075,7 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
             // Function to show the details page and hide the home screen
             function showCompaignPage() {
@@ -2964,7 +3091,9 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
+
 
             // Function to show the details page and hide the home screen
             function showCompaignSmartleadPage() {
@@ -2980,6 +3109,7 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
 
 
@@ -2997,6 +3127,7 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
 
             // Function to show the details page and hide the home screen
@@ -3013,6 +3144,7 @@
                 document.getElementById('work-email-screen').style.display = 'block';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
 
             // Function to show the details page and hide the home screen
@@ -3029,6 +3161,7 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'block';
                 document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'none';
             }
             // Function to show the details page and hide the home screen
             function showLinkedinProfilePage() {
@@ -3044,10 +3177,30 @@
                 document.getElementById('work-email-screen').style.display = 'none';
                 document.getElementById('linkedin-company-screen').style.display = 'none';
                 document.getElementById('linkedin-profile-screen').style.display = 'block';
+                document.getElementById('apify-screen').style.display = 'none';
             }
+
+            // Function to show the details page and hide the home screen
+            function showApifyPage() {
+                document.getElementById('home-screen').style.display = 'none'; // Hide home screen
+                document.getElementById('ai-screen').style.display = 'none';
+                document.getElementById('scrapper-screen').style.display = 'none'; // Show details page
+                document.querySelector('.go-back').style.display = 'block'; // Show go back button
+                document.querySelector('.logo').style.display = 'none';
+                document.getElementById('google-screen').style.display = 'none';
+                document.getElementById('compaign-screen').style.display = 'none';
+                document.getElementById('smartlead-screen').style.display = 'none';
+                document.getElementById('email-screen').style.display = 'none';
+                document.getElementById('work-email-screen').style.display = 'none';
+                document.getElementById('linkedin-company-screen').style.display = 'none';
+                document.getElementById('linkedin-profile-screen').style.display = 'none';
+                document.getElementById('apify-screen').style.display = 'block';
+            }
+
 
             // Function to go back to the home screen
             function goBack() {
+                document.getElementById('apify-screen').style.display = 'none';
                 document.getElementById('ai-screen').style.display = 'none'; // Hide details page
                 document.getElementById('google-screen').style.display = 'none'; // Hide details page
                 document.getElementById('home-screen').style.display = 'block'; // Show home screen
@@ -3063,7 +3216,7 @@
             }
         </script>
 
-   <script>
+        <script>
             document.getElementById("submitBtn").addEventListener("click", function () {
                 const btn = this;
                 const progressBar = btn.querySelector(".progress-bar");
@@ -3247,6 +3400,58 @@
 
         </script>
         <script>
+            document.getElementById("linkedinBtn2").addEventListener("click", function () {
+                const btn = this;
+                const progressBar = btn.querySelector(".progress-bar");
+
+
+                // Show progress and disable button
+                btn.classList.add("submitting");
+                btn.querySelector("span").textContent = "Processing...";
+
+                // Animate the progress bar
+                setTimeout(() => {
+                    progressBar.style.width = "100%";
+                }, 100);
+
+                // After 2 seconds, mark as completed
+                setTimeout(() => {
+                    btn.classList.remove("submitting");
+                    btn.classList.add("Verified");
+                    btn.querySelector("span").textContent = "Done 👍🏻";
+                }, 2100);
+            });
+
+
+
+        </script>
+        <script>
+            document.getElementById("apifyBtn").addEventListener("click", function () {
+                const btn = this;
+                const progressBar = btn.querySelector(".progress-bar");
+
+
+                // Show progress and disable button
+                btn.classList.add("submitting");
+                btn.querySelector("span").textContent = "Launching...";
+
+                // Animate the progress bar
+                setTimeout(() => {
+                    progressBar.style.width = "100%";
+                }, 100);
+
+                // After 2 seconds, mark as completed
+                setTimeout(() => {
+                    btn.classList.remove("submitting");
+                    btn.classList.add("Verified");
+                    btn.querySelector("span").textContent = "Done 👍🏻";
+                }, 2100);
+            });
+
+
+
+        </script>
+        <script>
             $(document).ready(function () {
                 // Function to update the numbers of each Pair
                 function updatePairNumbers() {
@@ -3350,9 +3555,9 @@
                 });
             });
         </script>
-       
-       <!-- linkedin 1 -->
-       <script>
+
+        <!-- linkedin 1 -->
+        <script>
             $(document).ready(function () {
                 // Function to update the numbers of each Pair
                 function updatePairNumbers3() {
@@ -3552,13 +3757,13 @@
                     // Create new variable card HTML structure
                     const newVariableCard7 = `
                <div class="more-m mb-2">
-                                                <div class="Smartvariable-card">
+                                                <div class="Smartvariable-card2">
                                                     <div class="d-flex justify-content-between align-items-center mb-1">
                                                         <div>
                                                             <h3>Pair <span></span></h3>
                                                         </div>
                                                         <div>
-                                                            <i class="bi bi-trash-fill remove-m"></i>
+                                                            <i class="bi bi-trash-fill remove-more remove-m"></i>
                                                         </div>
                                                     </div>
                                                     <div class="mb-2">
@@ -3583,7 +3788,7 @@
                 });
 
                 // Event handler for removing variable cards
-                $(document).on('click', '.remove-more-m', function () {
+                $(document).on('click', '.remove-m', function () {
                     // Remove the parent .variable-card
                     $(this).closest('.more-m').remove();
 
@@ -3594,22 +3799,22 @@
         </script>
 
 
-  <!-- linkedin 2 -->
-  <script>
-    $(document).ready(function () {
-        // Function to update the numbers of each Pair
-        function updatePairNumbers8() {
-            $('.more-f-name2').each(function (index) {
-                $(this).find('label span').text(index + 1);
-            });
-        }
+        <!-- linkedin 2 -->
+        <script>
+            $(document).ready(function () {
+                // Function to update the numbers of each Pair
+                function updatePairNumbers8() {
+                    $('.more-f-name2').each(function (index) {
+                        $(this).find('label span').text(index + 1);
+                    });
+                }
 
-        // Event handler for adding new variable cards
-        $('.add-more-f2').on('click', function (e) {
-            e.preventDefault();
+                // Event handler for adding new variable cards
+                $('.add-more-f2').on('click', function (e) {
+                    e.preventDefault();
 
-            // Create new variable card HTML structure
-            const newVariableCard8 = `
+                    // Create new variable card HTML structure
+                    const newVariableCard8 = `
                 <div class="more-f-name2 mb-2">
                                             <div class="mb-2">
                                                 <div class="d-flex justify-content-between">
@@ -3624,38 +3829,38 @@
                                         </div>
             `;
 
-            // Append the new variable card to the .variables-wrapper
-            $('.more-f-wrapper2').append(newVariableCard8);
+                    // Append the new variable card to the .variables-wrapper
+                    $('.more-f-wrapper2').append(newVariableCard8);
 
-            // Update the pair numbers
-            updatePairNumbers8();
-        });
+                    // Update the pair numbers
+                    updatePairNumbers8();
+                });
 
-        // Event handler for removing variable cards
-        $(document).on('click', '.remove-more-f2', function () {
-            // Remove the parent .variable-card
-            $(this).closest('.more-f-name2').remove();
+                // Event handler for removing variable cards
+                $(document).on('click', '.remove-more-f2', function () {
+                    // Remove the parent .variable-card
+                    $(this).closest('.more-f-name2').remove();
 
-            // Update the pair numbers after removal
-            updatePairNumbers8();
-        });
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        // Function to update the numbers of each Pair
-        function updatePairNumbers9() {
-            $('.more-l-name2').each(function (index) {
-                $(this).find('label span').text(index + 1);
+                    // Update the pair numbers after removal
+                    updatePairNumbers8();
+                });
             });
-        }
+        </script>
+        <script>
+            $(document).ready(function () {
+                // Function to update the numbers of each Pair
+                function updatePairNumbers9() {
+                    $('.more-l-name2').each(function (index) {
+                        $(this).find('label span').text(index + 1);
+                    });
+                }
 
-        // Event handler for adding new variable cards
-        $('.add-more-l2').on('click', function (e) {
-            e.preventDefault();
+                // Event handler for adding new variable cards
+                $('.add-more-l2').on('click', function (e) {
+                    e.preventDefault();
 
-            // Create new variable card HTML structure
-            const newVariableCard9 = `
+                    // Create new variable card HTML structure
+                    const newVariableCard9 = `
                 <div class="more-l-name2 mb-2">
                                             <div class="mb-2">
                                                 <div class="d-flex justify-content-between">
@@ -3670,38 +3875,38 @@
                                         </div>
             `;
 
-            // Append the new variable card to the .variables-wrapper
-            $('.more-l-wrapper2').append(newVariableCard9);
+                    // Append the new variable card to the .variables-wrapper
+                    $('.more-l-wrapper2').append(newVariableCard9);
 
-            // Update the pair numbers
-            updatePairNumbers9();
-        });
+                    // Update the pair numbers
+                    updatePairNumbers9();
+                });
 
-        // Event handler for removing variable cards
-        $(document).on('click', '.remove-more-l2', function () {
-            // Remove the parent .variable-card
-            $(this).closest('.more-l-name2').remove();
+                // Event handler for removing variable cards
+                $(document).on('click', '.remove-more-l2', function () {
+                    // Remove the parent .variable-card
+                    $(this).closest('.more-l-name2').remove();
 
-            // Update the pair numbers after removal
-            updatePairNumbers9();
-        });
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        // Function to update the numbers of each Pair
-        function updatePairNumbers10() {
-            $('.more-j-name2').each(function (index) {
-                $(this).find('label span').text(index + 1);
+                    // Update the pair numbers after removal
+                    updatePairNumbers9();
+                });
             });
-        }
+        </script>
+        <script>
+            $(document).ready(function () {
+                // Function to update the numbers of each Pair
+                function updatePairNumbers10() {
+                    $('.more-j-name2').each(function (index) {
+                        $(this).find('label span').text(index + 1);
+                    });
+                }
 
-        // Event handler for adding new variable cards
-        $('.add-more-j2').on('click', function (e) {
-            e.preventDefault();
+                // Event handler for adding new variable cards
+                $('.add-more-j2').on('click', function (e) {
+                    e.preventDefault();
 
-            // Create new variable card HTML structure
-            const newVariableCard10 = `
+                    // Create new variable card HTML structure
+                    const newVariableCard10 = `
                 <div class="more-j-name2 mb-2">
                                             <div class="mb-2">
                                                 <div class="d-flex justify-content-between">
@@ -3716,38 +3921,38 @@
                                         </div>
             `;
 
-            // Append the new variable card to the .variables-wrapper
-            $('.more-j-wrapper2').append(newVariableCard10);
+                    // Append the new variable card to the .variables-wrapper
+                    $('.more-j-wrapper2').append(newVariableCard10);
 
-            // Update the pair numbers
-            updatePairNumbers10();
-        });
+                    // Update the pair numbers
+                    updatePairNumbers10();
+                });
 
-        // Event handler for removing variable cards
-        $(document).on('click', '.remove-more-j2', function () {
-            // Remove the parent .variable-card
-            $(this).closest('.more-j-name2').remove();
+                // Event handler for removing variable cards
+                $(document).on('click', '.remove-more-j2', function () {
+                    // Remove the parent .variable-card
+                    $(this).closest('.more-j-name2').remove();
 
-            // Update the pair numbers after removal
-            updatePairNumbers10();
-        });
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        // Function to update the numbers of each Pair
-        function updatePairNumbers11() {
-            $('.more-c-name2').each(function (index) {
-                $(this).find('label span').text(index + 1);
+                    // Update the pair numbers after removal
+                    updatePairNumbers10();
+                });
             });
-        }
+        </script>
+        <script>
+            $(document).ready(function () {
+                // Function to update the numbers of each Pair
+                function updatePairNumbers11() {
+                    $('.more-c-name2').each(function (index) {
+                        $(this).find('label span').text(index + 1);
+                    });
+                }
 
-        // Event handler for adding new variable cards
-        $('.add-more-c2').on('click', function (e) {
-            e.preventDefault();
+                // Event handler for adding new variable cards
+                $('.add-more-c2').on('click', function (e) {
+                    e.preventDefault();
 
-            // Create new variable card HTML structure
-            const newVariableCard11 = `
+                    // Create new variable card HTML structure
+                    const newVariableCard11 = `
                     <div class="more-c-name2 mb-2">
                                                 <div class="mb-2">
                                                     <div class="d-flex justify-content-between">
@@ -3762,46 +3967,46 @@
                                             </div>
                 `;
 
-            // Append the new variable card to the .variables-wrapper
-            $('.more-c-wrapper2').append(newVariableCard11);
+                    // Append the new variable card to the .variables-wrapper
+                    $('.more-c-wrapper2').append(newVariableCard11);
 
-            // Update the pair numbers
-            updatePairNumbers11();
-        });
+                    // Update the pair numbers
+                    updatePairNumbers11();
+                });
 
-        // Event handler for removing variable cards
-        $(document).on('click', '.remove-more-c2', function () {
-            // Remove the parent .variable-card
-            $(this).closest('.more-c-name2').remove();
+                // Event handler for removing variable cards
+                $(document).on('click', '.remove-more-c2', function () {
+                    // Remove the parent .variable-card
+                    $(this).closest('.more-c-name2').remove();
 
-            // Update the pair numbers after removal
-            updatePairNumbers11();
-        });
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        // Function to update the numbers of each Pair
-        function updatePairNumbers12() {
-            $('.more-m2').each(function (index) {
-                $(this).find('h3 span').text(index + 1);
+                    // Update the pair numbers after removal
+                    updatePairNumbers11();
+                });
             });
-        }
+        </script>
+        <script>
+            $(document).ready(function () {
+                // Function to update the numbers of each Pair
+                function updatePairNumbers12() {
+                    $('.more-m2').each(function (index) {
+                        $(this).find('h3 span').text(index + 1);
+                    });
+                }
 
-        // Event handler for adding new variable cards
-        $('.add-m-more2').on('click', function (e) {
-            e.preventDefault();
+                // Event handler for adding new variable cards
+                $('.add-m-more2').on('click', function (e) {
+                    e.preventDefault();
 
-            // Create new variable card HTML structure
-            const newVariableCard12 = `
+                    // Create new variable card HTML structure
+                    const newVariableCard12 = `
        <div class="more-m2 mb-2">
-                                        <div class="Smartvariable-card">
+                                        <div class="Smartvariable-card2">
                                             <div class="d-flex justify-content-between align-items-center mb-1">
                                                 <div>
                                                     <h3>Pair <span></span></h3>
                                                 </div>
                                                 <div>
-                                                    <i class="bi bi-trash-fill remove-m"></i>
+                                                    <i class="bi bi-trash-fill remove-more remove-m2"></i>
                                                 </div>
                                             </div>
                                             <div class="mb-2">
@@ -3818,23 +4023,82 @@
                                     </div>
     `;
 
-            // Append the new variable card to the .variables-wrapper
-            $('.more-m-wrapper2').append(newVariableCard12);
+                    // Append the new variable card to the .variables-wrapper
+                    $('.more-m-wrapper2').append(newVariableCard12);
 
-            // Update the pair numbers
-            updatePairNumbers12();
-        });
+                    // Update the pair numbers
+                    updatePairNumbers12();
+                });
 
-        // Event handler for removing variable cards
-        $(document).on('click', '.remove-more-m2', function () {
-            // Remove the parent .variable-card
-            $(this).closest('.more-m2').remove();
+                // Event handler for removing variable cards
+                $(document).on('click', '.remove-m2', function () {
+                    // Remove the parent .variable-card
+                    $(this).closest('.more-m2').remove();
 
-            // Update the pair numbers after removal
-            updatePairNumbers12();
-        });
-    });
-</script>
+                    // Update the pair numbers after removal
+                    updatePairNumbers12();
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                // Function to update the numbers of each Pair
+                function updatePairNumbers13() {
+                    $('.more-m3').each(function (index) {
+                        // Update the span inside the h3 with the correct pair number
+                        $(this).find('h3 span').text(index + 1);
+                    });
+                }
+
+                // Event handler for adding new variable cards
+                $('.add-m-more3').on('click', function (e) {
+                    e.preventDefault();
+
+                    // Create new variable card HTML structure
+                    const newVariableCard13 = `
+                <div class="more-m3 mb-2">
+                    <div class="Smartvariable-card2">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <div>
+                                <h3>Pair <span></span></h3>
+                            </div>
+                            <div>
+                                <i class="bi bi-trash-fill remove-more remove-m3"></i>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="" class="form-label text mb-0">Field</label>
+                            <input type="text" class="w-100 searchbar" name="" id="" placeholder="Enter Field..." />
+                        </div>
+                        <div class="">
+                            <label for="" class="form-label text mb-0">Output</label>
+                            <input type="text" class="w-100 searchbar" name="" id="" placeholder="Enter Output..." />
+                        </div>
+                    </div>
+                </div>
+            `;
+
+                    // Append the new variable card to the .more-m-wrapper3
+                    $('.more-m-wrapper3').append(newVariableCard13);
+
+                    // Update the pair numbers
+                    updatePairNumbers13();
+                });
+
+                // Event handler for removing variable cards
+                $(document).on('click', '.remove-m3', function () {
+                    // Remove the parent .more-m3 card
+                    $(this).closest('.more-m3').remove();
+
+                    // Update the pair numbers after removal
+                    updatePairNumbers13();
+                });
+
+                // Initially update the pair numbers on page load for pre-existing cards
+                updatePairNumbers13();
+            });
+        </script>
 </body>
 
 </html>

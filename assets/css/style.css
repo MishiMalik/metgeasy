@@ -454,7 +454,24 @@ body {
     padding: 6px 12px;
     border-top: none;
   }
-
+.faq-card{
+    padding:40px 30px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.faq-img{
+    height: 200px;
+    width: auto;
+}
+.faq-card h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.faq-card p{
+    font-size: 14px;
+}
   .faq-list {
     padding: 0 100px;
   }
@@ -578,7 +595,15 @@ body {
 }
 
 @media only screen and (max-width:767px) {
-
+    .faq-card h3{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .faq-card p{
+        font-size: 14px;
+        text-align: center;
+    }
     .feature-table {
         min-width: 800;
     }
