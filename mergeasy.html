@@ -134,7 +134,7 @@
 
 
                         <li class="nav-item position-relative">
-                            <a class="nav-link dropdownMenu-link">About <img src="assets/images/arro.svg" alt=""
+                            <a class="nav-link dropdownMenu-link">More <img src="assets/images/arro.svg" alt=""
                                     class="arrow-icon"></a>
                             <div class="dropdownMenu dropdownMenu2 bg-white shadow-sm">
                                 <div class="mb-2">
@@ -284,12 +284,40 @@
                     </div>
                     <div class="col-xl-6 col-lg-5 mx-auto  ">
                         <!-- <img src="assets/images/hero-image.webp" alt="" class="img-fluid shadow rounded-1 mt-lg-4"> -->
-                        <div class="banner-video mx-auto d-flex justify-content-center ">
-                            <!-- <img src="assets/images/video-frame.png" alt="video" class="img-fluid video-desktop"> -->
+                        <!-- <div class="banner-video mx-auto d-flex justify-content-center ">
                             <video class="banner-video-b border shadow rounded-2" controls autoplay loop >
                                 <source src="https://mergeasy.com/dist/images/video.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                        </div> -->
+                        <button class="about-video bg-transparent border-0 position-relative p-0" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <img src="assets/images/hero-image.webp" alt="" class="img-fluid rounded-2">
+                            <div class="play-icon">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg p-0">
+                                <div class="modal-content p-0 bg-transparent border-0">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <i class="bi bi-x-circle"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <video class="banner-video-b border shadow rounded-2" controls  loop >
+                                            <source src="https://mergeasy.com/dist/images/video.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <!-- <iframe class="w-100" style="height:400px;" frameborder="0" allowfullscreen=""
+                                            src="https://www.youtube.com/embed/1MTkZPys7mU?feature=oembed?playlist=1MTkZPys7mU&amp;mute=0&amp;autoplay=0&amp;loop=no&amp;controls=0&amp;start=0&amp;end="></iframe> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,7 +407,10 @@
                         </h2>
                         <p class="text2">
                             Unleash intelligent inquiries for instant insights into your uploaded documents.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis eum modi sunt, placeat mollitia, doloremque, numquam necessitatibus ipsam impedit qui rerum molestias adipisci. Accusantium, numquam facilis fugiat adipisci consequuntur unde aliquid repellat sint fugit ea, vero iusto porro deleniti voluptate.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis eum modi sunt, placeat
+                            mollitia, doloremque, numquam necessitatibus ipsam impedit qui rerum molestias adipisci.
+                            Accusantium, numquam facilis fugiat adipisci consequuntur unde aliquid repellat sint fugit
+                            ea, vero iusto porro deleniti voluptate.
                         </p>
                     </div>
                     <div class="col-lg-7 mt-lg-0 mt-3 mx-auto">
@@ -472,7 +503,7 @@
         </section>
         <section class="py-lg-5 py-4 ">
             <div class="container">
-                <div class="row">
+                <div class="row border-bottom">
                     <div class="col-lg-12 mb-3 text-center">
                         <span class="title">Types</span>
                         <h2 class="main-heading ">
@@ -644,7 +675,98 @@
             </div>
         </section>
 
+        <section class="py-lg-5 py-4 ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <span class="title">Frequently Asked Questions
+                        </span>
+                        <h2 class="main-heading text-black mt-1">
+                          MergDoc FAQs
+                        </h2>
+                        <div class="faq-list p-0 mt-3">
+                            <ul>
+                                <li class="border-bottom rounded-0">
+                                    <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-1" class="collapsed">
+                                        What is Mergeasy?
+                                        <i class="fa fa-sm fa-angle-down icon-show" aria-hidden="true"></i>
+                                        <i class="fa fa-sm fa-angle-up icon-close"></i>
+                                    </a>
+                                    <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                            Mergeasy is a digital solution that streamlines document signing, calling,
+                                            and management processes with services like MergeSign and MergeCall, helping
+                                            businesses manage contracts, calls, and workflow efficiently.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="border-bottom rounded-0">
+                                    <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-1" class="collapsed">
+                                        What is Mergeasy?
+                                        <i class="fa fa-sm fa-angle-down icon-show" aria-hidden="true"></i>
+                                        <i class="fa fa-sm fa-angle-up icon-close"></i>
+                                    </a>
+                                    <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                            Mergeasy is a digital solution that streamlines document signing, calling,
+                                            and management processes with services like MergeSign and MergeCall, helping
+                                            businesses manage contracts, calls, and workflow efficiently.
+                                        </p>
+                                    </div>
+                                </li>
+                               
+                                <li class="border-bottom rounded-0">
+                                    <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-9" class="collapsed">
+                                        How does MergeSign work?
+                                        <i class="fa fa-sm fa-angle-down icon-show" aria-hidden="true"></i>
+                                        <i class="fa fa-sm fa-angle-up icon-close"></i>
+                                    </a>
+                                    <div id="faq-list-9" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                            MergeSign allows users to digitally sign documents quickly and securely. The
+                                            platform offers e-signature services that are legally binding and fully
+                                            encrypted for safety.
+                                        </p>
+                                    </div>
+                                </li>
 
+                                <li class="border-bottom rounded-0">
+                                    <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">
+                                        What is MergeCall?
+                                        <i class="fa fa-sm fa-angle-down icon-show" aria-hidden="true"></i>
+                                        <i class="fa fa-sm fa-angle-up icon-close"></i>
+                                    </a>
+                                    <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                            MergeCall enables users to connect with their clients through secure,
+                                            recorded calls. These calls are integrated with your workflow and can be
+                                            easily managed through the Mergeasy platform.
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="mt-4 ">
+                            <a href="contact.php" class="animated-button1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                               View All
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mx-auto">
+                        <img src="assets/images/Questions-pana.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="bg-light ">
             <div class="container">
                 <div class="row">
@@ -685,10 +807,9 @@
                                                 class="partner-img"></a>
                                     </div>
                                     <div class="item shadow-sm">
-                                        <a href=""
-                                        ><img src="assets/images/partners/salesforce.png" alt=""
+                                        <a href=""><img src="assets/images/partners/salesforce.png" alt=""
                                                 class="partner-img">
-                                            </a>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

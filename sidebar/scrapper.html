@@ -314,48 +314,59 @@
         }
 
         .cat {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 500;
             width: fit-content;
-            padding: 2px 5px;
+            padding: 2px 3px;
             border-radius: 7px;
             border: none;
             margin-right: 7px;
             margin-bottom: 8px;
         }
 
+        .active-cat {
+            background-color: transparent !important;
+        }
+
         .gray {
             background-color: #E6F0F9;
+            border: 1px solid #E6F0F9;
             color: #697A82;
         }
 
         .blue {
             background-color: #BDEEFF;
+            border: 1px solid #BDEEFF;
             color: #557C99;
         }
 
         .green {
             background-color: #ECFCD9;
+            border: 1px solid #ECFCD9;
             color: #7B9C65;
         }
 
         .pink {
             background-color: #FAF3FE;
+            border: 1px solid #FAF3FE;
             color: #C592DA;
         }
 
         .red {
             background-color: #E6F0F9;
+            border: 1px solid #E6F0F9;
             color: #BE9E93;
         }
 
         .purple {
             background-color: #F1E1FE;
+            border: 1px solid #F1E1FE;
             color: #916E9C;
         }
 
         .orange {
             background-color: #FBF3E3;
+            border: 1px solid #FBF3E3;
             color: #CD9F8B;
         }
 
@@ -703,32 +714,25 @@
                         <input type="search" name id class="w-100 searchbar" placeholder="Search or ask anything...">
                     </div>
                     <div class="mt-2 categories">
-                        <button class="gray cat">
-                            Core
-                        </button>
-                        <button class="blue cat">
-                            Loaders
-                        </button>
-                        <button class="green cat">
-                            Using AI ✨
-                        </button>
-                        <button class="orange cat">
-                            Modifiers
-                        </button>
-                        <button class="red cat">
-                            Writers
-                        </button>
-                        <button class="purple cat">
-                            Control Flow
-                        </button>
-                        <button class="pink cat">
-                            Advance
-                        </button>
+                        <button class="gray cat" id="cat-ai" onclick="toggleFeature('ai')">AI 🤖</button>
+                        <button class="green cat" id="cat-emails" onclick="toggleFeature('emails')">Emails
+                            💌</button>
+                        <button class="orange cat" id="cat-search" onclick="toggleFeature('search')">Search
+                            🔎</button>
+                        <button class="purple cat" id="cat-scrap" onclick="toggleFeature('scrap')">Scraping
+                            😈</button>
+                        <button class="red cat" id="cat-integ" onclick="toggleFeature('integ')">Integrations
+                            🔗</button>
+                        <button class="pink cat" id="cat-auto" onclick="toggleFeature('auto')">Automation
+                            🧞‍♂</button>
+                        <button class="blue cat" id="cat-enrich" onclick="toggleFeature('enrich')">Enrichment
+                            ✨</button>
                     </div>
 
                     <div class="features-list mt-2 ">
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showAiPage()">
+                        <div class="card-bg mb-2 shadow-sm ai-category search-category" onclick="showAiPage()"
+                            id="card-ai-1">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
@@ -758,7 +762,7 @@
 
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showGooglePage()">
+                        <div class="card-bg mb-2 shadow-sm search-category" onclick="showGooglePage()" id="card-search">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
@@ -789,7 +793,7 @@
 
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showScrapperPage()">
+                        <div class="card-bg mb-2 shadow-sm scrap-category" onclick="showScrapperPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
@@ -800,13 +804,16 @@
                                         </div>
                                         <div class>
                                             <div class="d-flex align-items-start justify-content-between">
-                                                <h3 class="heading-secondry ">Scrape a URL</h3>
+                                                <h3 class="heading-secondry ">Scrape
+                                                    a URL</h3>
                                                 <div class="credit-number ">
                                                     <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
                                                         alt>&nbsp;<span>3</span>
                                                 </div>
                                             </div>
-                                            <p class="text mb-0 pb-0">Run a Zenrows scrape on any URL and retrieve the
+                                            <p class="text mb-0 pb-0">Run a
+                                                Zenrows scrape on any URL
+                                                and retrieve the
                                                 results.</p>
                                         </div>
                                     </div>
@@ -816,7 +823,7 @@
 
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showCompaignPage()">
+                        <div class="card-bg mb-2 shadow-sm integ-category" onclick="showCompaignPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
@@ -847,7 +854,7 @@
 
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showCompaignSmartleadPage()">
+                        <div class="card-bg mb-2 shadow-sm integ-category" onclick="showCompaignSmartleadPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
@@ -877,7 +884,7 @@
                             </a>
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showValidateEmailPage()">
+                        <div class="card-bg mb-2 shadow-sm emails-category" onclick="showValidateEmailPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex align-items-start">
@@ -907,7 +914,8 @@
 
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showWorkEmailPage()">
+                        <div class="card-bg mb-2 shadow-sm emails-category enrich-category"
+                            onclick="showWorkEmailPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div4">
@@ -939,7 +947,7 @@
 
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showLinkedinProfilePage()">
+                        <div class="card-bg mb-2 shadow-sm enrich-category" onclick="showLinkedinProfilePage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
@@ -966,7 +974,7 @@
 
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showLinkedinCompanyPage()">
+                        <div class="card-bg mb-2 shadow-sm enrich-category" onclick="showLinkedinCompanyPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
@@ -992,7 +1000,7 @@
                             </a>
                         </div>
 
-                        <div class="card-bg mb-2 shadow-sm" onclick="showApifyPage()">
+                        <div class="card-bg mb-2 shadow-sm integ-category scrap-category" onclick="showApifyPage()">
                             <a class="text-decoration-none">
                                 <div class="d-flex align-items-start">
                                     <div class="feature-icon-div">
@@ -1020,7 +1028,6 @@
                                 </div>
                             </a>
                         </div>
-
 
                         <!-- <div class="card-bg  mb-3 shadow-sm ">
                         <a href="" class="text-decoration-none">
@@ -1328,7 +1335,7 @@
             <hr>
 
             <div class="d-flex justify-content-between mt-3">
-                <a href="" class="d-flex align-items-center text-decoration-none">
+                <a href class="d-flex align-items-center text-decoration-none">
                     <div class="upgrade-icon">
                         <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                     </div>
@@ -1336,7 +1343,7 @@
                         100/100 Credits left
                     </div>
                 </a>
-                <a href="" class="d-flex align-items-center text-decoration-none">
+                <a href class="d-flex align-items-center text-decoration-none">
                     <div class="upgrade-text ">
                         <div>Free Credits</div>
                     </div>
@@ -1568,8 +1575,8 @@
                 <div class="progress-container">
                     <div id="progress-bar" class="progress-bar"></div>
                 </div>
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -1577,7 +1584,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -1676,8 +1683,8 @@
                 <!-- <div class="progress-container">
                     <div id="progress-bar" class="progress-bar"></div>
                 </div> -->
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -1685,7 +1692,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -1715,13 +1722,16 @@
                                 </div>
                                 <div class>
                                     <div class="d-flex align-items-start justify-content-between">
-                                        <h3 class="heading-secondry">Scrape a URL. </h3>
+                                        <h3 class="heading-secondry">Scrape
+                                            a URL. </h3>
                                         <div class="credit-number ">
                                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
                                                 alt>&nbsp;<span>3</span>
                                         </div>
                                     </div>
-                                    <p class="text mb-0 pb-0">Run a Zenrows scrape on any URL and retrieve the results.
+                                    <p class="text mb-0 pb-0">Run a Zenrows
+                                        scrape on any URL and retrieve the
+                                        results.
                                     </p>
                                     <a href class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch
                                         Full
@@ -1760,8 +1770,8 @@
                     <div class="progress-bar"></div>
                 </button>
 
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -1769,7 +1779,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -1874,7 +1884,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
-                                        <input type="email" name id class="w-100 searchbar"
+                                        <input type="text" name id class="w-100 searchbar"
                                             placeholder="Enter First Name...">
                                     </div>
                                 </div>
@@ -1891,7 +1901,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
-                                        <input type="email" name id class="w-100 searchbar"
+                                        <input type="text" name id class="w-100 searchbar"
                                             placeholder="Enter Last Name...">
                                     </div>
                                 </div>
@@ -1909,7 +1919,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
-                                        <input type="email" name id class="w-100 searchbar"
+                                        <input type="text" name id class="w-100 searchbar"
                                             placeholder="Enter Company Name...">
                                     </div>
                                 </div>
@@ -1926,7 +1936,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
-                                        <input type="email" name id class="w-100 searchbar" placeholder="Enter ...">
+                                        <input type="text" name id class="w-100 searchbar" placeholder="Enter ...">
                                     </div>
                                 </div>
                             </div>
@@ -1960,8 +1970,8 @@
                     <div class="progress-bar"></div>
                 </button>
 
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -1969,7 +1979,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -2063,16 +2073,16 @@
                 </div>
                 <div>
 
-                    <div class="accordion mt-3 mb-2" id="accordionExample">
+                    <div class="accordion mt-3 mb-2" id="accordionExample-2">
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
+                            <h2 class="accordion-header" id="heading33">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
                                     First Name
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapse33" class="accordion-collapse collapse " aria-labelledby="heading33"
+                                data-bs-parent="#accordionExample-2">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
                                         <input type="text" name id class="w-100 searchbar"
@@ -2082,14 +2092,14 @@
                             </div>
                         </div>
                         <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading2">
+                            <h2 class="accordion-header" id="heading34">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
                                     Last Name
                                 </button>
                             </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34"
+                                data-bs-parent="#accordionExample-2">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
                                         <input type="text" name id class="w-100 searchbar"
@@ -2099,14 +2109,14 @@
                             </div>
                         </div>
                         <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading3">
+                            <h2 class="accordion-header" id="heading35">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
                                     Company Name
                                 </button>
                             </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35"
+                                data-bs-parent="#accordionExample-2">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
                                         <input type="text" name id class="w-100 searchbar"
@@ -2116,14 +2126,14 @@
                             </div>
                         </div>
                         <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading4">
+                            <h2 class="accordion-header" id="heading36">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
                                     Personalization
                                 </button>
                             </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="heading36"
+                                data-bs-parent="#accordionExample-2">
                                 <div class="accordion-body p-0 mb-2 mt-1">
                                     <div class="search-input ">
                                         <input type="text" name id class="w-100 searchbar" placeholder="Enter ...">
@@ -2132,15 +2142,15 @@
                             </div>
                         </div>
                         <div class="accordion-item mt-1">
-                            <h2 class="accordion-header" id="heading5">
+                            <h2 class="accordion-header" id="heading37">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
                                     Custom Variables
                                 </button>
                             </h2>
 
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
-                                data-bs-parent="#accordionExample">
+                            <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37"
+                                data-bs-parent="#accordionExample-2">
                                 <div class="Smartleadvariables-wrapper">
 
                                 </div>
@@ -2160,8 +2170,8 @@
                     <div class="progress-bar"></div>
                 </button>
 
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -2169,7 +2179,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -2199,15 +2209,18 @@
                                 </div>
                                 <div class>
                                     <div class="d-flex align-items-start justify-content-between">
-                                        <h3 class="heading-secondry"> Validate Email
+                                        <h3 class="heading-secondry">
+                                            Validate Email
                                         </h3>
                                         <div class="credit-number ">
                                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
                                                 alt>&nbsp;<span>3</span>
                                         </div>
                                     </div>
-                                    <p class="text mb-0 pb-0">Determine if an email address has a valid inbox (+
-                                        catchall verification)</p>
+                                    <p class="text mb-0 pb-0">Determine if
+                                        an email address has a valid inbox
+                                        (+
+                                        catchall verification)</p>
                                     <a href class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch
                                         Full
                                         Tutorial</a>
@@ -2241,8 +2254,8 @@
                     <div class="progress-bar"></div>
                 </button>
 
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -2250,7 +2263,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -2357,8 +2370,8 @@
                     <div class="progress-bar"></div>
                 </button>
 
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -2366,7 +2379,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -2588,10 +2601,14 @@
                                                             placeholder="Enter Field..." /> -->
                                                     <div class="search-input  output-div w-100">
                                                         <select class="form-select form-select searchbar w-100" name id>
-                                                            <option selected>Select Field</option>
-                                                            <option value>Field 1</option>
-                                                            <option value>Field 2</option>
-                                                            <option value>Field 3</option>
+                                                            <option selected>Select
+                                                                Field</option>
+                                                            <option value>Field
+                                                                1</option>
+                                                            <option value>Field
+                                                                2</option>
+                                                            <option value>Field
+                                                                3</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -2617,8 +2634,8 @@
                     <span>Enrich ✨</span>
                     <div class="progress-bar"></div>
                 </button>
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -2626,7 +2643,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -2641,7 +2658,6 @@
                 </div>
             </div>
         </div>
-
 
         <!--LinkedIn_logo_initials.png Screen -->
         <div id="linkedin-company-screen" class="details">
@@ -2658,8 +2674,8 @@
                                 </div>
                                 <div class>
                                     <div class="d-flex align-items-start justify-content-between">
-                                        <h3 class="heading-secondry">Enrich Linkedin Company URL
-
+                                        <h3 class="heading-secondry">Enrich
+                                            Linkedin Company URL
 
                                         </h3>
 
@@ -2668,7 +2684,9 @@
                                                 alt>&nbsp;<span>3</span>
                                         </div>
                                     </div>
-                                    <p class="text mb-0 pb-0"> Enrich a company's data using their LinkedIn company URL
+                                    <p class="text mb-0 pb-0"> Enrich a
+                                        company's data using their LinkedIn
+                                        company URL
                                     </p>
                                     <a href class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch
                                         Full
@@ -2845,10 +2863,14 @@
                                                     <label for class="form-label text mb-0">Field</label>
                                                     <div class="search-input  output-div w-100">
                                                         <select class="form-select form-select searchbar w-100" name id>
-                                                            <option selected>Select Field</option>
-                                                            <option value>Field 1</option>
-                                                            <option value>Field 2</option>
-                                                            <option value>Field 3</option>
+                                                            <option selected>Select
+                                                                Field</option>
+                                                            <option value>Field
+                                                                1</option>
+                                                            <option value>Field
+                                                                2</option>
+                                                            <option value>Field
+                                                                3</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -2875,8 +2897,8 @@
                     <div class="progress-bar"></div>
                 </button>
 
-                <div class="d-flex justify-content-between mt-3">
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
                             <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                         </div>
@@ -2884,7 +2906,7 @@
                             100/100 Credits left
                         </div>
                     </a>
-                    <a href="" class="d-flex align-items-center text-decoration-none">
+                    <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-text ">
                             <div>Free Credits</div>
                         </div>
@@ -2900,7 +2922,6 @@
             </div>
         </div>
 
-
         <!--apify Screen -->
         <div id="apify-screen" class="details">
 
@@ -2915,9 +2936,8 @@
                                 </div>
                                 <div class>
                                     <div class="d-flex align-items-start justify-content-between">
-                                        <h3 class="heading-secondry">Get Data from Apify
-
-
+                                        <h3 class="heading-secondry">Get
+                                            Data from Apify
 
                                         </h3>
 
@@ -2926,8 +2946,11 @@
                                                 alt>&nbsp;<span>3</span>
                                         </div>
                                     </div>
-                                    <p class="text mb-0 pb-0"> ERetrieve dataset details from an Apify actor and export
-                                        the results directly to your Google Sheet
+                                    <p class="text mb-0 pb-0"> ERetrieve
+                                        dataset details from an Apify actor
+                                        and export
+                                        the results directly to your Google
+                                        Sheet
                                     </p>
                                     <a href class="tutorial"><i class="bi bi-play-circle"></i>&nbsp;Watch
                                         Full
@@ -2989,12 +3012,12 @@
                     <button class="w-100 add-more add-m-more3 ">+
                         Add More</button>
 
-                    <button class="megic-btn mt-3" id="apify-btn">
+                    <button class="megic-btn mt-3" id="apifyBtn">
                         <span>Launch ✨</span>
                         <div class="progress-bar"></div>
                     </button>
-                    <div class="d-flex justify-content-between mt-3">
-                        <a href="" class="d-flex align-items-center text-decoration-none">
+                    <div class="d-flex justify-content-between mt-3 mb-2">
+                        <a href class="d-flex align-items-center text-decoration-none">
                             <div class="upgrade-icon">
                                 <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt>&nbsp;&nbsp;
                             </div>
@@ -3002,7 +3025,7 @@
                                 100/100 Credits left
                             </div>
                         </a>
-                        <a href="" class="d-flex align-items-center text-decoration-none">
+                        <a href class="d-flex align-items-center text-decoration-none">
                             <div class="upgrade-text ">
                                 <div>Free Credits</div>
                             </div>
@@ -3010,7 +3033,7 @@
                                 &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                             </div>
                         </a>
-
+    
                     </div>
                     <div class>
                         <button class="w-100  upgrade-btn">UPGRADE</button>
@@ -3032,6 +3055,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
         integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <!-- home tabs -->
     <script>
         function homePage(evt, cityName) {
             var i, tabcontent, tablinks;
@@ -3049,6 +3073,7 @@
         document.getElementById("defaultOpen").click();
 
     </script>
+    <!-- add to fav on home -->
     <script>
         $(document).ready(function () {
             $('.toggle-star').on('click', function (e) {
@@ -3058,6 +3083,7 @@
 
         });
     </script>
+    <!-- add fav in ai -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const stars = document.querySelectorAll('.toggle-star');
@@ -3082,6 +3108,7 @@
             });
         });
     </script>
+    <!-- functions to toggle screens on card clicks -->
     <script>
         // Function to show the details page and hide the home screen
         function showAiPage() {
@@ -3282,6 +3309,7 @@
         }
     </script>
 
+    <!-- Buttons progress -->
     <script>
         document.getElementById("submitBtn").addEventListener("click", function () {
             const btn = this;
@@ -3307,9 +3335,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("MegicBtn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3334,8 +3359,6 @@
 
 
 
-    </script>
-    <script>
         document.getElementById("ScrapBtn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3359,9 +3382,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("leadBtn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3385,9 +3405,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("SmartleadBtn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3411,9 +3428,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("VerifyBtn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3437,9 +3451,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("linkedinBtn1").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3462,10 +3473,6 @@
             }, 2100);
         });
 
-
-
-    </script>
-    <script>
         document.getElementById("linkedinBtn2").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3489,9 +3496,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("apifyBtn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3515,9 +3519,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("emailBtn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3541,9 +3542,6 @@
         });
 
 
-
-    </script>
-    <script>
         document.getElementById("apify-btn").addEventListener("click", function () {
             const btn = this;
             const progressBar = btn.querySelector(".progress-bar");
@@ -3678,38 +3676,38 @@
     <script>
         $(document).ready(function () {
             // Function to update the numbers of each Pair
-            function updatePairNumbers3() {
-                $('.more-f-name').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // function updatePairNumbers3() {
+            //     $('.more-f-name').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-f').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-f').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard3 = `
-                        <div class="more-f-name mb-2">
-                                                    <div class="mb-2">
-                                                        <div class="d-flex justify-content-between">
-                                                            <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                            <div>
-                                                                <i class="bi bi-trash-fill remove-more remove-more-f"></i>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="w-100 searchbar" name="" id=""
-                                                            placeholder="Enter First Name..." />
-                                                    </div>
-                                                </div>
-                    `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard3 = `
+            //             <div class="more-f-name mb-2">
+            //                                         <div class="mb-2">
+            //                                             <div class="d-flex justify-content-between">
+            //                                                 <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                                 <div>
+            //                                                     <i class="bi bi-trash-fill remove-more remove-more-f"></i>
+            //                                                 </div>
+            //                                             </div>
+            //                                             <input type="text" class="w-100 searchbar" name="" id=""
+            //                                                 placeholder="Enter First Name..." />
+            //                                         </div>
+            //                                     </div>
+            //         `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-f-wrapper').append(newVariableCard3);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-f-wrapper').append(newVariableCard3);
 
-                // Update the pair numbers
-                updatePairNumbers3();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers3();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-f', function () {
@@ -3717,45 +3715,45 @@
                 $(this).closest('.more-f-name').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers3();
+                // updatePairNumbers3();
             });
         });
     </script>
     <script>
         $(document).ready(function () {
-            // Function to update the numbers of each Pair
-            function updatePairNumbers4() {
-                $('.more-l-name').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // // Function to update the numbers of each Pair
+            // function updatePairNumbers4() {
+            //     $('.more-l-name').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-l').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-l').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard4 = `
-                        <div class="more-l-name mb-2">
-                                                    <div class="mb-2">
-                                                        <div class="d-flex justify-content-between">
-                                                            <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                            <div>
-                                                                <i class="bi bi-trash-fill remove-more remove-more-l"></i>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="w-100 searchbar" name="" id=""
-                                                            placeholder="Enter Last Name..." />
-                                                    </div>
-                                                </div>
-                    `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard4 = `
+            //             <div class="more-l-name mb-2">
+            //                                         <div class="mb-2">
+            //                                             <div class="d-flex justify-content-between">
+            //                                                 <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                                 <div>
+            //                                                     <i class="bi bi-trash-fill remove-more remove-more-l"></i>
+            //                                                 </div>
+            //                                             </div>
+            //                                             <input type="text" class="w-100 searchbar" name="" id=""
+            //                                                 placeholder="Enter Last Name..." />
+            //                                         </div>
+            //                                     </div>
+            //         `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-l-wrapper').append(newVariableCard4);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-l-wrapper').append(newVariableCard4);
 
-                // Update the pair numbers
-                updatePairNumbers4();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers4();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-l', function () {
@@ -3763,45 +3761,45 @@
                 $(this).closest('.more-l-name').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers4();
+                // updatePairNumbers4();
             });
         });
     </script>
     <script>
         $(document).ready(function () {
-            // Function to update the numbers of each Pair
-            function updatePairNumbers5() {
-                $('.more-j-name').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // // Function to update the numbers of each Pair
+            // function updatePairNumbers5() {
+            //     $('.more-j-name').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-j').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-j').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard5 = `
-                        <div class="more-j-name mb-2">
-                                                    <div class="mb-2">
-                                                        <div class="d-flex justify-content-between">
-                                                            <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                            <div>
-                                                                <i class="bi bi-trash-fill remove-more remove-more-j"></i>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="w-100 searchbar" name="" id=""
-                                                            placeholder="Enter Job Title..." />
-                                                    </div>
-                                                </div>
-                    `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard5 = `
+            //             <div class="more-j-name mb-2">
+            //                                         <div class="mb-2">
+            //                                             <div class="d-flex justify-content-between">
+            //                                                 <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                                 <div>
+            //                                                     <i class="bi bi-trash-fill remove-more remove-more-j"></i>
+            //                                                 </div>
+            //                                             </div>
+            //                                             <input type="text" class="w-100 searchbar" name="" id=""
+            //                                                 placeholder="Enter Job Title..." />
+            //                                         </div>
+            //                                     </div>
+            //         `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-j-wrapper').append(newVariableCard5);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-j-wrapper').append(newVariableCard5);
 
-                // Update the pair numbers
-                updatePairNumbers5();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers5();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-j', function () {
@@ -3809,45 +3807,45 @@
                 $(this).closest('.more-j-name').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers5();
+                // updatePairNumbers5();
             });
         });
     </script>
     <script>
         $(document).ready(function () {
             // Function to update the numbers of each Pair
-            function updatePairNumbers6() {
-                $('.more-c-name').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // function updatePairNumbers6() {
+            //     $('.more-c-name').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-c').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-c').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard6 = `
-                            <div class="more-c-name mb-2">
-                                                        <div class="mb-2">
-                                                            <div class="d-flex justify-content-between">
-                                                                <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                                <div>
-                                                                    <i class="bi bi-trash-fill remove-more remove-more-c"></i>
-                                                                </div>
-                                                            </div>
-                                                            <input type="text" class="w-100 searchbar" name="" id=""
-                                                                placeholder="Enter Company..." />
-                                                        </div>
-                                                    </div>
-                        `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard6 = `
+            //                 <div class="more-c-name mb-2">
+            //                                             <div class="mb-2">
+            //                                                 <div class="d-flex justify-content-between">
+            //                                                     <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                                     <div>
+            //                                                         <i class="bi bi-trash-fill remove-more remove-more-c"></i>
+            //                                                     </div>
+            //                                                 </div>
+            //                                                 <input type="text" class="w-100 searchbar" name="" id=""
+            //                                                     placeholder="Enter Company..." />
+            //                                             </div>
+            //                                         </div>
+            //             `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-c-wrapper').append(newVariableCard6);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-c-wrapper').append(newVariableCard6);
 
-                // Update the pair numbers
-                updatePairNumbers6();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers6();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-c', function () {
@@ -3855,7 +3853,7 @@
                 $(this).closest('.more-c-name').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers6();
+                // updatePairNumbers6();
             });
         });
     </script>
@@ -3922,43 +3920,42 @@
         });
     </script>
 
-
     <!-- linkedin 2 -->
     <script>
         $(document).ready(function () {
             // Function to update the numbers of each Pair
-            function updatePairNumbers8() {
-                $('.more-f-name2').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // function updatePairNumbers8() {
+            //     $('.more-f-name2').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-f2').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-f2').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard8 = `
-                <div class="more-f-name2 mb-2">
-                                            <div class="mb-2">
-                                                <div class="d-flex justify-content-between">
-                                                    <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                    <div>
-                                                        <i class="bi bi-trash-fill remove-more remove-more-f2"></i>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="w-100 searchbar" name="" id=""
-                                                    placeholder="Enter First Name..." />
-                                            </div>
-                                        </div>
-            `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard8 = `
+            //     <div class="more-f-name2 mb-2">
+            //                                 <div class="mb-2">
+            //                                     <div class="d-flex justify-content-between">
+            //                                         <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                         <div>
+            //                                             <i class="bi bi-trash-fill remove-more remove-more-f2"></i>
+            //                                         </div>
+            //                                     </div>
+            //                                     <input type="text" class="w-100 searchbar" name="" id=""
+            //                                         placeholder="Enter First Name..." />
+            //                                 </div>
+            //                             </div>
+            // `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-f-wrapper2').append(newVariableCard8);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-f-wrapper2').append(newVariableCard8);
 
-                // Update the pair numbers
-                updatePairNumbers8();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers8();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-f2', function () {
@@ -3966,45 +3963,45 @@
                 $(this).closest('.more-f-name2').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers8();
+                // updatePairNumbers8();
             });
         });
     </script>
     <script>
         $(document).ready(function () {
             // Function to update the numbers of each Pair
-            function updatePairNumbers9() {
-                $('.more-l-name2').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // function updatePairNumbers9() {
+            //     $('.more-l-name2').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-l2').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-l2').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard9 = `
-                <div class="more-l-name2 mb-2">
-                                            <div class="mb-2">
-                                                <div class="d-flex justify-content-between">
-                                                    <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                    <div>
-                                                        <i class="bi bi-trash-fill remove-more remove-more-l"></i>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="w-100 searchbar" name="" id=""
-                                                    placeholder="Enter Last Name..." />
-                                            </div>
-                                        </div>
-            `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard9 = `
+            //     <div class="more-l-name2 mb-2">
+            //                                 <div class="mb-2">
+            //                                     <div class="d-flex justify-content-between">
+            //                                         <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                         <div>
+            //                                             <i class="bi bi-trash-fill remove-more remove-more-l"></i>
+            //                                         </div>
+            //                                     </div>
+            //                                     <input type="text" class="w-100 searchbar" name="" id=""
+            //                                         placeholder="Enter Last Name..." />
+            //                                 </div>
+            //                             </div>
+            // `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-l-wrapper2').append(newVariableCard9);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-l-wrapper2').append(newVariableCard9);
 
-                // Update the pair numbers
-                updatePairNumbers9();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers9();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-l2', function () {
@@ -4012,45 +4009,45 @@
                 $(this).closest('.more-l-name2').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers9();
+                // updatePairNumbers9();
             });
         });
     </script>
     <script>
         $(document).ready(function () {
             // Function to update the numbers of each Pair
-            function updatePairNumbers10() {
-                $('.more-j-name2').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // function updatePairNumbers10() {
+            //     $('.more-j-name2').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-j2').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-j2').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard10 = `
-                <div class="more-j-name2 mb-2">
-                                            <div class="mb-2">
-                                                <div class="d-flex justify-content-between">
-                                                    <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                    <div>
-                                                        <i class="bi bi-trash-fill remove-more remove-more-j2"></i>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="w-100 searchbar" name="" id=""
-                                                    placeholder="Enter Job Title..." />
-                                            </div>
-                                        </div>
-            `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard10 = `
+            //     <div class="more-j-name2 mb-2">
+            //                                 <div class="mb-2">
+            //                                     <div class="d-flex justify-content-between">
+            //                                         <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                         <div>
+            //                                             <i class="bi bi-trash-fill remove-more remove-more-j2"></i>
+            //                                         </div>
+            //                                     </div>
+            //                                     <input type="text" class="w-100 searchbar" name="" id=""
+            //                                         placeholder="Enter Job Title..." />
+            //                                 </div>
+            //                             </div>
+            // `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-j-wrapper2').append(newVariableCard10);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-j-wrapper2').append(newVariableCard10);
 
-                // Update the pair numbers
-                updatePairNumbers10();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers10();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-j2', function () {
@@ -4058,45 +4055,45 @@
                 $(this).closest('.more-j-name2').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers10();
+                // updatePairNumbers10();
             });
         });
     </script>
     <script>
         $(document).ready(function () {
             // Function to update the numbers of each Pair
-            function updatePairNumbers11() {
-                $('.more-c-name2').each(function (index) {
-                    $(this).find('label span').text(index + 1);
-                });
-            }
+            // function updatePairNumbers11() {
+            //     $('.more-c-name2').each(function (index) {
+            //         $(this).find('label span').text(index + 1);
+            //     });
+            // }
 
-            // Event handler for adding new variable cards
-            $('.add-more-c2').on('click', function (e) {
-                e.preventDefault();
+            // // Event handler for adding new variable cards
+            // $('.add-more-c2').on('click', function (e) {
+            //     e.preventDefault();
 
-                // Create new variable card HTML structure
-                const newVariableCard11 = `
-                    <div class="more-c-name2 mb-2">
-                                                <div class="mb-2">
-                                                    <div class="d-flex justify-content-between">
-                                                        <label for="" class="form-label text mb-0">Output <span>1</span></label>
-                                                        <div>
-                                                            <i class="bi bi-trash-fill remove-more remove-more-c"></i>
-                                                        </div>
-                                                    </div>
-                                                    <input type="text" class="w-100 searchbar" name="" id=""
-                                                        placeholder="Enter Company..." />
-                                                </div>
-                                            </div>
-                `;
+            //     // Create new variable card HTML structure
+            //     const newVariableCard11 = `
+            //         <div class="more-c-name2 mb-2">
+            //                                     <div class="mb-2">
+            //                                         <div class="d-flex justify-content-between">
+            //                                             <label for="" class="form-label text mb-0">Output <span>1</span></label>
+            //                                             <div>
+            //                                                 <i class="bi bi-trash-fill remove-more remove-more-c"></i>
+            //                                             </div>
+            //                                         </div>
+            //                                         <input type="text" class="w-100 searchbar" name="" id=""
+            //                                             placeholder="Enter Company..." />
+            //                                     </div>
+            //                                 </div>
+            //     `;
 
-                // Append the new variable card to the .variables-wrapper
-                $('.more-c-wrapper2').append(newVariableCard11);
+            //     // Append the new variable card to the .variables-wrapper
+            //     $('.more-c-wrapper2').append(newVariableCard11);
 
-                // Update the pair numbers
-                updatePairNumbers11();
-            });
+            //     // Update the pair numbers
+            //     updatePairNumbers11();
+            // });
 
             // Event handler for removing variable cards
             $(document).on('click', '.remove-more-c2', function () {
@@ -4104,7 +4101,7 @@
                 $(this).closest('.more-c-name2').remove();
 
                 // Update the pair numbers after removal
-                updatePairNumbers11();
+                // updatePairNumbers11();
             });
         });
     </script>
@@ -4228,6 +4225,48 @@
             // Initially update the pair numbers on page load for pre-existing cards
             updatePairNumbers13();
         });
+    </script>
+    <!-- category toggle -->
+    <script>
+        function toggleFeature(category) {
+            // Get all category buttons and cards
+            let categoryButtons = document.querySelectorAll('.cat');
+            let featureCards = document.querySelectorAll('.features-list .card-bg');
+
+            // Get the clicked button and relevant cards
+            let clickedButton = document.getElementById('cat-' + category);
+            let relevantCards = document.querySelectorAll('.' + category + '-category');
+
+            // Check if the clicked button already has the active class
+            if (clickedButton.classList.contains('active-cat')) {
+                // Remove the active class
+                clickedButton.classList.remove('active-cat');
+
+                // Show all cards (reset state)
+                featureCards.forEach(function (card) {
+                    card.style.display = 'block';
+                });
+            } else {
+                // Remove active class from all buttons
+                categoryButtons.forEach(function (button) {
+                    button.classList.remove('active-cat');
+                });
+
+                // Add the active class to the clicked button
+                clickedButton.classList.add('active-cat');
+
+                // Hide all cards
+                featureCards.forEach(function (card) {
+                    card.style.display = 'none';
+                });
+
+                // Show only the relevant cards for the selected category
+                relevantCards.forEach(function (card) {
+                    card.style.display = 'block';
+                });
+            }
+        }
+
     </script>
 </body>
 
