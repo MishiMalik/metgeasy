@@ -693,6 +693,25 @@ body {
 
 
 @media only screen and (max-width:767px) {
+    .tab {
+        background-color:transparent;
+        flex-direction: column;
+      }
+      
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color:#F8F9FA;
+        margin-bottom: 10px
+      }
+    th{
+        font-size: 14px;
+        padding: 7px 3px;
+        font-weight: 500;
+    }
+    td{
+       font-size: 12px;
+       padding: 5px 3px;
+    }
     .demo-video-image{
         height: auto;
      }
@@ -719,8 +738,12 @@ body {
     }
 
     .services-title {
-        font-size: 22px;
+        font-size: 24px !important;
     }
+    .hero-text h1 {
+        font-size: 18px;
+    }
+    
 
     .merg-card h3 {
         font-size: 22px;
@@ -813,4 +836,12 @@ body {
     .partner .item{
         width: 100%;
     }
+     
+  .faq-list .icon-show,
+  .faq-list .icon-close {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 14px;
+  }
 }
