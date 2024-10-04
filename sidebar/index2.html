@@ -13,32 +13,68 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .position-relative {
-    position: relative;
-}
+            position: relative;
+        }
 
-#dropdown {
-    position: absolute;
-    top: 80px; /* Adjust to fit the location below the textarea */
-    left: 0; /* Align dropdown with the textarea */
-    z-index: 1000;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-height: 150px;
-    overflow-y: auto;
-    width: 100%;
-    padding: 5px;
-}
+        #dropdown {
+            position: absolute;
+            top: 80px;
+            /* Adjust to fit the location below the textarea */
+            left: 0;
+            /* Align dropdown with the textarea */
+            z-index: 1000;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            max-height: 150px;
+            overflow-y: auto;
+            width: 100%;
+            padding: 5px;
+        }
 
-#dropdown .dropdown-item {
-    padding: 10px;
-    cursor: pointer;
-}
+        #dropdown .dropdown-item {
+            padding: 10px;
+            cursor: pointer;
+        }
 
-#dropdown .dropdown-item:hover {
-    background-color: #f0f0f0;
-}
+        #dropdown .dropdown-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <style>
+        .sidebar {
+            width: 300px;
+        }
 
+        .condition-header {
+            font-size: 16px;
+            font-weight: 500;
+            color: black;
+            background-color: #f6f9fc !important;
+            border-radius: 0px !important;
+            box-shadow: none !important;
+            padding: 8px 10px !important;
+        }
+
+        .condition-body {
+            padding: 10px !important;
+        }
+
+        .run-condition h5 {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .add-condition p,
+        .run-condition p {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0px !important;
+            padding: 0px !important;
+            color: gray;
+        }
     </style>
 </head>
 
@@ -46,33 +82,34 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 mx-auto">
-
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="col-lg-10 mx-auto sidebar">
+                    <div class="accordion" id="accordionExample-111">
+                        <div class="accordion-item rounded-0 border-0">
+                            <h2 class="accordion-header " id="heading111">
+                                <button class="accordion-button condition-header border-0" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse111" aria-expanded="true"
+                                    aria-controls="collapse111">
                                     Run Settings
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="card m-3">
-                                        <div class="d-flex justify-content-between align-items-center p-3">
+                            <div id="collapse111" class="accordion-collapse collapse show" aria-labelledby="heading111"
+                                data-bs-parent="#accordionExample-111">
+                                <div class="accordion-body condition-body">
+                                    <div class="card run-condition border-0">
+                                        <div class="d-flex justify-content-between align-items-center ">
                                             <div>
                                                 <h5>Run Conditions</h5>
-                                                <p>Only Run this step if run conditions are met</p>
                                             </div>
-                                            <div>
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="flexSwitchCheckDefault" />
-                                                </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckDefault" />
                                             </div>
+
                                         </div>
-                                        <hr>
+                                        <div>
+
+                                            <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                                        </div>
                                         <!-- <div class="condition-on d-none p-3">
                                             <p class="mb-0 pb-0 condition-text-1">
                                                 NO Run Conditions are Added
@@ -84,7 +121,7 @@
                                     </div>
 
                                     <!-- Add Condition Card -->
-                                    <div class="card add-condition d-none m-3 p-3">
+                                    <div class="card add-condition d-none mt-2">
                                         <p class="mb-0 pb-0 no-condition-added">
                                             NO Run Conditions are Added
                                         </p>
@@ -170,12 +207,12 @@
                     </div>
 
                 </div>
-             
+
                 <div class="col-lg-10 mx-auto">
                     <div class="position-relative">
-                        <textarea id="searchbar" class="w-100 searchbar" placeholder="Write Prompt"></textarea>
+                        <textarea id="write-prompt" class="w-100 searchbar " placeholder="Write Prompt"></textarea>
                         <p class="text mb-0">Press # to select a variable cell</p>
-                        
+
                         <!-- Dropdown with options -->
                         <ul id="dropdown" class="dropdown-menu" style="display: none;">
                             <li><a class="dropdown-item" href="#">Option 1</a></li>
@@ -183,7 +220,7 @@
                             <li><a class="dropdown-item" href="#">Option 3</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -206,109 +243,143 @@
     <script>
         $(document).ready(function () {
             let clickCount = 0;
+            // Toggle .add-condition based on the specific switch for all instances
+            $(document).on('change', '.form-check-input', function () {
+                // Find the closest accordion body where the switch is located
+                const $accordionBody = $(this).closest('.accordion-body');
+                const $addConditionCard = $accordionBody.find('.add-condition');
 
-            // Toggle .condition-on based on the switch
-            $('#flexSwitchCheckDefault').on('change', function () {
-                $('.add-condition').toggleClass('d-none', !$(this).is(':checked'));
+                // Toggle the visibility of the add-condition card
+                $addConditionCard.toggleClass('d-none', !$(this).is(':checked'));
             });
 
+            // // Toggle .condition-on based on the switch
+            // $('#flexSwitchCheckDefault').on('change', function () {
+            //     $('.add-condition').toggleClass('d-none', !$(this).is(':checked'));
+            // });
             $(document).ready(function () {
-                let conditionCount = 0;
 
-                // On Add Condition button click
-                $('.add-condition-btn').on('click', function () {
-                    // Show condition-1 on the first click
-                    if (conditionCount === 0) {
-                        $('.condition-1').removeClass('d-none');
-                        $('.no-condition-added').addClass('d-none'); // Hide the "NO Run Conditions are Added" text
+                // On Add Condition button click (works for all instances of add-condition-btn)
+                $(document).on('click', '.add-condition-btn', function () {
+                    const $accordionBody = $(this).closest('.accordion-body');
+                    const $condition1 = $accordionBody.find('.condition-1');
+                    const $noConditionText = $accordionBody.find('.no-condition-added');
+                    const $condition2Template = $accordionBody.find('.condition-2:first');
+                    const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+
+                    // Show Remove All button when condition-1 is added
+                    if ($removeAllBtn.hasClass('d-none')) {
+                        $removeAllBtn.removeClass('d-none');
                     }
-                    // After first click, add condition-2 every time
+
+                    // Check if condition-1 is shown, if not, show it
+                    if ($condition1.hasClass('d-none')) {
+                        $condition1.removeClass('d-none');
+                        $noConditionText.addClass('d-none'); // Hide the "NO Run Conditions are Added" text
+                    }
+                    // If condition-1 is already shown, add new condition-2 every time
                     else {
                         // Clone the condition-2 and append it after the last condition-2
-                        let newCondition = $('.condition-2:first').clone();
+                        let newCondition = $condition2Template.clone();
                         newCondition.find('input').val(''); // Clear input fields
                         newCondition.removeClass('d-none');
-                        $('.condition-2:last').after(newCondition);
+                        $accordionBody.find('.condition-2:last').after(newCondition);
                     }
-                    conditionCount++;
                 });
 
-                // On Remove All button click
-                $('.remove-all-btn').on('click', function () {
-                    // Reset conditions
-                    conditionCount = 0;
-                    $('.condition-1, .condition-2').addClass('d-none');
-                    $('.no-condition-added').removeClass('d-none'); // Show the "NO Run Conditions are Added" text
-                    $('.condition-2:not(:first)').remove(); // Remove all clones of condition-2
+                // On Remove All button click (works for all instances of remove-all-btn)
+                $(document).on('click', '.remove-all-btn', function () {
+                    const $accordionBody = $(this).closest('.accordion-body');
+                    const $condition1 = $accordionBody.find('.condition-1');
+                    const $condition2 = $accordionBody.find('.condition-2');
+                    const $noConditionText = $accordionBody.find('.no-condition-added');
+                    const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+
+                    // Reset all conditions and show "NO Run Conditions are Added" text
+                    $condition1.addClass('d-none');
+                    $condition2.addClass('d-none').not(':first').remove(); // Remove all cloned condition-2 elements
+                    $noConditionText.removeClass('d-none');
+
+                    // Hide the Remove All button after conditions are removed
+                    $removeAllBtn.addClass('d-none');
                 });
 
-                // Individual condition delete
+                // Delete individual condition (works for all instances of delete-condition)
                 $(document).on('click', '.delete-condition', function () {
+                    const $accordionBody = $(this).closest('.accordion-body');
                     $(this).closest('.d-flex').parent().remove(); // Remove the specific condition block
-                    conditionCount--;
-                    if (conditionCount === 0) {
-                        $('.no-condition-added').removeClass('d-none'); // Show the "NO Run Conditions are Added" text if all conditions are deleted
+
+                    const $condition1 = $accordionBody.find('.condition-1');
+                    const $conditions = $accordionBody.find('.condition-2:not(.d-none)');
+                    const $noConditionText = $accordionBody.find('.no-condition-added');
+                    const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+
+                    // If there are no more conditions, hide Remove All button and show the "NO Run Conditions are Added" text
+                    if ($condition1.hasClass('d-none') && $conditions.length === 0) {
+                        $noConditionText.removeClass('d-none');
+                        $removeAllBtn.addClass('d-none');
                     }
                 });
             });
 
 
         });
+
     </script>
 
     <script>
-       document.getElementById('searchbar').addEventListener('input', function(e) {
-    const textarea = e.target;
-    const value = textarea.value;
-    const cursorPosition = textarea.selectionStart;
-    const dropdown = document.getElementById('dropdown');
+        document.getElementById('write-prompt').addEventListener('input', function (e) {
+            const textarea = e.target;
+            const value = textarea.value;
+            const cursorPosition = textarea.selectionStart;
+            const dropdown = document.getElementById('dropdown');
 
-    // Check if '#' was just typed
-    if (value.charAt(cursorPosition - 1) === '#') {
-        // Show the dropdown
-        dropdown.style.display = 'block';
-    } else {
-        dropdown.style.display = 'none';
-    }
-});
+            // Check if '#' was just typed
+            if (value.charAt(cursorPosition - 1) === '#') {
+                // Show the dropdown
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        });
 
-// Add click event listener for all dropdown items
-document.querySelectorAll('#dropdown .dropdown-item').forEach(item => {
-    item.addEventListener('click', function(e) {
-        const textarea = document.getElementById('searchbar');
-        const cursorPosition = textarea.selectionStart;
-        const textBefore = textarea.value.substring(0, cursorPosition);
-        const textAfter = textarea.value.substring(cursorPosition);
-        const selectedText = e.target.textContent;
-        const dropdown = document.getElementById('dropdown');
+        // Add click event listener for all dropdown items
+        document.querySelectorAll('#dropdown .dropdown-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                const textarea = document.getElementById('write-prompt');
+                const cursorPosition = textarea.selectionStart;
+                const textBefore = textarea.value.substring(0, cursorPosition);
+                const textAfter = textarea.value.substring(cursorPosition);
+                const selectedText = e.target.textContent;
+                const dropdown = document.getElementById('dropdown');
 
-        // Insert selected dropdown item where the cursor is
-        textarea.value = textBefore + selectedText + textAfter;
+                // Insert selected dropdown item where the cursor is
+                textarea.value = textBefore + selectedText + textAfter;
 
-        // Update cursor position to after the inserted text
-        textarea.selectionStart = textarea.selectionEnd = textBefore.length + selectedText.length;
+                // Update cursor position to after the inserted text
+                textarea.selectionStart = textarea.selectionEnd = textBefore.length + selectedText.length;
 
-        // Hide the dropdown after selection
-        dropdown.style.display = 'none';
+                // Hide the dropdown after selection
+                dropdown.style.display = 'none';
 
-        // Focus back on the textarea
-        textarea.focus();
-    });
-});
+                // Focus back on the textarea
+                textarea.focus();
+            });
+        });
 
-// Optionally, add functionality to close dropdown when clicking outside or pressing 'Escape'
-document.addEventListener('click', function(e) {
-    const dropdown = document.getElementById('dropdown');
-    if (!e.target.closest('#dropdown') && !e.target.closest('#searchbar')) {
-        dropdown.style.display = 'none';
-    }
-});
+        // Optionally, add functionality to close dropdown when clicking outside or pressing 'Escape'
+        document.addEventListener('click', function (e) {
+            const dropdown = document.getElementById('dropdown');
+            if (!e.target.closest('#dropdown') && !e.target.closest('#write-prompt')) {
+                dropdown.style.display = 'none';
+            }
+        });
 
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        document.getElementById('dropdown').style.display = 'none';
-    }
-});
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.getElementById('dropdown').style.display = 'none';
+            }
+        });
 
 
     </script>

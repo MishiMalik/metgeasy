@@ -98,13 +98,13 @@
 
         /* Change background color of buttons on hover */
         .tab button:hover {
-            border-bottom: 2px solid rgb(250, 129, 149);
-            color: rgb(250, 129, 149) !important;
+            border-bottom: 2px solid #E60F59;
+            color: #E60F59 !important;
         }
 
         /* Create an active/current tablink class */
         .tab button.active {
-            border-bottom: 2px solid rgb(250, 129, 149);
+            border-bottom: 2px solid #E60F59;
             color: black;
         }
 
@@ -126,7 +126,7 @@
         .searchbar:active {
             outline: none !important;
             box-sizing: none !important;
-            border: 1px solid rgb(250, 129, 149);
+            border: 1px solid #E60F59;
 
         }
 
@@ -226,7 +226,9 @@
         .add-more,
         .addSmartlead-variable,
         .add-variable {
-            background-color: rgb(233, 233, 233);
+            /* background-color: rgb(233, 233, 233); */
+            background-color: #FDF3F6 !important;
+            color: #E60F59 !important;
             border: none;
             font-size: 12px;
             font-weight: 500;
@@ -239,7 +241,9 @@
         .add-more:hover,
         .addSmartlead-variable:hover,
         .add-variable:hover {
-            background-color: rgb(206, 206, 206);
+            /* background-color: rgb(206, 206, 206); */
+            background-color: #E60F59 !important;
+            color: white !important;
         }
 
 
@@ -257,7 +261,7 @@
         .megic-btn:hover,
         .megic-btn:focus,
         .megic-btn:active {
-            background-color: rgb(245, 115, 137);
+            background-color: #E60F59);
             color: white !important;
             outline: none;
         } */
@@ -390,7 +394,7 @@
 
         .prize:hover {
             text-decoration: none;
-            color: rgb(250, 129, 149);
+            color: #E60F59;
         }
 
         .fav {
@@ -553,12 +557,12 @@
             cursor: pointer;
             overflow: hidden;
             transition: background-color 0.3s ease;
-
-            background-color: rgb(252, 151, 167);
+            background-color: #FDF3F6;
+            color: #E60F59;
             border: none;
             font-size: 14px;
             font-weight: 500;
-            color: white;
+           
             padding: 7px;
             width: 100%;
             border-radius: 4px;
@@ -567,11 +571,17 @@
         .megic-btn:hover,
         .megic-btn:focus,
         .megic-btn:active {
-            background-color: rgb(245, 115, 137);
+            background-color: #E60F59;
             color: white !important;
             outline: none;
         }
-
+        .form-check-input:checked {
+    background-color: #E60F59 !important;
+    border-color: #E60F59 !important;
+}
+.form-check-input:focus{
+    box-shadow: none !important;
+}
         .megic-btn .progress-bar {
             position: absolute;
             top: 0;
@@ -595,6 +605,7 @@
 
         .megic-btn.completed {
             background-color: #28a745;
+            color: white !important;
         }
     </style>
     <style>
@@ -682,6 +693,76 @@
         .Smartvariable-card i:hover {
             color: rgb(187, 7, 7);
             cursor: pointer;
+        }
+    </style>
+    <style>
+        .condition-header {
+            /* font-size: 16px;
+            font-weight: 500;
+             color: black; */
+            background-color: #f6f9fc !important;
+            /* border-radius: 0px !important;
+            box-shadow: none !important; */
+            padding: 8px 10px !important;
+        }
+
+        .condition-body {
+            padding: 10px !important;
+        }
+
+        .run-condition h5 {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .add-condition p,
+        .run-condition p {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0px !important;
+            padding: 0px !important;
+            color: gray;
+        }
+
+        .add-condition-btn {
+            font-size: 14px;
+            /* color: gray !important; */
+            padding: 7px 0;
+            border-radius: 4px;
+            background-color: #E60F59 !important;
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .add-condition-btn:hover {
+            
+            background-color: #c50e4e !important;
+            color: white !important;
+        }
+
+        .remove-all-btn {
+           background-color: rgb(233, 233, 233);;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: gray;
+            border: none;
+            border-radius: 4px;
+        }
+        .remove-all-btn:hover{
+             background-color: gray;
+             color: white;
+        }
+        .prompt-dropdown {
+            position: absolute;
+            top: 66% !important;
+            width: 100%;
+        }
+
+        .prompt-dropdown .dropdown-item {
+            font-size: 14px;
         }
     </style>
 </head>
@@ -1392,14 +1473,43 @@
 
                         </div>
                     </a>
-
                 </div>
                 <hr>
                 <h2 class="heading-primary">
                     Write Prompt
                 </h2>
-                <textarea name id class="w-100 searchbar" placeholder="Write Prompt"></textarea>
-                <p class="text mb-0 ">Press # to select a variable cell</p>
+                <!-- <div class="position-relative">
+                    <textarea id="write-prompt" class="w-100 searchbar " placeholder="Write Prompt"></textarea>
+                    <p class="text mb-0 pb-0">Press # to select a variable cell</p>
+
+                    <ul id="dropdown" class="dropdown-menu prompt-dropdown" style="display: none;">
+                        <li><a class="dropdown-item" href="#">Column 1</a></li>
+                        <li><a class="dropdown-item" href="#">Column 2</a></li>
+                        <li><a class="dropdown-item" href="#">Column 3</a></li>
+                    </ul>
+                </div> -->
+                <style>
+                    .styled-text {
+                        background-color: yellow;
+                        color: black;
+                        font-weight: bold;
+                        padding: 2px 4px;
+                        border-radius: 4px;
+                    }
+                </style>
+                <div class="position-relative">
+                    <div id="write-prompt" class="w-100 searchbar" contenteditable="true" placeholder="Write Prompt"></div>
+                    <p class="text mb-0">Press # to select a variable cell</p>
+
+                    <!-- Dropdown with options -->
+                    <ul id="prompt-dropdown" class="dropdown-menu "  style="display: none;">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                    </ul>
+                </div>
+
+
                 <h2 class="heading-primary mt-3">
                     Search Prompt Library
                 </h2>
@@ -1561,6 +1671,149 @@
                     <p class="text mb-0 ">Press # to select a variable
                         cell</p>
                 </div>
+                <hr>
+                <div class="accordion" id="accordionExample-111">
+                    <div class="accordion-item border-0 shadow-sm ">
+                        <h2 class="accordion-header " id="heading111">
+                            <button class="accordion-button condition-header border-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse111" aria-expanded="true"
+                                aria-controls="collapse111">
+                                &nbsp;&nbsp;&nbsp;Run Settings
+                            </button>
+                        </h2>
+                        <div id="collapse111" class="accordion-collapse collapse show" aria-labelledby="heading111"
+                            data-bs-parent="#accordionExample-111">
+                            <div class="accordion-body condition-body ">
+                                <div class="card run-condition border-0">
+                                    <div class="d-flex justify-content-between align-items-center ">
+                                        <div>
+                                            <h5>Run Conditions</h5>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                                        </div>
+
+                                    </div>
+                                    <div>
+
+                                        <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                                    </div>
+                                    <!-- <div class="condition-on d-none p-3">
+                                        <p class="mb-0 pb-0 condition-text-1">
+                                            NO Run Conditions are Added
+                                        </p>
+                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
+                                        <br>
+                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
+                                    </div> -->
+                                </div>
+
+                                <!-- Add Condition Card -->
+                                <div class="card add-condition d-none mt-2 border-0 p-0">
+                                    <hr>
+                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
+                                        NO Run Conditions are Added
+                                    </p>
+                                    <!-- Condition 1 -->
+                                    <div class="condition-1 d-none mb-3">
+                                        <div class="d-flex align-items-start flex-column gap-2">
+                                            <div class="d-flex justify-content-between align-items-center w-100">
+                                                <div>
+                                                    <p class="mb-0">Run If</p>
+                                                </div>
+                                                <div class="">
+                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
+                                                </div>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select form-select w-100 searchbar condition-1-field">
+                                                    <option value="Company" selected>Company</option>
+                                                    <option value="Website URL">Website URL</option>
+                                                    <option value="Similar Companies">Similar Companies</option>
+                                                    <option value="Column D">Column D</option>
+                                                    <option value="Column A">Column A</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select w-100 form-select searchbar condition-1-operator">
+                                                    <option value="Contains" selected>Contains</option>
+                                                    <option value="Does Not Contain">Does Not Contain</option>
+                                                    <option value="Is">Is</option>
+                                                    <option value="Is not">Is not</option>
+                                                    <option value="is empty">is empty</option>
+                                                    <option value="is not empty">is not empty</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <input type="text"
+                                                    class="form-control w-100 condition-1-value searchbar"
+                                                    placeholder="Enter value" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Condition 2 -->
+                                    <div class="condition-2 d-none mb-3">
+                                        <div class="d-flex align-items-start flex-column gap-2">
+                                            <div class="d-flex justify-content-between align-items-center w-100">
+                                                <div>
+                                                    <!-- <p class="mb-0">Run If</p> -->
+                                                </div>
+                                                <div class="">
+                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
+                                                </div>
+                                            </div>
+                                            <div class="w-100">
+                                                <select class="form-select form-select searchbar condition-2-logic">
+                                                    <option selected>And</option>
+                                                    <option value="Or">Or</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select form-select searchbar w-100 condition-2-field">
+                                                    <option value="company" selected>Company</option>
+                                                    <option value="Website URL">Website URL</option>
+                                                    <option value="Similar Companies">Similar Companies</option>
+                                                    <option value="Column D">Column D</option>
+                                                    <option value="Column A">Column A</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select form-select searchbar w-100 condition-2-operator">
+                                                    <option value="Contains" selected>Contains</option>
+                                                    <option value="Does Not Contain">Does Not Contain</option>
+                                                    <option value="Is">Is</option>
+                                                    <option value="Is not">Is not</option>
+                                                    <option value="is empty">is empty</option>
+                                                    <option value="is not empty">is not empty</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <input type="text" class="form-control searchbar condition-2-value"
+                                                    placeholder="Enter value" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Buttons -->
+                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
+                                        Condition</button>
+                                    <hr class="last-line d-none">
+                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
 
                 <!-- <div class="">
                     <button class="w-100 mt-2 megic-btn">Let the magic begin ✨</button>
@@ -1672,9 +1925,147 @@
                     <!-- <p class="text mb-0 ">Press # to select a variable cell</p> -->
                 </div>
 
-                <!-- <div class="">
-                    <button class="w-100 mt-2 megic-btn">Let the magic begin ✨</button>
-                </div> -->
+                <hr>
+                <div class="accordion" id="accordionExample-111">
+                    <div class="accordion-item border-0 shadow-sm ">
+                        <h2 class="accordion-header " id="heading111">
+                            <button class="accordion-button condition-header border-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse111" aria-expanded="true"
+                                aria-controls="collapse111">
+                                &nbsp;&nbsp;&nbsp;Run Settings
+                            </button>
+                        </h2>
+                        <div id="collapse111" class="accordion-collapse collapse show" aria-labelledby="heading111"
+                            data-bs-parent="#accordionExample-111">
+                            <div class="accordion-body condition-body ">
+                                <div class="card run-condition border-0">
+                                    <div class="d-flex justify-content-between align-items-center ">
+                                        <div>
+                                            <h5>Run Conditions</h5>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                                        </div>
+
+                                    </div>
+                                    <div>
+
+                                        <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                                    </div>
+                                    <!-- <div class="condition-on d-none p-3">
+                                        <p class="mb-0 pb-0 condition-text-1">
+                                            NO Run Conditions are Added
+                                        </p>
+                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
+                                        <br>
+                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
+                                    </div> -->
+                                </div>
+
+                                <!-- Add Condition Card -->
+                                <div class="card add-condition d-none mt-2 border-0 p-0">
+                                    <hr>
+                                    <p class="mb-0 pb-0 no-condition-added">
+                                        NO Run Conditions are Added
+                                    </p>
+                                    <!-- Condition 1 -->
+                                    <div class="condition-1 d-none mb-3">
+                                        <div class="d-flex align-items-start flex-column gap-2">
+                                            <div class="d-flex justify-content-between align-items-center w-100">
+                                                <div>
+                                                    <p class="mb-0">Run If</p>
+                                                </div>
+                                                <div class="">
+                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
+                                                </div>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select form-select w-100 searchbar condition-1-field">
+                                                    <option value="Company" selected>Company</option>
+                                                    <option value="Website URL">Website URL</option>
+                                                    <option value="Similar Companies">Similar Companies</option>
+                                                    <option value="Column D">Column D</option>
+                                                    <option value="Column A">Column A</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select w-100 form-select searchbar condition-1-operator">
+                                                    <option value="Contains" selected>Contains</option>
+                                                    <option value="Does Not Contain">Does Not Contain</option>
+                                                    <option value="Is">Is</option>
+                                                    <option value="Is not">Is not</option>
+                                                    <option value="is empty">is empty</option>
+                                                    <option value="is not empty">is not empty</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <input type="text"
+                                                    class="form-control w-100 condition-1-value searchbar"
+                                                    placeholder="Enter value" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Condition 2 -->
+                                    <div class="condition-2 d-none mb-3">
+                                        <div class="d-flex align-items-start flex-column gap-2">
+                                            <div class="d-flex justify-content-between align-items-center w-100">
+                                                <div>
+                                                    <!-- <p class="mb-0">Run If</p> -->
+                                                </div>
+                                                <div class="">
+                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
+                                                </div>
+                                            </div>
+                                            <div class="w-100">
+                                                <select class="form-select form-select searchbar condition-2-logic">
+                                                    <option selected>And</option>
+                                                    <option value="Or">Or</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select form-select searchbar w-100 condition-2-field">
+                                                    <option value="company" selected>Company</option>
+                                                    <option value="Website URL">Website URL</option>
+                                                    <option value="Similar Companies">Similar Companies</option>
+                                                    <option value="Column D">Column D</option>
+                                                    <option value="Column A">Column A</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <select
+                                                    class="form-select form-select searchbar w-100 condition-2-operator">
+                                                    <option value="Contains" selected>Contains</option>
+                                                    <option value="Does Not Contain">Does Not Contain</option>
+                                                    <option value="Is">Is</option>
+                                                    <option value="Is not">Is not</option>
+                                                    <option value="is empty">is empty</option>
+                                                    <option value="is not empty">is not empty</option>
+                                                </select>
+                                            </div>
+                                            <div class="w-100">
+                                                <input type="text" class="form-control searchbar condition-2-value"
+                                                    placeholder="Enter value" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- Buttons -->
+                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
+                                        Condition</button>
+                                    <hr class="last-line d-none">
+                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
                 <button class="megic-btn mt-3" id="submitBtn">
                     <span>Search ✨</span>
@@ -3033,7 +3424,7 @@
                                 &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.png" alt>
                             </div>
                         </a>
-    
+
                     </div>
                     <div class>
                         <button class="w-100  upgrade-btn">UPGRADE</button>
@@ -3055,6 +3446,96 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
         integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <!-- condition -->
+    <script>
+        $(document).ready(function () {
+            let clickCount = 0;
+            // Toggle .add-condition based on the specific switch for all instances
+            $(document).on('change', '.form-check-input', function () {
+                // Find the closest accordion body where the switch is located
+                const $accordionBody = $(this).closest('.accordion-body');
+                const $addConditionCard = $accordionBody.find('.add-condition');
+
+                // Toggle the visibility of the add-condition card
+                $addConditionCard.toggleClass('d-none', !$(this).is(':checked'));
+            });
+            // Toggle .condition-on based on the switch
+            // $('#flexSwitchCheckDefault').on('change', function () {
+            //     $('.add-condition').toggleClass('d-none', !$(this).is(':checked'));
+            // });
+            $(document).ready(function () {
+
+                // On Add Condition button click (works for all instances of add-condition-btn)
+                $(document).on('click', '.add-condition-btn', function () {
+                    const $accordionBody = $(this).closest('.accordion-body');
+                    const $condition1 = $accordionBody.find('.condition-1');
+                    const $noConditionText = $accordionBody.find('.no-condition-added');
+                    const $condition2Template = $accordionBody.find('.condition-2:first');
+                    const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+                    const $lastLine = $accordionBody.find('.last-line');
+
+                    // Show Remove All button when condition-1 is added
+                    if ($removeAllBtn.hasClass('d-none')) {
+                        $removeAllBtn.removeClass('d-none');
+                    }
+                    if ($lastLine.hasClass('d-none')) {
+                        $lastLine.removeClass('d-none');
+                    }
+
+                    // Check if condition-1 is shown, if not, show it
+                    if ($condition1.hasClass('d-none')) {
+                        $condition1.removeClass('d-none');
+                        $noConditionText.addClass('d-none'); // Hide the "NO Run Conditions are Added" text
+                    }
+                    // If condition-1 is already shown, add new condition-2 every time
+                    else {
+                        // Clone the condition-2 and append it after the last condition-2
+                        let newCondition = $condition2Template.clone();
+                        newCondition.find('input').val(''); // Clear input fields
+                        newCondition.removeClass('d-none');
+                        $accordionBody.find('.condition-2:last').after(newCondition);
+                    }
+                });
+
+                // On Remove All button click (works for all instances of remove-all-btn)
+                $(document).on('click', '.remove-all-btn', function () {
+                    const $accordionBody = $(this).closest('.accordion-body');
+                    const $condition1 = $accordionBody.find('.condition-1');
+                    const $condition2 = $accordionBody.find('.condition-2');
+                    const $noConditionText = $accordionBody.find('.no-condition-added');
+                    const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+
+                    // Reset all conditions and show "NO Run Conditions are Added" text
+                    $condition1.addClass('d-none');
+                    $condition2.addClass('d-none').not(':first').remove(); // Remove all cloned condition-2 elements
+                    $noConditionText.removeClass('d-none');
+
+                    // Hide the Remove All button after conditions are removed
+                    $removeAllBtn.addClass('d-none');
+                });
+
+                // Delete individual condition (works for all instances of delete-condition)
+                $(document).on('click', '.delete-condition', function () {
+                    const $accordionBody = $(this).closest('.accordion-body');
+                    $(this).closest('.d-flex').parent().remove(); // Remove the specific condition block
+
+                    const $condition1 = $accordionBody.find('.condition-1');
+                    const $conditions = $accordionBody.find('.condition-2:not(.d-none)');
+                    const $noConditionText = $accordionBody.find('.no-condition-added');
+                    const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+
+                    // If there are no more conditions, hide Remove All button and show the "NO Run Conditions are Added" text
+                    if ($condition1.hasClass('d-none') && $conditions.length === 0) {
+                        $noConditionText.removeClass('d-none');
+                        $removeAllBtn.addClass('d-none');
+                    }
+                });
+            });
+
+        });
+
+    </script>
+
     <!-- home tabs -->
     <script>
         function homePage(evt, cityName) {
@@ -4266,6 +4747,70 @@
                 });
             }
         }
+
+    </script>
+
+    <script>
+        document.getElementById('write-prompt').addEventListener('input', function (e) {
+            const editableDiv = e.target;
+            const value = editableDiv.textContent;
+            const cursorPosition = window.getSelection().getRangeAt(0).startOffset;
+            const dropdown = document.getElementById('prompt-dropdown');
+
+            // Check if '#' was just typed
+            if (value.charAt(cursorPosition - 1) === '#') {
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        // Add click event listener for all dropdown items
+        document.querySelectorAll('#prompt-dropdown .dropdown-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                const editableDiv = document.getElementById('write-prompt');
+                const selectedText = e.target.textContent;
+                const range = window.getSelection().getRangeAt(0);
+                const dropdown = document.getElementById('prompt-dropdown');
+
+                // Create a span element to wrap the selected option text with styles
+                const span = document.createElement('span');
+                span.className = 'styled-text';
+                span.textContent = `#${selectedText}`;  // Prepend '#' to the selected text
+
+                // Insert the span at the cursor position
+                range.deleteContents(); // Clear any selected text
+                range.insertNode(span);
+
+                // Move the cursor to after the inserted span
+                range.setStartAfter(span);
+                range.setEndAfter(span);
+
+                // Set the new selection to be after the styled text
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+
+                // Hide the dropdown after selection
+                dropdown.style.display = 'none';
+
+                // Focus back on the contenteditable div
+                editableDiv.focus();
+            });
+        });
+
+        // Optionally, add functionality to close dropdown when clicking outside or pressing 'Escape'
+        document.addEventListener('click', function (e) {
+            const dropdown = document.getElementById('prompt-dropdown');
+            if (!e.target.closest('#prompt-dropdown') && !e.target.closest('#write-prompt')) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.getElementById('prompt-dropdown').style.display = 'none';
+            }
+        });
 
     </script>
 </body>
