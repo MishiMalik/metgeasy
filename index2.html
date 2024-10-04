@@ -44,14 +44,14 @@
                                             </div>
                                         </div>
                                         <hr>
-                                        <div class="condition-on d-none p-3">
+                                        <!-- <div class="condition-on d-none p-3">
                                             <p class="mb-0 pb-0 condition-text-1">
                                                 NO Run Conditions are Added
                                             </p>
                                             <p class="mb-0 pb-0 condition-text-2 d-none"></p>
                                             <br>
                                             <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                     <!-- Add Condition Card -->
@@ -85,6 +85,9 @@
                                                 <div class="flex-grow-1">
                                                     <input type="text" class="form-control condition-1-value"
                                                         placeholder="Enter value" />
+                                                </div>
+                                                <div class="">
+                                                    <button class="delete-condition">delete</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -120,6 +123,9 @@
                                                     <input type="text" class="form-control condition-2-value"
                                                         placeholder="Enter value" />
                                                 </div>
+                                                <div class="">
+                                                    <button class="delete-condition">delete</button>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- Buttons -->
@@ -149,95 +155,67 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-   
-        <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
         integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     <!-- jQuery Script -->
     <script>
         $(document).ready(function () {
             let clickCount = 0;
-        
-            // Function to update condition texts dynamically
-            function updateConditionText() {
-                let conditionText = '';
-        
-                // Get values for condition-1
-                let condition1Field = $('.condition-1 select:eq(0)').val() || 'Any Field'; // Default text if empty
-                let condition1Operator = $('.condition-1 select:eq(1)').val() || 'Any Operator'; // Default text if empty
-                let condition1Value = $('.condition-1 input').val() || 'Any Value'; // Default text if empty
-        
-                // Generate text for condition-1
-                if (clickCount === 1) {
-                    conditionText = `Run if ${condition1Field} ${condition1Operator} ${condition1Value}`;
-                }
-        
-                // Get values for condition-2
-                let condition2Logic = $('.condition-2 select:eq(0)').val() || 'AND'; // Default text if empty
-                let condition2Field = $('.condition-2 select:eq(1)').val() || 'Any Field'; // Default text if empty
-                let condition2Operator = $('.condition-2 select:eq(2)').val() || 'Any Operator'; // Default text if empty
-                let condition2Value = $('.condition-2 input').val() || 'Any Value'; // Default text if empty
-        
-                // Generate text for condition-2
-                if (clickCount === 2) {
-                    conditionText = `${condition2Logic} ${condition2Field} ${condition2Operator} ${condition2Value}`;
-                }
-        
-                // Update the text for the appropriate condition
-                $('.condition-text-1').text(clickCount === 1 ? conditionText : 'NO Run Conditions are Added');
-                $('.condition-text-2').text(clickCount === 2 ? conditionText : '').toggleClass('d-none', clickCount !== 2);
-            }
-        
+
             // Toggle .condition-on based on the switch
             $('#flexSwitchCheckDefault').on('change', function () {
-                $('.condition-on').toggleClass('d-none', !$(this).is(':checked'));
+                $('.add-condition').toggleClass('d-none', !$(this).is(':checked'));
             });
-        
-            // Show .add-condition when "Edit Condition" is clicked
-            $('.edit-condition-btn').on('click', function () {
-                $('.add-condition').removeClass('d-none');
-                updateConditionText(); // Update text in case conditions were previously filled
-            });
-        
-            // Add Condition functionality
-            $('.add-condition-btn').on('click', function () {
-                clickCount++;
-        
-                // Hide the "NO Run Conditions are Added" message
-                $('.no-condition-added').addClass('d-none');
-        
-                if (clickCount === 1) {
-                    $('.condition-1').removeClass('d-none');
-                } else if (clickCount === 2) {
-                    $('.condition-2').removeClass('d-none');
-                }
-        
-                // Update the text to reflect the newly added conditions
-                updateConditionText();
-            });
-        
-            // Remove All functionality
-            $('.remove-all-btn').on('click', function () {
-                $('.condition-1, .condition-2').addClass('d-none'); // Hide both conditions
-                $('.no-condition-added').removeClass('d-none'); // Show the message again
-                $('.add-condition').addClass('d-none'); // Hide add-condition card
-                clickCount = 0; // Reset the counter
-                
-                // Reset text after removing all conditions
-                $('.condition-text-1').text('NO Run Conditions are Added');
-                $('.condition-text-2').addClass('d-none').text(''); // Reset the text
-            });
-        
-            // Listen for changes in selects and inputs, update text dynamically
-            $('.condition-1 select, .condition-1 input, .condition-2 select, .condition-2 input').on('change keyup', function () {
-                updateConditionText(); // Update the text on any change
-            });
+
+            $(document).ready(function() {
+    let conditionCount = 0;
+
+    // On Add Condition button click
+    $('.add-condition-btn').on('click', function() {
+        // Show condition-1 on the first click
+        if (conditionCount === 0) {
+            $('.condition-1').removeClass('d-none');
+            $('.no-condition-added').addClass('d-none'); // Hide the "NO Run Conditions are Added" text
+        } 
+        // After first click, add condition-2 every time
+        else {
+            // Clone the condition-2 and append it after the last condition-2
+            let newCondition = $('.condition-2:first').clone();
+            newCondition.find('input').val(''); // Clear input fields
+            newCondition.removeClass('d-none');
+            $('.condition-2:last').after(newCondition);
+        }
+        conditionCount++;
+    });
+
+    // On Remove All button click
+    $('.remove-all-btn').on('click', function() {
+        // Reset conditions
+        conditionCount = 0;
+        $('.condition-1, .condition-2').addClass('d-none');
+        $('.no-condition-added').removeClass('d-none'); // Show the "NO Run Conditions are Added" text
+        $('.condition-2:not(:first)').remove(); // Remove all clones of condition-2
+    });
+
+    // Individual condition delete
+    $(document).on('click', '.delete-condition', function() {
+        $(this).closest('.d-flex').parent().remove(); // Remove the specific condition block
+        conditionCount--;
+        if(conditionCount === 0){
+            $('.no-condition-added').removeClass('d-none'); // Show the "NO Run Conditions are Added" text if all conditions are deleted
+        }
+    });
+});
+
+
         });
-        </script>
-        
-        
-        
-        
-        
+    </script>
+
+
+
+
+
 </body>
 
 </html>
