@@ -29,9 +29,9 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-
+.services-title-2,
 .services-title {
-    font-size: 44px !important;
+    font-size: 38px !important;
     line-height: 60px;
     font-weight: 400 !important;
     font-family: var(--secondry-fonts);
@@ -44,14 +44,15 @@ body {
     padding-right: 10px;
     transform: skewX(-15deg)
  }
-.services-title span {
-    font-size: 48px !important;
+ .services-title .wrap,
+.services-title .wrap {
+    font-size: 38px !important;
     line-height: 60px;
     font-weight: 400 !important;
     font-family: var(--secondry-fonts);
-    color: black !important;
+    color: var(--primary)
 }
-
+.services-title .desc,
 .services-title .desc {
     font-size: 14px !important;
     color: black !important;
@@ -676,13 +677,19 @@ body {
         right: 0px;
         
      }
+     .services-title-2,
     .services-title {
         font-size: 32px !important;
         line-height: 36px;
     }
-
+    .services-title-2 span,
     .services-title span {
-        font-size: 26px !important;
+        font-size: 32px !important;
+        line-height: 36px;
+    }
+    .services-title-2 .wrap,
+    .services-title .wrap {
+        font-size: 32px !important;
         line-height: 36px;
     }
 
@@ -848,6 +855,21 @@ body {
     }
 }
 @media only screen and (max-width:560px){
+    .services-title-2 {
+        font-size: 24px !important;
+        line-height: 46px;
+ 
+    }
+
+    .services-title-2 span {
+        font-size: 24px !important;
+        line-height: 46px;
+     
+    }
+    .services-title-2 .wrap {
+        font-size: 28px !important;
+        margin-top: 25px !important;
+    }
     .partner .item{
         width: 100%;
     }
