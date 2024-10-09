@@ -25,6 +25,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/buttons.css">
 
@@ -257,9 +258,11 @@
                 <div class="row align-items-center">
                     <div class="col-xl-10 col-lg-12  hero-text mx-auto text-center">
                         <!-- <span class="title">About us</span> -->
-                        <h2 class="services-title">
-                           About Mergeasy
-                        </h2>
+                        <div class="overflow-hidden">
+                            <h2 class="services-title"  data-aos="zoom-in" data-aos-duration="1000">
+                                About Mergeasy
+                             </h2>
+                        </div>
                         <p class="hero-text pe-lg-3 mt-2 mb-0 pb-0">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, magni nostrum laudantium reprehenderit eaque dolorum. Facilis quos a earum qui totam eum, voluptates illum voluptate repellendus ab dolores quod aut porro consequatur laborum laboriosam assumenda nisi saepe veritatis consequuntur. Facere.
                         </p>
@@ -290,7 +293,7 @@
                             <!-- <h3>MergeSign </h3>
                             <h4 class="text-dark">(eSignatures)</h4> -->
                             <div class="my-3">
-                                <img src="assets/images/Signing a contract-bro.svg" alt="" class="img-fluid">
+                                <img src="assets/images/Signing a contract-bro.svg" alt="" class="img-fluid"  data-aos="zoom-in" data-aos-duration="1000">
                             </div>
                             <h5>Secure & Compliant eSignatures</h5>
                             <p class="text">
@@ -305,7 +308,7 @@
                             <!-- <h3>MergeCall</h3>
                             <h4 class="text-dark">(Integrated Calling)</h4> -->
                             <div class="my-3">
-                                <img src="assets/images/Calling-bro.svg" alt="" class="img-fluid">
+                                <img src="assets/images/Calling-bro.svg" alt="" class="img-fluid"  data-aos="zoom-in" data-aos-duration="1000">
                             </div>
                             <h5>Integrated Calling & Messaging</h5>
                             <p class="text">
@@ -320,7 +323,7 @@
                             <!-- <h3>MergeMerge</h3>
                             <h4 class="text-dark">(Document Merging)</h4> -->
                             <div class="my-3">
-                                <img src="assets/images/Online document-rafiki.png" alt="" class="img-fluid">
+                                <img src="assets/images/Online document-rafiki.png" alt="" class="img-fluid"  data-aos="zoom-in" data-aos-duration="1500">
                             </div>
                             <h5>Flexible Document Merging</h5>
                             <p class="text">
@@ -553,8 +556,8 @@
         <section class=" mt-lg-0 mt-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 col-10  mx-auto">
-                            <img src="assets/images/About us page-pana.png" alt="Choose deliery" class=" img-fluid" >
+                    <div class="col-md-6 col-10  mx-auto overflow-hidden">
+                            <img src="assets/images/About us page-pana.png" alt="Choose deliery" class=" img-fluid"  data-aos="fade-right" data-aos-duration="1000">
                     </div>
                     <div class="col-lg-5 mt-lg-0 mt-3 text-md-start text-center hero-text  ms-lg-auto mx-auto">
                         <span class="title"> Versatile Cloud
@@ -587,8 +590,8 @@
                        
                     </div>
 
-                    <div class="col-md-6 col-10 mt-lg-0 mt-3 mx-auto order-lg-2 order-1">
-                            <img src="assets/images/About us page-amico.png" alt="Choose deliery" class=" img-fluid">
+                    <div class="col-md-6 col-10 mt-lg-0 mt-3 mx-auto order-lg-2 order-1 overflow-hidden">
+                            <img src="assets/images/About us page-amico.png" alt="Choose deliery" class=" img-fluid"  data-aos="fade-left" data-aos-duration="1000">
                     </div>
                 </div>
             </div>
@@ -743,7 +746,7 @@
                             <div class="hero-text w-100">
                                 <div
                                     class="d-flex align-items-center flex-sm-row flex-column justify-content-center mt-4">
-                                    <div class="hero-btn">
+                                    <div class="hero-btn" data-aos="zoom-in" data-aos-duration="1000">
                                         <!-- <a href="" class="btn-primary animated-button">Start Free Trial</a> -->
                                         <a href="contact.php" class="animated-button1">
                                             <span></span>
@@ -753,7 +756,7 @@
                                             Start Free Trial
                                         </a>
                                     </div>
-                                    <div class="hero-btn">
+                                    <div class="hero-btn" data-aos="zoom-in" data-aos-duration="1500">
                                         <a href="" class="secondry-button">Explore API Features</a>
                                     </div>
                                 </div>
@@ -895,6 +898,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
         integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
 
         $('.testi').owlCarousel({
@@ -980,6 +984,9 @@
             }
         });
     </script>
+      <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
