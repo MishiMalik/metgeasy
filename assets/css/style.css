@@ -31,15 +31,21 @@ body {
 }
 
 .services-title {
-    font-size: 48px !important;
+    font-size: 44px !important;
     line-height: 60px;
     font-weight: 400 !important;
     font-family: var(--secondry-fonts);
     color: black
 }
-
+.service-top-title{
+    /* background-color: var(--primary); */
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 10px;
+    transform: skewX(-15deg)
+ }
 .services-title span {
-    font-size: 52px !important;
+    font-size: 48px !important;
     line-height: 60px;
     font-weight: 400 !important;
     font-family: var(--secondry-fonts);
@@ -621,6 +627,15 @@ body {
  .demo-btn:hover{
     color: var(--text);
  }
+
+ /* .services-title{
+    background-color: var(--primary);
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: skewX(4deg); 
+
+ } */
 @keyframes ripple {
     0% {
       box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3), /* Ripple start */
