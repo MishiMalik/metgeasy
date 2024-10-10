@@ -29,6 +29,7 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
+
 .services-title-2,
 .services-title {
     font-size: 38px !important;
@@ -37,14 +38,16 @@ body {
     font-family: var(--secondry-fonts);
     color: black
 }
-.service-top-title{
+
+.service-top-title {
     /* background-color: var(--primary); */
     width: fit-content;
     padding-left: 20px;
     padding-right: 10px;
     transform: skewX(-15deg)
- }
- .services-title .wrap,
+}
+
+.services-title .wrap,
 .services-title .wrap {
     font-size: 38px !important;
     line-height: 60px;
@@ -52,6 +55,7 @@ body {
     font-family: var(--secondry-fonts);
     color: var(--primary)
 }
+
 .services-title .desc,
 .services-title .desc {
     font-size: 14px !important;
@@ -67,9 +71,11 @@ body {
 .nav-link {
     font-size: 18px !important;
 }
-.active-nav{
+
+.active-nav {
     color: var(--primary) !important;
 }
+
 /* ===========================================why choose */
 .text-primary {
     color: var(--primary) !important;
@@ -350,14 +356,16 @@ body {
     transition: all .5;
     border-radius: 20px;
 }
+
 .dropdownMenu2 {
     padding: 15px;
 }
+
 .nav-item:hover .dropdownMenu {
     display: block;
     top: 40px;
     /* opacity: 1; */
-   
+
 }
 
 .arrow-icon {
@@ -398,38 +406,43 @@ body {
 .nav-icon {
     width: 26px;
 }
-.nav-icon2{
+
+.nav-icon2 {
     width: 22px;
-   text-align: left;
+    text-align: left;
 }
-.nav-icon2 i{
+
+.nav-icon2 i {
     font-size: 20px
 }
-.partner-img{
+
+.partner-img {
     height: 50px;
     width: auto;
     object-fit: contain;
 }
-.partner .item{
+
+.partner .item {
     width: 200px;
-    padding:20px 15px;
+    padding: 20px 15px;
     /* background-color: #F5F6F7; */
     background-color: white;
     border-radius: 4px;
 }
+
 /* =============================================tabs */
 
 /* Style the tab */
 .tab {
     overflow: hidden;
-    background-color:#F8F9FA;
+    background-color: #F8F9FA;
     padding: 5px;
     display: flex;
     justify-content: space-between;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
+}
+
+/* Style the buttons inside the tab */
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -440,66 +453,71 @@ body {
     font-size: 16px;
     font-weight: 500;
     border-radius: 4px;
-    color:black;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
+    color: black;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
     background-color: var(--primary);
     color: white;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
     background-color: var(--primary);
     color: white;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
+}
+
+/* Style the tab content */
+.tabcontent {
     display: none;
     padding: 6px 12px;
     border-top: none;
-  }
-.faq-card{
-    padding:40px 30px;
+}
+
+.faq-card {
+    padding: 40px 30px;
     min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.faq-img{
+
+.faq-img {
     height: 200px;
     width: auto;
 }
-.faq-card h3{
+
+.faq-card h3 {
     font-size: 20px;
     font-weight: 500;
 }
-.faq-card p{
+
+.faq-card p {
     font-size: 14px;
 }
-  .faq-list {
+
+.faq-list {
     padding: 0 100px;
-  }
-  
-  .faq-list ul {
+}
+
+.faq-list ul {
     padding: 0;
     list-style: none;
-  }
-  
-  .faq-list li+li {
+}
+
+.faq-list li+li {
     margin-top: 15px;
-  }
-  
-  .faq-list li {
+}
+
+.faq-list li {
     padding: 20px;
     background: #fff;
     border-radius: 4px;
     position: relative;
-  }
-  
-  .faq-list a {
+}
+
+.faq-list a {
     display: block;
     position: relative;
     font-family: "Poppins", sans-serif;
@@ -511,52 +529,52 @@ body {
     cursor: pointer;
     text-decoration: none;
     color: var(--primary);
-  }
-  
-  .faq-list .icon-help {
+}
+
+.faq-list .icon-help {
     font-size: 24px;
     position: absolute;
     right: 0;
     left: 20px;
     color: var(--primary);
-  }
-  
-  .faq-list .icon-show,
-  .faq-list .icon-close {
+}
+
+.faq-list .icon-show,
+.faq-list .icon-close {
     font-size: 24px;
     position: absolute;
     right: 0;
     top: 0;
-  }
-  
-  .faq-list p {
+}
+
+.faq-list p {
     margin-bottom: 0;
     padding: 10px 0 0 0;
     font-size: 14px;
     padding: 10px 20px 0px 20px;
-  }
-  
-  .faq-list .icon-show {
+}
+
+.faq-list .icon-show {
     display: none;
-  }
-  
-  .faq-list a.collapsed {
+}
+
+.faq-list a.collapsed {
     color: black;
     transition: 0.3s;
-  }
-  
-  .faq-list a.collapsed:hover {
+}
+
+.faq-list a.collapsed:hover {
     color: var(--primary) !important;
-  }
-  
-  .faq-list a.collapsed .icon-show {
+}
+
+.faq-list a.collapsed .icon-show {
     display: inline-block;
-  }
-  
-  .faq-list a.collapsed .icon-close {
+}
+
+.faq-list a.collapsed .icon-close {
     display: none;
-  }
- 
+}
+
 .play-icon {
     position: absolute;
     height: 60px;
@@ -573,7 +591,8 @@ body {
     animation: ripple 1.5s linear infinite;
     transition: all 0.7s ease;
 }
-.btn-close{
+
+.btn-close {
     background-image: none !important;
     color: white !important;
     font-size: 35px;
@@ -581,36 +600,43 @@ body {
     top: -30px;
     right: -30px;
     opacity: 1;
-    
- }
- /* ==================================================demo */
- .demo-card {
+
+}
+
+/* ==================================================demo */
+.demo-card {
     background-color: white;
     padding: 20px;
     border-radius: 4px;
- }
- .demo-video-image{
+}
+
+.demo-video-image {
     height: 170px;
- }
- .demo-video-image img{
+}
+
+.demo-video-image img {
     object-fit: fill;
     width: 100% !important;
     height: 170px;
- }
- .issue-date{
+}
+
+.issue-date {
     font-size: 14px;
     color: gray;
- }
- .demo-heading{
-    font-size: 18px;font-weight: 500;
+}
+
+.demo-heading {
+    font-size: 18px;
+    font-weight: 500;
     color: black;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     height: 44px;
- }
- .demo-text{
+}
+
+.demo-text {
     font-size: 14px;
     font-weight: 400;
     color: black;
@@ -619,17 +645,19 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     /* height: 85px; */
- }
- .demo-btn{
+}
+
+.demo-btn {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
- }
- .demo-btn:hover{
-    color: var(--text);
- }
+}
 
- /* .services-title{
+.demo-btn:hover {
+    color: var(--text);
+}
+
+/* .services-title{
     background-color: var(--primary);
     width: fit-content;
     padding-left: 10px;
@@ -639,54 +667,62 @@ body {
  } */
 @keyframes ripple {
     0% {
-      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3), /* Ripple start */
-                  0 0 0 1px rgba(0, 123, 255, 0.3),
-                  0 0 0 3px rgba(0, 123, 255, 0.3),
-                  0 0 0 5px rgba(0, 123, 255, 0.3);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3),
+            /* Ripple start */
+            0 0 0 1px rgba(0, 123, 255, 0.3),
+            0 0 0 3px rgba(0, 123, 255, 0.3),
+            0 0 0 5px rgba(0, 123, 255, 0.3);
     }
+
     100% {
-      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3), /* Ripple end */
-                  0 0 0 4px rgba(0, 123, 255, 0.3),
-                  0 0 0 20px rgba(0, 123, 255, 0),
-                  0 0 0 30px rgba(0, 123, 255, 0);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3),
+            /* Ripple end */
+            0 0 0 4px rgba(0, 123, 255, 0.3),
+            0 0 0 20px rgba(0, 123, 255, 0),
+            0 0 0 30px rgba(0, 123, 255, 0);
     }
 }
-.about-icon{
+
+.about-icon {
     height: 50px;
     width: 50px;
     object-fit: contain;
     margin-right: 10px;
 }
-  
-  @media (max-width: 1200px) {
-    .faq-list {
-      padding: 0;
-    }
-  }
 
-  @media only screen and (max-width:1200px){
-    
+@media (max-width: 1200px) {
+    .faq-list {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+
     .navbar-nav {
         text-align: center;
     }
-  }
+}
+
 @media only screen and (max-width:991px) {
-    .btn-close{
-     
+    .btn-close {
+
         top: -20px;
         right: 0px;
-        
-     }
-     .services-title-2,
+
+    }
+
+    .services-title-2,
     .services-title {
         font-size: 32px !important;
         line-height: 36px;
     }
+
     .services-title-2 span,
     .services-title span {
         font-size: 32px !important;
         line-height: 36px;
     }
+
     .services-title-2 .wrap,
     .services-title .wrap {
         font-size: 32px !important;
@@ -716,41 +752,48 @@ body {
 
 @media only screen and (max-width:767px) {
     .tab {
-        background-color:transparent;
+        background-color: transparent;
         flex-direction: column;
-      }
-      
-      /* Style the buttons inside the tab */
-      .tab button {
-        background-color:#F8F9FA;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: #F8F9FA;
         margin-bottom: 10px
-      }
-    th{
+    }
+
+    th {
         font-size: 14px;
         padding: 7px 3px;
         font-weight: 500;
     }
-    td{
-       font-size: 12px;
-       padding: 5px 3px;
+
+    td {
+        font-size: 12px;
+        padding: 5px 3px;
     }
-    .demo-video-image{
+
+    .demo-video-image {
         height: auto;
-     }
-     .demo-video-image img{
+    }
+
+    .demo-video-image img {
         object-fit: cover;
         width: 100%;
         height: auto;
-     }
-    .faq-card h3{
+    }
+
+    .faq-card h3 {
         font-size: 20px;
         font-weight: 500;
         text-align: center;
     }
-    .faq-card p{
+
+    .faq-card p {
         font-size: 14px;
         text-align: center;
     }
+
     .feature-table {
         min-width: 800;
     }
@@ -762,10 +805,11 @@ body {
     .services-title {
         font-size: 24px !important;
     }
+
     .hero-text h1 {
         font-size: 18px;
     }
-    
+
 
     .merg-card h3 {
         font-size: 22px;
@@ -854,31 +898,34 @@ body {
         color: #FFD832;
     }
 }
-@media only screen and (max-width:560px){
+
+@media only screen and (max-width:560px) {
     .services-title-2 {
         font-size: 24px !important;
         line-height: 46px;
- 
+
     }
 
     .services-title-2 span {
         font-size: 24px !important;
         line-height: 46px;
-     
+
     }
+
     .services-title-2 .wrap {
         font-size: 28px !important;
         margin-top: 25px !important;
     }
-    .partner .item{
+
+    .partner .item {
         width: 100%;
     }
-     
-  .faq-list .icon-show,
-  .faq-list .icon-close {
-    font-size: 24px;
-    position: absolute;
-    right: 0;
-    top: 14px;
-  }
+
+    .faq-list .icon-show,
+    .faq-list .icon-close {
+        font-size: 24px;
+        position: absolute;
+        right: 0;
+        top: 14px;
+    }
 }
