@@ -25,9 +25,9 @@
             overflow-x: hidden !important;
         }
 
-     
+
         .sidebar {
-            width: 100%;
+            width: 300px;
             margin: 0px auto;
             background-color: white;
             padding: 15px 15px 15px 15px;
@@ -160,6 +160,13 @@
             -webkit-box-orient: vertical;
         }
 
+        input:active,
+        input:focus,
+        select:active,
+        select:focus {
+            box-shadow: none !important;
+        }
+
         .text {
             font-size: 12px;
             font-weight: 400;
@@ -230,7 +237,7 @@
             color: white !important;
             /* background-color: #FFE500; */
             outline: none;
-                        background-color: #E60F59;
+            background-color: #E60F59;
 
         }
 
@@ -985,14 +992,16 @@
             --tag-hover-bg: #cfcfcf !important;
             background: #cfcfcf !important;
         } */
-.flatpickr-calendar.animate.open{
-width:275px !important;
-left:5px !important;
-}
-.flatpickr-innerContainer{
-/* width: 255px !important; */
-overflow-x: scroll !important;
-}
+        .flatpickr-calendar.animate.open {
+            width: 275px !important;
+            left: 5px !important;
+        }
+
+        .flatpickr-innerContainer {
+            /* width: 255px !important; */
+            overflow-x: scroll !important;
+        }
+
         .flatpickr-day.inRange,
         .flatpickr-day.prevMonthDay.inRange,
         .flatpickr-day.nextMonthDay.inRange,
@@ -1947,18 +1956,13 @@ overflow-x: scroll !important;
                         </a>
                     </div>
                 </div>
+
                 <h2 class="heading-primary mt-3">
-                    Select Coumn
+                    Output
                 </h2>
-                <!-- <div class="search-input  output-div">
-                    <input type="text" name id class="w-100 searchbar">
-                    <p class="text mb-0 ">Press # to select a variable
-                        cell</p>
-                </div> -->
                 <div class="w-100 ">
-                    <select
-                        class="form-select form-select w-100 searchbar condition-1-field">
-                        <option selected>Select Coumn</option>
+                    <select class="form-select form-select w-100 searchbar condition-1-field">
+                        <option selected>Select Column</option>
                         <option value="Column 1">Column 1</option>
                         <option value="Column 2">Column 2</option>
                         <option value="Column 3">Column 3</option>
@@ -1977,9 +1981,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse111" class="accordion-collapse collapse show" aria-labelledby="heading111"
                             data-bs-parent="#accordionExample-111">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -1987,133 +1991,42 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                        <p class="mb-0 pb-0 condition-text-1">
-                                            NO Run Conditions are Added
-                                        </p>
-                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                        <br>
-                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                    </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
 
                 </div>
 
-                <button class="megic-btn mt-3" id="MegicBtn">
-                    <span>Let the magic begin ✨</span>
-                    <div class="progress-bar"></div>
-                </button>
-                <div class="progress-container">
-                    <div id="progress-bar" class="progress-bar"></div>
+                <div>
+                    <button class="megic-btn mt-3" id="MegicBtn">
+                        <span>Let the magic begin ✨</span>
+                        <div class="progress-bar"></div>
+                    </button>
+                    <div class="progress-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
                 </div>
+
                 <div class="d-flex justify-content-between mt-3 mb-2">
                     <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
@@ -2200,12 +2113,24 @@ overflow-x: scroll !important;
                     <input type="text" name id class="w-100 searchbar" placeholder="US">
                 </div>
                 <h2 class="heading-primary mt-3">
+                    Output
+                </h2>
+                <div class="w-100 ">
+                    <select class="form-select form-select w-100 searchbar condition-1-field">
+                        <option selected>Select Column</option>
+                        <option value="Column 1">Column 1</option>
+                        <option value="Column 2">Column 2</option>
+                        <option value="Column 3">Column 3</option>
+                        <option value="Column 4">Column 4</option>
+                    </select>
+                </div>
+
+                <!-- <h2 class="heading-primary mt-3">
                     Output (Cell Range)
                 </h2>
                 <div class="search-input  output-div">
                     <input type="text" name id class="w-100 searchbar">
-                    <!-- <p class="text mb-0 ">Press # to select a variable cell</p> -->
-                </div>
+                </div> -->
                 <hr>
                 <div class="accordion" id="accordionExample-111">
                     <div class="accordion-item border-0 shadow-sm ">
@@ -2218,9 +2143,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse111" class="accordion-collapse collapse show" aria-labelledby="heading111"
                             data-bs-parent="#accordionExample-111">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -2228,113 +2153,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class="mb-0 pb-0 no-condition-added">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -2411,15 +2248,36 @@ overflow-x: scroll !important;
                 <h2 class="heading-primary mt-3">
                     Scrapper (Cell Range)
                 </h2>
-                <div class="search-input ">
-                    <input type="text" name id class="w-100 searchbar" placeholder="A1:A3">
+                <div class="w-100 ">
+                    <select class="form-select form-select w-100 searchbar condition-1-field">
+                        <option selected>Select Column</option>
+                        <option value="Column 1">Column 1</option>
+                        <option value="Column 2">Column 2</option>
+                        <option value="Column 3">Column 3</option>
+                        <option value="Column 4">Column 4</option>
+                    </select>
                 </div>
+                <!-- <div class="search-input ">
+                    <input type="text" name id class="w-100 searchbar" placeholder="A1:A3">
+                </div> -->
                 <h2 class="heading-primary mt-3">
                     Output (Cell Range)
                 </h2>
-                <div class="search-input  output-div">
+                <!-- <div class="search-input  output-div">
                     <input type="text" name id class="w-100 searchbar" placeholder="B1:B3">
-                    <!-- <p class="text mb-0 ">Press # to select a variable cell</p> -->
+                </div>
+
+                <h2 class="heading-primary mt-3">
+                    Select Coumn
+                </h2> -->
+                <div class="w-100 ">
+                    <select class="form-select form-select w-100 searchbar condition-1-field">
+                        <option selected>Select Column</option>
+                        <option value="Column 1">Column 1</option>
+                        <option value="Column 2">Column 2</option>
+                        <option value="Column 3">Column 3</option>
+                        <option value="Column 4">Column 4</option>
+                    </select>
                 </div>
 
                 <div class="accordion" id="accordionExample-333">
@@ -2433,9 +2291,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse333" class="accordion-collapse collapse show" aria-labelledby="heading333"
                             data-bs-parent="#accordionExample-333">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -2443,120 +2301,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                        <p class="mb-0 pb-0 condition-text-1">
-                                            NO Run Conditions are Added
-                                        </p>
-                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                        <br>
-                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                    </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -2775,9 +2538,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse444" class="accordion-collapse collapse show" aria-labelledby="heading444"
                             data-bs-parent="#accordionExample-444">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -2785,120 +2548,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                        <p class="mb-0 pb-0 condition-text-1">
-                                            NO Run Conditions are Added
-                                        </p>
-                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                        <br>
-                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                    </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -3116,9 +2784,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse555" class="accordion-collapse collapse show" aria-labelledby="heading555"
                             data-bs-parent="#accordionExample-555">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -3126,120 +2794,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                        <p class="mb-0 pb-0 condition-text-1">
-                                            NO Run Conditions are Added
-                                        </p>
-                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                        <br>
-                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                    </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -3341,9 +2914,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse666" class="accordion-collapse collapse show" aria-labelledby="heading666"
                             data-bs-parent="#accordionExample-666">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -3351,120 +2924,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                        <p class="mb-0 pb-0 condition-text-1">
-                                            NO Run Conditions are Added
-                                        </p>
-                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                        <br>
-                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                    </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -3598,9 +3076,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse777" class="accordion-collapse collapse show" aria-labelledby="heading777"
                             data-bs-parent="#accordionExample-777">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -3608,120 +3086,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                            <p class="mb-0 pb-0 condition-text-1">
-                                                NO Run Conditions are Added
-                                            </p>
-                                            <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                            <br>
-                                            <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                        </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -4004,9 +3387,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse888" class="accordion-collapse collapse show" aria-labelledby="heading888"
                             data-bs-parent="#accordionExample-888">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -4014,120 +3397,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                        <p class="mb-0 pb-0 condition-text-1">
-                                            NO Run Conditions are Added
-                                        </p>
-                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                        <br>
-                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                    </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -4407,9 +3695,9 @@ overflow-x: scroll !important;
                         </h2>
                         <div id="collapse999" class="accordion-collapse collapse show" aria-labelledby="heading999"
                             data-bs-parent="#accordionExample-999">
-                            <div class="accordion-body condition-body ">
+                            <div class="accordion-body condition-body">
                                 <div class="card run-condition border-0">
-                                    <div class="d-flex justify-content-between align-items-center ">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h5>Run Conditions</h5>
                                         </div>
@@ -4417,120 +3705,25 @@ overflow-x: scroll !important;
                                             <input class="form-check-input" type="checkbox"
                                                 id="flexSwitchCheckDefault" />
                                         </div>
-
                                     </div>
                                     <div>
-
                                         <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
                                     </div>
-                                    <!-- <div class="condition-on d-none p-3">
-                                        <p class="mb-0 pb-0 condition-text-1">
-                                            NO Run Conditions are Added
-                                        </p>
-                                        <p class="mb-0 pb-0 condition-text-2 d-none"></p>
-                                        <br>
-                                        <button class="btn btn-primary edit-condition-btn">Edit Condition</button>
-                                    </div> -->
                                 </div>
 
                                 <!-- Add Condition Card -->
                                 <div class="card add-condition d-none mt-2 border-0 p-0">
-                                    <hr>
-                                    <p class=" no-condition-added " style="margin-bottom: 5px !important;">
-                                        NO Run Conditions are Added
-                                    </p>
-                                    <!-- Condition 1 -->
-                                    <div class="condition-1 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3 ">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <p class="mb-0">Run If</p>
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select w-100 searchbar condition-1-field">
-                                                    <option value="Company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select w-100 form-select searchbar condition-1-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text"
-                                                    class="form-control w-100 condition-1-value searchbar"
-                                                    placeholder="Enter value" />
-                                            </div>
-
-                                        </div>
+                                    <hr />
+                                    <div class="conditions-container">
+                                        <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                                        <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                                     </div>
-                                    <!-- Condition 2 -->
-                                    <div class="condition-2 d-none ">
-                                        <div class="d-flex align-items-start flex-column gap-2 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center w-100">
-                                                <div>
-                                                    <!-- <p class="mb-0">Run If</p> -->
-                                                </div>
-                                                <div class="">
-                                                    <i class="bi bi-trash-fill remove-more  delete-condition"></i>
-                                                </div>
-                                            </div>
-                                            <div class="w-100">
-                                                <select class="form-select form-select searchbar condition-2-logic">
-                                                    <option selected>And</option>
-                                                    <option value="Or">Or</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-field">
-                                                    <option value="company" selected>Company</option>
-                                                    <option value="Website URL">Website URL</option>
-                                                    <option value="Similar Companies">Similar Companies</option>
-                                                    <option value="Column D">Column D</option>
-                                                    <option value="Column A">Column A</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <select
-                                                    class="form-select form-select searchbar w-100 condition-2-operator">
-                                                    <option value="Contains" selected>Contains</option>
-                                                    <option value="Does Not Contain">Does Not Contain</option>
-                                                    <option value="Is">Is</option>
-                                                    <option value="Is not">Is not</option>
-                                                    <option value="is empty">is empty</option>
-                                                    <option value="is not empty">is not empty</option>
-                                                </select>
-                                            </div>
-                                            <div class="w-100">
-                                                <input type="text" class="form-control searchbar condition-2-value"
-                                                    placeholder="Enter value" />
-                                            </div>
 
-                                        </div>
-                                    </div>
                                     <!-- Buttons -->
-                                    <button class="border-0 add-condition-btn addSmartlead-variabl">Add
-                                        Condition</button>
-                                    <hr class="last-line d-none">
-                                    <button class=" remove-all-btn d-none">Remove All</button>
+                                    <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                                    <hr class="last-line d-none" />
+                                    <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -13097,7 +12290,7 @@ overflow-x: scroll !important;
     </script>
 
     <!-- condition -->
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             let clickCount = 0;
             // Toggle .add-condition based on the specific switch for all instances
@@ -13180,7 +12373,162 @@ overflow-x: scroll !important;
             });
 
         });
+    </script> -->
+
+
+    <script>
+        $(document).ready(function () {
+            // Global counter for unique condition IDs
+            let conditionCounter = 0;
+    
+            // Toggle .add-condition visibility based on the switch state
+            $(document).on('change', '.form-check-input', function () {
+                const $accordionBody = $(this).closest('.accordion-body');
+                const $addConditionCard = $accordionBody.find('.add-condition');
+                $addConditionCard.toggleClass('d-none', !$(this).is(':checked'));
+            });
+    
+            // Function to create condition-1 template
+            function createCondition1() {
+                conditionCounter++; // Increment the global counter
+                return `
+                    <div class="condition-1" id="condition-${conditionCounter}">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <p class="mb-0">Run If</p>
+                            <i class="bi bi-trash-fill remove-more delete-condition"></i>
+                        </div>
+                        <div class="mb-2">
+                            <select class="form-select searchbar condition-1-field">
+                                <option value="Company" selected>Company</option>
+                                <option value="Website URL">Website URL</option>
+                                <option value="Similar Companies">Similar Companies</option>
+                                <option value="Column D">Column D</option>
+                                <option value="Column A">Column A</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <select class="form-select searchbar condition-1-operator">
+                                <option value="Contains" selected>Contains</option>
+                                <option value="Does Not Contain">Does Not Contain</option>
+                                <option value="Is">Is</option>
+                                <option value="Is not">Is not</option>
+                                <option value="is empty">is empty</option>
+                                <option value="is not empty">is not empty</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control searchbar condition-1-value" placeholder="Enter value" />
+                        </div>
+                    </div>
+                `;
+            }
+    
+            // Function to create condition-2 template
+            function createCondition2() {
+                conditionCounter++; // Increment the global counter
+                return `
+                    <div class="condition-2" id="condition-${conditionCounter}">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <p class="mb-0">And/Or</p>
+                            <i class="bi bi-trash-fill remove-more delete-condition"></i>
+                        </div>
+                        <div class="mb-2">
+                            <select class="form-select searchbar condition-2-logic">
+                                <option value="And" selected>And</option>
+                                <option value="Or">Or</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <select class="form-select searchbar condition-2-field">
+                                <option value="Company" selected>Company</option>
+                                <option value="Website URL">Website URL</option>
+                                <option value="Similar Companies">Similar Companies</option>
+                                <option value="Column D">Column D</option>
+                                <option value="Column A">Column A</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <select class="form-select searchbar condition-2-operator">
+                                <option value="Contains" selected>Contains</option>
+                                <option value="Does Not Contain">Does Not Contain</option>
+                                <option value="Is">Is</option>
+                                <option value="Is not">Is not</option>
+                                <option value="is empty">is empty</option>
+                                <option value="is not empty">is not empty</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control searchbar condition-2-value" placeholder="Enter value" />
+                        </div>
+                    </div>
+                `;
+            }
+    
+            // Add condition logic
+            $(document).on('click', '.add-condition-btn', function () {
+                const $accordionBody = $(this).closest('.accordion-body');
+                const $conditionsContainer = $accordionBody.find('.conditions-container');
+                const $noConditionText = $accordionBody.find('.no-condition-added');
+                const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+                const $lastLine = $accordionBody.find('.last-line');
+    
+                // Check if there are no conditions present
+                if ($conditionsContainer.children('.condition-1, .condition-2').length === 0) {
+                    // Add condition-1 if none exists
+                    $conditionsContainer.append(createCondition1());
+                    $noConditionText.addClass('d-none');
+                } else {
+                    // If at least one condition is present, add condition-2
+                    $conditionsContainer.append(createCondition2());
+                }
+    
+                // Show the "Remove All" button and last-line
+                $removeAllBtn.removeClass('d-none');
+                $lastLine.removeClass('d-none');
+            });
+    
+            // Remove individual condition
+            $(document).on('click', '.delete-condition', function () {
+                const $accordionBody = $(this).closest('.accordion-body');
+                const $conditionsContainer = $accordionBody.find('.conditions-container');
+                const $noConditionText = $accordionBody.find('.no-condition-added');
+                const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+                const $lastLine = $accordionBody.find('.last-line');
+    
+                // Remove the specific condition
+                $(this).closest('.condition-1, .condition-2').remove();
+    
+                // If no conditions are left, show "NO Run Conditions" text
+                if ($conditionsContainer.children('.condition-1, .condition-2').length === 0) {
+                    $noConditionText.removeClass('d-none');
+                    $removeAllBtn.addClass('d-none');
+                    $lastLine.addClass('d-none');
+                }
+            });
+    
+            // Remove all conditions
+            $(document).on('click', '.remove-all-btn', function () {
+                const $accordionBody = $(this).closest('.accordion-body');
+                const $conditionsContainer = $accordionBody.find('.conditions-container');
+                const $noConditionText = $accordionBody.find('.no-condition-added');
+                const $removeAllBtn = $accordionBody.find('.remove-all-btn');
+                const $lastLine = $accordionBody.find('.last-line');
+    
+                // Remove all conditions
+                $conditionsContainer.empty();
+    
+                // Show "NO Run Conditions" text
+                $noConditionText.removeClass('d-none');
+                $removeAllBtn.addClass('d-none');
+                $lastLine.addClass('d-none');
+    
+                // Reset the condition counter to allow adding conditions starting from condition-1 again
+                // conditionCounter = 0;
+            });
+        });
     </script>
+    
+    
     <!-- create automation -->
     <script>
         // JavaScript
@@ -13225,7 +12573,7 @@ overflow-x: scroll !important;
             enableTime: true, // Enables time selection
             dateFormat: "Y-m-d H:i", // Format: Year-Month-Day Hour:Minute
             time_24hr: true, // 24-hour time format
-                  //  appendTo: document.querySelector('.script-application-sidebar') // Append dropdown inside sidebar 
+            //  appendTo: document.querySelector('.script-application-sidebar') // Append dropdown inside sidebar 
 
 
         });
