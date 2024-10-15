@@ -2016,20 +2016,79 @@
                     </div>
 
                 </div>
-
-                <div>
-                    <button class="megic-btn mt-3 position-relative" id="MegicBtn">
-                        <span>Let the magic begin ✨</span>
-                        <div class="progress-bar"></div>
-                        <img src="https://mergeasy123.netlify.app/sidebar/arrow.svg" class="arrow-icon" 
-                        style="position: absolute;
-                        top: 8px;
-                        right: 5%;">
-                    </button>
-                    <div class="progress-container">
-                        <div id="progress-bar" class="progress-bar"></div>
+                <style>
+                    .cta-options {
+                        position: absolute;
+                        top: -250%;
+                        left: 0;
+                        right: 0;
+                        border: 1px solid #E60F59;
+                        border-radius: 7px;
+                        padding: 7px;
+                        background-color: white;
+                    }
+                    .cancel-icon{
+                        z-index: 10;
+                    }
+                    .total-credit{
+                        background-color: #fdf3f6;
+                        color: #e60f59;
+                        padding: 4px 7px;
+                        border-radius: 3px;
+                        font-size: 12px;
+                    }
+                    .run-btn{
+                        font-size: 12px;
+                        background-color: transparent;
+                        border: none;
+                        padding: 7px 20px;
+                        width: 100%;
+                    }
+                    .run-btn:hover{
+                        background-color: #fdf3f6;
+                        color: #e60f59;
+                    }
+                </style>
+           <div class="position-relative">
+            <div class="cta-options d-none">
+                <button class="d-flex justify-content-between align-items-center run-btn run-5-rows">
+                    <p class="mb-0 pb-0">Run 5 rows</p>
+                    <div class="total-credit">
+                        <i class="bi bi-database"></i> 30
                     </div>
+                </button>
+                <hr class="my-0 py-0">
+                <button class="d-flex justify-content-between align-items-center run-btn run-500-rows">
+                    Run 500 rows in this view
+                    <div class="total-credit">
+                        <i class="bi bi-database"></i> 30
+                    </div>
+                </button>
+                <hr class="my-0 py-0">
+                <button class="d-flex justify-content-between align-items-center run-btn save-and-no-run">
+                    Save and don't run
+                    <div class="total-credit">
+                        <i class="bi bi-database"></i> 30
+                    </div>
+                </button>
+            </div>
+            
+            <button class="megic-btn mt-3 position-relative" id="MegicBtn">
+                <span>Let the magic begin ✨</span>
+                <div class="progress-bar"></div>
+                <div class="dropdown-icon" style="position: absolute; top: 8px; right: 5%;">
+                    <i class="bi bi-chevron-down"></i>
                 </div>
+                <div class="cancel-icon d-none" style="position: absolute; top: 8px; right: 5%; cursor: pointer;">
+                    <i class="bi bi-x"></i>
+                </div>
+            </button>
+            
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+        
 
                 <div class="d-flex justify-content-between mt-3 mb-2">
                     <a href class="d-flex align-items-center text-decoration-none">
@@ -11163,27 +11222,29 @@
             }, 2100);
         });
 
-        document.getElementById("MegicBtn").addEventListener("click", function () {
-            const btn = this;
-            const progressBar = btn.querySelector(".progress-bar");
+        // document.getElementById("MegicBtn").addEventListener("click", function () {
+        //     const btn = this;
+        //     const progressBar = btn.querySelector(".progress-bar");
 
 
-            // Show progress and disable button
-            btn.classList.add("submitting");
-            btn.querySelector("span").textContent = "Processing...";
+        //     // Show progress and disable button
+        //     btn.classList.add("submitting");
+        //     btn.querySelector("span").textContent = "Processing...";
 
-            // Animate the progress bar
-            setTimeout(() => {
-                progressBar.style.width = "100%";
-            }, 100);
+        //     // Animate the progress bar
+        //     setTimeout(() => {
+        //         progressBar.style.width = "100%";
+        //     }, 100);
 
-            // After 2 seconds, mark as completed
-            setTimeout(() => {
-                btn.classList.remove("submitting");
-                btn.classList.add("completed");
-                btn.querySelector("span").textContent = "Completed 👍🏻";
-            }, 2100);
-        });
+        //     // After 2 seconds, mark as completed
+        //     setTimeout(() => {
+        //         btn.classList.remove("submitting");
+        //         btn.classList.add("completed");
+        //         btn.querySelector("span").textContent = "Completed 👍🏻";
+        //     }, 2100);
+        // });
+
+
 
         document.getElementById("ScrapBtn").addEventListener("click", function () {
             const btn = this;
@@ -11206,6 +11267,7 @@
                 btn.querySelector("span").textContent = "Completed 👍🏻";
             }, 2100);
         });
+
 
         document.getElementById("leadBtn").addEventListener("click", function () {
             const btn = this;
@@ -11407,7 +11469,71 @@
         });
 
     </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const magicBtn = document.getElementById("MegicBtn");
+    const ctaOptions = document.querySelector(".cta-options");
+    const progressBar = magicBtn.querySelector(".progress-bar");
+    const dropdownIcon = magicBtn.querySelector(".dropdown-icon");
+    const cancelIcon = magicBtn.querySelector(".cancel-icon");
 
+    let processing = false;
+
+    // Toggle cta-options only if dropdown-icon is visible
+    magicBtn.addEventListener("click", function (event) {
+        if (!processing && !dropdownIcon.classList.contains("d-none")) {
+            ctaOptions.classList.toggle("d-none"); // Toggle dropdown on button click
+        }
+        event.stopPropagation(); // Prevents the click from propagating to document
+    });
+
+    // Hide the dropdown and show cancel icon when an option is clicked
+    document.querySelectorAll('.cta-options button').forEach(function (option) {
+        option.addEventListener("click", function () {
+            ctaOptions.classList.add("d-none");  // Hide options after selection
+            dropdownIcon.classList.add("d-none"); // Hide dropdown icon
+            cancelIcon.classList.remove("d-none"); // Show cancel icon
+
+            processing = true;
+            magicBtn.classList.add("submitting");
+            magicBtn.querySelector("span").textContent = "Processing...";
+            progressBar.style.display = "block";
+            // Start the progress bar animation
+            setTimeout(() => {
+                progressBar.style.width = "100%";
+            }, 100);
+            
+            // Simulate completion after 2 seconds
+            setTimeout(() => {
+                magicBtn.classList.remove("submitting");
+                magicBtn.classList.add("completed");
+                magicBtn.querySelector("span").textContent = "Completed 👍🏻";
+            }, 2100);
+        });
+    });
+
+    // Reset button state and stop progress when cancel icon is clicked
+    cancelIcon.addEventListener("click", function () {
+        processing = false;
+        ctaOptions.classList.add("d-none"); // Ensure options stay hidden
+        magicBtn.classList.remove("submitting", "completed");
+        magicBtn.querySelector("span").textContent = "Let the magic begin ✨";
+        progressBar.style.width = "0%";  // Reset the progress bar
+        progressBar.style.display = "none";
+        // Hide cancel "X" and show dropdown icon again
+        cancelIcon.classList.add("d-none");
+        dropdownIcon.classList.remove("d-none");
+    });
+
+    // Hide cta-options when clicking anywhere outside the button or dropdown
+    document.addEventListener("click", function (event) {
+        if (!magicBtn.contains(event.target) && !ctaOptions.contains(event.target)) {
+            ctaOptions.classList.add("d-none"); // Hide dropdown when clicking outside
+        }
+    });
+});
+
+</script>
     <!-- Add cards -->
     <script>
         $(document).ready(function () {
@@ -12384,14 +12510,14 @@
         $(document).ready(function () {
             // Global counter for unique condition IDs
             let conditionCounter = 0;
-    
+
             // Toggle .add-condition visibility based on the switch state
             $(document).on('change', '.form-check-input', function () {
                 const $accordionBody = $(this).closest('.accordion-body');
                 const $addConditionCard = $accordionBody.find('.add-condition');
                 $addConditionCard.toggleClass('d-none', !$(this).is(':checked'));
             });
-    
+
             // Function to create condition-1 template
             function createCondition1() {
                 conditionCounter++; // Increment the global counter
@@ -12426,7 +12552,7 @@
                     </div>
                 `;
             }
-    
+
             // Function to create condition-2 template
             function createCondition2() {
                 conditionCounter++; // Increment the global counter
@@ -12467,7 +12593,7 @@
                     </div>
                 `;
             }
-    
+
             // Add condition logic
             $(document).on('click', '.add-condition-btn', function () {
                 const $accordionBody = $(this).closest('.accordion-body');
@@ -12475,7 +12601,7 @@
                 const $noConditionText = $accordionBody.find('.no-condition-added');
                 const $removeAllBtn = $accordionBody.find('.remove-all-btn');
                 const $lastLine = $accordionBody.find('.last-line');
-    
+
                 // Check if there are no conditions present
                 if ($conditionsContainer.children('.condition-1, .condition-2').length === 0) {
                     // Add condition-1 if none exists
@@ -12485,12 +12611,12 @@
                     // If at least one condition is present, add condition-2
                     $conditionsContainer.append(createCondition2());
                 }
-    
+
                 // Show the "Remove All" button and last-line
                 $removeAllBtn.removeClass('d-none');
                 $lastLine.removeClass('d-none');
             });
-    
+
             // Remove individual condition
             $(document).on('click', '.delete-condition', function () {
                 const $accordionBody = $(this).closest('.accordion-body');
@@ -12498,10 +12624,10 @@
                 const $noConditionText = $accordionBody.find('.no-condition-added');
                 const $removeAllBtn = $accordionBody.find('.remove-all-btn');
                 const $lastLine = $accordionBody.find('.last-line');
-    
+
                 // Remove the specific condition
                 $(this).closest('.condition-1, .condition-2').remove();
-    
+
                 // If no conditions are left, show "NO Run Conditions" text
                 if ($conditionsContainer.children('.condition-1, .condition-2').length === 0) {
                     $noConditionText.removeClass('d-none');
@@ -12509,7 +12635,7 @@
                     $lastLine.addClass('d-none');
                 }
             });
-    
+
             // Remove all conditions
             $(document).on('click', '.remove-all-btn', function () {
                 const $accordionBody = $(this).closest('.accordion-body');
@@ -12517,22 +12643,22 @@
                 const $noConditionText = $accordionBody.find('.no-condition-added');
                 const $removeAllBtn = $accordionBody.find('.remove-all-btn');
                 const $lastLine = $accordionBody.find('.last-line');
-    
+
                 // Remove all conditions
                 $conditionsContainer.empty();
-    
+
                 // Show "NO Run Conditions" text
                 $noConditionText.removeClass('d-none');
                 $removeAllBtn.addClass('d-none');
                 $lastLine.addClass('d-none');
-    
+
                 // Reset the condition counter to allow adding conditions starting from condition-1 again
                 // conditionCounter = 0;
             });
         });
     </script>
-    
-    
+
+
     <!-- create automation -->
     <script>
         // JavaScript
