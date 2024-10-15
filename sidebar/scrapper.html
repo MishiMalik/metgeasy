@@ -2048,6 +2048,12 @@
                         background-color: #fdf3f6;
                         color: #e60f59;
                     }
+                    .submitting{
+                        color: white !important;
+                    }
+                    .submitting.megic-btn{
+                        background-color:#e60f59 !important ;
+                    }
                 </style>
            <div class="position-relative">
             <div class="cta-options d-none">
@@ -2067,9 +2073,6 @@
                 <hr class="my-0 py-0">
                 <button class="d-flex justify-content-between align-items-center run-btn save-and-no-run">
                     Save and don't run
-                    <div class="total-credit">
-                        <i class="bi bi-database"></i> 30
-                    </div>
                 </button>
             </div>
             
@@ -2080,7 +2083,7 @@
                     <i class="bi bi-chevron-down"></i>
                 </div>
                 <div class="cancel-icon d-none" style="position: absolute; top: 8px; right: 5%; cursor: pointer;">
-                    <i class="bi bi-x"></i>
+                    <i class="bi bi-x-circle"></i>
                 </div>
             </button>
             
@@ -11470,7 +11473,7 @@
 
     </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const magicBtn = document.getElementById("MegicBtn");
     const ctaOptions = document.querySelector(".cta-options");
     const progressBar = magicBtn.querySelector(".progress-bar");
@@ -11490,14 +11493,29 @@
     // Hide the dropdown and show cancel icon when an option is clicked
     document.querySelectorAll('.cta-options button').forEach(function (option) {
         option.addEventListener("click", function () {
-            ctaOptions.classList.add("d-none");  // Hide options after selection
+            // Check if the clicked option is "Save and don't run"
+            if (this.textContent.includes("Save and don't run")) {
+                ctaOptions.classList.add("d-none"); // Hide options after selection
+                dropdownIcon.classList.add("d-none"); // Hide dropdown icon
+                cancelIcon.classList.remove("d-none"); // Show cancel icon
+                magicBtn.classList.remove("submitting"); // Remove submitting class
+                magicBtn.classList.add("completed"); // Add completed class
+                magicBtn.querySelector("span").textContent = "Saved"; // Show saved message
+                progressBar.style.width = "0%"; // Reset the progress bar
+                progressBar.style.display="none";
+                processing = false; // Reset processing state
+                return; // Exit the function early
+            }
+
+            // For other options, proceed with processing
+            ctaOptions.classList.add("d-none"); // Hide options after selection
             dropdownIcon.classList.add("d-none"); // Hide dropdown icon
             cancelIcon.classList.remove("d-none"); // Show cancel icon
 
             processing = true;
             magicBtn.classList.add("submitting");
             magicBtn.querySelector("span").textContent = "Processing...";
-            progressBar.style.display = "block";
+            progressBar.style.display="block";
             // Start the progress bar animation
             setTimeout(() => {
                 progressBar.style.width = "100%";
@@ -11516,10 +11534,10 @@
     cancelIcon.addEventListener("click", function () {
         processing = false;
         ctaOptions.classList.add("d-none"); // Ensure options stay hidden
-        magicBtn.classList.remove("submitting", "completed");
+        magicBtn.classList.remove("submitting", "completed"); // Remove completed class
         magicBtn.querySelector("span").textContent = "Let the magic begin ✨";
-        progressBar.style.width = "0%";  // Reset the progress bar
-        progressBar.style.display = "none";
+        progressBar.style.width = "0%"; // Reset the progress bar
+        progressBar.style.display="none";
         // Hide cancel "X" and show dropdown icon again
         cancelIcon.classList.add("d-none");
         dropdownIcon.classList.remove("d-none");
@@ -11532,6 +11550,7 @@
         }
     });
 });
+
 
 </script>
     <!-- Add cards -->
