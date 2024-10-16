@@ -1045,7 +1045,7 @@
     <style>
         .cta-options {
             position: absolute;
-            top: -250%;
+            top: -201%;
             left: 0;
             right: 0;
             border: 1px solid #E60F59;
@@ -1055,6 +1055,8 @@
         }
 
         .cancel-icon {
+            position: fixed;
+            top: 10px;
             z-index: 10;
         }
 
@@ -2068,26 +2070,29 @@
 
                 <div class="position-relative">
                     <div class="cta-options d-none">
-                        <button class="d-flex justify-content-between align-items-center option" data-action="run-5-rows">
+                        <button class="d-flex justify-content-between align-items-center option run-btn" data-action="run-5-rows">
                             Run 5 rows
                         </button>
-                        <button class="d-flex justify-content-between align-items-center option" data-action="run-500-rows">
+                        <button class="d-flex justify-content-between align-items-center option run-btn" data-action="run-500-rows">
                             Run 500 rows in this view
                         </button>
-                        <button class="d-flex justify-content-between align-items-center option" data-action="save">
+                        <button class="d-flex justify-content-between align-items-center option run-btn" data-action="save">
                             Save and don't run
                         </button>
                     </div>
-                    <button class="megic-btn mt-3 position-relative" id="MegicBtn">
-                        <span>Let the magic begin ✨</span>
-                        <div class="progress-bar"></div>
-                        <div class="dropdown-icon" style="position: absolute; top: 8px; right: 5%;">
-                            <i class="bi bi-chevron-down"></i>
+                    <div class="position-relative">
+                        <div class="cancel-icon d-none" style="position: absolute; top: 12px; right: 5%; z-index: 20;">
+                            <i class="bi bi-x text-white" style="font-size: 30px;"></i>
                         </div>
-                        <div class="cancel-icon d-none" style="position: absolute; top: 8px; right: 5%;">
-                            <i class="bi bi-x"></i>
-                        </div>
-                    </button>
+                        <button class="megic-btn mt-3 position-relative" id="MegicBtn">
+                            <span>Let the magic begin ✨</span>
+                            <div class="progress-bar"></div>
+                            <div class="dropdown-icon" style="position: absolute; top: 8px; right: 5%;">
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                           
+                        </button>
+                    </div>
                     <div class="progress-container">
                         <div id="progress-bar" class="progress-bar"></div>
                     </div>
@@ -11558,7 +11563,7 @@
     const $ctaOptions = $(".cta-options");         // Cache the CTA options container
     const $progressBar = $(".progress-bar");       // Cache the progress bar element
     const $dropdownIcon = $megicBtn.find(".dropdown-icon");   // Cache the dropdown icon
-    const $cancelIcon = $megicBtn.find(".cancel-icon");       // Cache the cancel (X) icon
+    const $cancelIcon = $(".cancel-icon");       // Cache the cancel (X) icon
     let processing = false;                       // Flag to track if processing is ongoing
     let progressTimeout, resetTimeout;            // Variables to hold timeouts
 
@@ -11596,6 +11601,7 @@
             $megicBtn.find("span").text("Saved 👍🏻"); // Change the button text to "Saved"
             $ctaOptions.addClass("d-none");           // Hide the CTA options
             resetTimeout = setTimeout(resetButton, 1000); // Reset the button after 1 second
+            $dropdownIcon.addClass("d-none");   
         } else if (action.startsWith("run")) {
             // If any "Run" option is clicked
             $progressBar.css("display", "block");     // Show the progress bar
