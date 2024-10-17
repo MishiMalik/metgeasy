@@ -1074,6 +1074,7 @@
             border: none;
             padding: 7px 20px;
             width: 100%;
+            border-bottom: 1px solid rgb(230, 227, 227);
         }
 
         .run-btn:hover {
@@ -2081,8 +2082,8 @@
                         </button>
                     </div>
                     <div class="position-relative">
-                        <div class="cancel-icon d-none" style="position: absolute; top: 12px; right: 5%; z-index: 20;">
-                            <i class="bi bi-x text-white" style="font-size: 30px;"></i>
+                        <div class="cancel-icon d-none" style="position: absolute; top: 22px; right: 5%; z-index: 20;">
+                            <i class="bi bi-x-circle text-white" style="font-size: 15px;"></i>
                         </div>
                         <button class="megic-btn mt-3 position-relative" id="MegicBtn">
                             <span>Let the magic begin ✨</span>
@@ -2090,7 +2091,6 @@
                             <div class="dropdown-icon" style="position: absolute; top: 8px; right: 5%;">
                                 <i class="bi bi-chevron-down"></i>
                             </div>
-                           
                         </button>
                     </div>
                     <div class="progress-container">
@@ -2251,11 +2251,40 @@
 
                 </div>
 
-                <button class="megic-btn mt-3" id="submitBtn">
+                <!-- <button class="megic-btn mt-3" id="submitBtn">
                     <span>Search ✨</span>
                     <div class="progress-bar"></div>
-                </button>
-
+                </button> -->
+                
+                <div class="position-relative">
+                    <div class="cta-options d-none">
+                        <button class="d-flex justify-content-between align-items-center option run-btn" data-action="run-5-rows">
+                            Run 5 rows
+                        </button>
+                        <button class="d-flex justify-content-between align-items-center option run-btn" data-action="run-500-rows">
+                            Run 500 rows in this view
+                        </button>
+                        <button class="d-flex justify-content-between align-items-center option run-btn" data-action="save">
+                            Save and don't run
+                        </button>
+                    </div>
+                
+                    <div class="position-relative">
+                        <div class="cancel-icon d-none" style="position: absolute; top: 22px; right: 5%; z-index: 20;">
+                            <i class="bi bi-x-circle text-white" style="font-size: 15px;"></i>
+                        </div>
+                        <button class="megic-btn mt-3 position-relative" id="submitBtn">
+                            <span>Let the magic begin ✨</span>
+                            <div class="progress-bar"></div>
+                            <div class="dropdown-icon" style="position: absolute; top: 8px; right: 5%;">
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="progress-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </div>
                 <div class="d-flex justify-content-between mt-3 mb-2">
                     <a href class="d-flex align-items-center text-decoration-none">
                         <div class="upgrade-icon">
@@ -11211,26 +11240,104 @@
 
     <!--progress Buttons all screen -->
     <script>
-        document.getElementById("submitBtn").addEventListener("click", function () {
-            const btn = this;
-            const progressBar = btn.querySelector(".progress-bar");
+        // document.getElementById("submitBtn").addEventListener("click", function () {
+        //     const btn = this;
+        //     const progressBar = btn.querySelector(".progress-bar");
 
-            // Show progress and disable button
-            btn.classList.add("submitting");
-            btn.querySelector("span").textContent = "Searching...";
+        //     // Show progress and disable button
+        //     btn.classList.add("submitting");
+        //     btn.querySelector("span").textContent = "Searching...";
 
-            // Animate the progress bar
-            setTimeout(() => {
+        //     // Animate the progress bar
+        //     setTimeout(() => {
+        //         progressBar.style.width = "100%";
+        //     }, 100);
+
+        //     // After 2 seconds, mark as completed
+        //     setTimeout(() => {
+        //         btn.classList.remove("submitting");
+        //         btn.classList.add("completed");
+        //         btn.querySelector("span").textContent = "Completed 👍🏻";
+        //     }, 2100);
+        // });
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const submitBtn = document.getElementById("submitBtn");
+    const ctaOptions = submitBtn.closest(".position-relative").querySelector(".cta-options");
+    const progressBar = submitBtn.querySelector(".progress-bar");
+    const dropdownIcon = submitBtn.querySelector(".dropdown-icon");
+    const cancelIcon = submitBtn.closest(".position-relative").querySelector(".cancel-icon");
+    let processing = false;
+    let progressTimeout, resetTimeout;
+
+    // Function to reset the button to its original state
+    function resetButton() {
+        submitBtn.classList.remove("submitting", "completed");
+        submitBtn.querySelector("span").textContent = "Search ✨";
+        cancelIcon.classList.add("d-none");
+        dropdownIcon.classList.remove("d-none");
+        progressBar.style.display = "none";
+        progressBar.style.width = "0";
+        clearTimeout(resetTimeout);
+        processing = false;
+    }
+
+    // Click event for the submitBtn
+    submitBtn.addEventListener("click", function () {
+        if (!processing) {
+            // Toggle CTA options if not processing
+            ctaOptions.classList.toggle("d-none");
+        } else {
+            // If processing, stop the progress and reset the button
+            clearTimeout(progressTimeout);
+            resetButton();
+        }
+    });
+
+    // Click event for CTA options
+    ctaOptions.addEventListener("click", function (e) {
+        const action = e.target.getAttribute("data-action");
+
+        if (action === "save") {
+            submitBtn.classList.add("completed");
+            submitBtn.querySelector("span").textContent = "Saved 👍🏻";
+            ctaOptions.classList.add("d-none");
+            resetTimeout = setTimeout(resetButton, 1000);
+            dropdownIcon.classList.add("d-none");
+        } else if (action.startsWith("run")) {
+            progressBar.style.display = "block";
+            ctaOptions.classList.add("d-none");
+            submitBtn.classList.add("submitting");
+            submitBtn.querySelector("span").textContent = "Searching...";
+            progressBar.style.width = "0";
+            dropdownIcon.classList.add("d-none");
+            cancelIcon.classList.remove("d-none");
+            processing = true;
+
+            // Simulate progress animation
+            setTimeout(function () {
                 progressBar.style.width = "100%";
             }, 100);
 
-            // After 2 seconds, mark as completed
-            setTimeout(() => {
-                btn.classList.remove("submitting");
-                btn.classList.add("completed");
-                btn.querySelector("span").textContent = "Completed 👍🏻";
+            // Simulate the process completing after 2 seconds
+            progressTimeout = setTimeout(function () {
+                submitBtn.classList.add("completed");
+                submitBtn.querySelector("span").textContent = "Completed 👍🏻";
+                cancelIcon.classList.add("d-none");
+                resetTimeout = setTimeout(resetButton, 1000);
             }, 2100);
-        });
+        }
+    });
+
+    // Click event for the cancel icon
+    cancelIcon.addEventListener("click", function () {
+        if (processing) {
+            clearTimeout(progressTimeout);
+            resetButton();
+        }
+    });
+});
+
 
         // document.getElementById("MegicBtn").addEventListener("click", function () {
         //     const btn = this;
@@ -11558,32 +11665,122 @@
         //     });
         // });
     // awais
-        $(document).ready(function () {
-    const $megicBtn = $("#MegicBtn");              // Cache the Magic Button element
-    const $ctaOptions = $(".cta-options");         // Cache the CTA options container
-    const $progressBar = $(".progress-bar");       // Cache the progress bar element
-    const $dropdownIcon = $megicBtn.find(".dropdown-icon");   // Cache the dropdown icon
-    const $cancelIcon = $(".cancel-icon");       // Cache the cancel (X) icon
-    let processing = false;                       // Flag to track if processing is ongoing
-    let progressTimeout, resetTimeout;            // Variables to hold timeouts
+//         $(document).ready(function () {
+//     const $megicBtn = $("#MegicBtn");              // Cache the Magic Button element
+//     const $ctaOptions = $(".cta-options");         // Cache the CTA options container
+//     const $progressBar = $(".progress-bar");       // Cache the progress bar element
+//     const $dropdownIcon = $megicBtn.find(".dropdown-icon");   // Cache the dropdown icon
+//     const $cancelIcon = $(".cancel-icon");       // Cache the cancel (X) icon
+//     let processing = false;                       // Flag to track if processing is ongoing
+//     let progressTimeout, resetTimeout;            // Variables to hold timeouts
+
+//     // Function to reset the button to its original state
+//     function resetButton() {
+//         $megicBtn.removeClass("submitting completed"); // Remove any states (submitting/completed)
+//         $megicBtn.find("span").text("Let the magic begin ✨"); // Set the original button text
+//         $cancelIcon.addClass("d-none");              // Hide the cancel icon
+//         $dropdownIcon.removeClass("d-none");         // Show the dropdown icon again
+//         $progressBar.css("display", "none");         // Hide the progress bar
+//         $progressBar.css("width", "0");              // Reset the progress bar width to 0
+//         clearTimeout(resetTimeout);                  // Clear the reset timeout
+//         processing = false;                          // Reset the processing flag
+//     }
+
+//     // Click event for the Magic Button
+//     $megicBtn.on("click", function () {
+//         if (!processing) {
+//             // Toggle CTA options if not processing
+//             $ctaOptions.toggleClass("d-none");
+//         } else {
+//             // If processing, stop the progress and reset the button
+//             clearTimeout(progressTimeout);  // Clear the progress timeout to stop the progress
+//             resetButton();                  // Reset to original state
+//         }
+//     });
+
+//     // Click event for CTA options
+//     $ctaOptions.on("click", "button", function () {
+//         const action = $(this).data("action");  // Get the action from the clicked button
+
+//         if (action === "save") {
+//             // If "Save and don't run" is clicked
+//             $megicBtn.addClass("completed");          // Add completed state to the button
+//             $megicBtn.find("span").text("Saved 👍🏻"); // Change the button text to "Saved"
+//             $ctaOptions.addClass("d-none");           // Hide the CTA options
+//             resetTimeout = setTimeout(resetButton, 1000); // Reset the button after 1 second
+//             $dropdownIcon.addClass("d-none");   
+//         } else if (action.startsWith("run")) {
+//             // If any "Run" option is clicked
+//             $progressBar.css("display", "block");     // Show the progress bar
+//             $ctaOptions.addClass("d-none");           // Hide the CTA options
+//             $megicBtn.addClass("submitting");         // Add submitting state to the button
+//             $megicBtn.find("span").text("Processing..."); // Set the text to "Processing..."
+//             $progressBar.css("width", "0");           // Reset the progress bar width
+//             $dropdownIcon.addClass("d-none");         // Hide the dropdown icon
+//             $cancelIcon.removeClass("d-none");        // Show the cancel icon
+//             processing = true;                        // Set the processing flag
+
+//             // Simulate progress animation
+//             setTimeout(function () {
+//                 $progressBar.css("width", "100%");    // Fill the progress bar to 100%
+//             }, 100);
+
+//             // Simulate the process completing after 2 seconds
+//             progressTimeout = setTimeout(function () {
+//                 $megicBtn.addClass("completed");      // Add completed state
+//                 $megicBtn.find("span").text("Completed 👍🏻"); // Set completed text
+//                 $cancelIcon.addClass("d-none");       // Hide the cancel icon
+//                 resetTimeout = setTimeout(resetButton, 1000); // Reset button after 1 second
+//             }, 2000); // You can adjust this time as needed
+//         }
+//     });
+
+//     // Click event for the cancel icon
+//     $cancelIcon.on("click", function () {
+//         if (processing) {
+//             clearTimeout(progressTimeout);  // Stop the progress when the cancel icon is clicked
+//             resetButton();                  // Reset the button immediately
+//         }
+//     });
+
+//     // // If the button is clicked while in the submitting state, stop processing immediately
+//     // $(".submitting").on("click", function () {
+//     //     $megicBtn.addClass("d-none"); 
+//     //     // if ($megicBtn.hasClass("submitting")) {
+//     //     //     clearTimeout(progressTimeout);  // Stop the progress timeout
+//     //     //     resetButton();  
+//     //     //     $megicBtn.addClass("submitting2");   
+//     //     //                     // Reset the button state to original
+//     //     // }
+//     // });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const megicBtn = document.getElementById("MegicBtn");       // Cache the Magic Button element
+    const ctaOptions = document.querySelector(".cta-options");  // Cache the CTA options container
+    const progressBar = document.querySelector(".progress-bar");// Cache the progress bar element
+    const dropdownIcon = megicBtn.querySelector(".dropdown-icon");  // Cache the dropdown icon
+    const cancelIcon = document.querySelector(".cancel-icon");      // Cache the cancel (X) icon
+    let processing = false;                                     // Flag to track if processing is ongoing
+    let progressTimeout, resetTimeout;                          // Variables to hold timeouts
 
     // Function to reset the button to its original state
     function resetButton() {
-        $megicBtn.removeClass("submitting completed"); // Remove any states (submitting/completed)
-        $megicBtn.find("span").text("Let the magic begin ✨"); // Set the original button text
-        $cancelIcon.addClass("d-none");              // Hide the cancel icon
-        $dropdownIcon.removeClass("d-none");         // Show the dropdown icon again
-        $progressBar.css("display", "none");         // Hide the progress bar
-        $progressBar.css("width", "0");              // Reset the progress bar width to 0
-        clearTimeout(resetTimeout);                  // Clear the reset timeout
-        processing = false;                          // Reset the processing flag
+        megicBtn.classList.remove("submitting", "completed");       // Remove any states (submitting/completed)
+        megicBtn.querySelector("span").textContent = "Let the magic begin ✨"; // Set the original button text
+        cancelIcon.classList.add("d-none");                         // Hide the cancel icon
+        dropdownIcon.classList.remove("d-none");                    // Show the dropdown icon again
+        progressBar.style.display = "none";                         // Hide the progress bar
+        progressBar.style.width = "0";                              // Reset the progress bar width to 0
+        clearTimeout(resetTimeout);                                 // Clear the reset timeout
+        processing = false;                                         // Reset the processing flag
     }
 
     // Click event for the Magic Button
-    $megicBtn.on("click", function () {
+    megicBtn.addEventListener("click", function () {
         if (!processing) {
             // Toggle CTA options if not processing
-            $ctaOptions.toggleClass("d-none");
+            ctaOptions.classList.toggle("d-none");
         } else {
             // If processing, stop the progress and reset the button
             clearTimeout(progressTimeout);  // Clear the progress timeout to stop the progress
@@ -11592,72 +11789,58 @@
     });
 
     // Click event for CTA options
-    $ctaOptions.on("click", "button", function () {
-        const action = $(this).data("action");  // Get the action from the clicked button
+    ctaOptions.addEventListener("click", function (event) {
+        const action = event.target.getAttribute("data-action");  // Get the action from the clicked button
 
         if (action === "save") {
             // If "Save and don't run" is clicked
-            $megicBtn.addClass("completed");          // Add completed state to the button
-            $megicBtn.find("span").text("Saved 👍🏻"); // Change the button text to "Saved"
-            $ctaOptions.addClass("d-none");           // Hide the CTA options
-            resetTimeout = setTimeout(resetButton, 1000); // Reset the button after 1 second
-            $dropdownIcon.addClass("d-none");   
-        } else if (action.startsWith("run")) {
+            megicBtn.classList.add("completed");                  // Add completed state to the button
+            megicBtn.querySelector("span").textContent = "Saved 👍🏻"; // Change the button text to "Saved"
+            ctaOptions.classList.add("d-none");                   // Hide the CTA options
+            resetTimeout = setTimeout(resetButton, 1000);         // Reset the button after 1 second
+            dropdownIcon.classList.add("d-none");                 // Hide the dropdown icon
+        } else if (action && action.startsWith("run")) {
             // If any "Run" option is clicked
-            $progressBar.css("display", "block");     // Show the progress bar
-            $ctaOptions.addClass("d-none");           // Hide the CTA options
-            $megicBtn.addClass("submitting");         // Add submitting state to the button
-            $megicBtn.find("span").text("Processing..."); // Set the text to "Processing..."
-            $progressBar.css("width", "0");           // Reset the progress bar width
-            $dropdownIcon.addClass("d-none");         // Hide the dropdown icon
-            $cancelIcon.removeClass("d-none");        // Show the cancel icon
-            processing = true;                        // Set the processing flag
+            progressBar.style.display = "block";                  // Show the progress bar
+            ctaOptions.classList.add("d-none");                   // Hide the CTA options
+            megicBtn.classList.add("submitting");                 // Add submitting state to the button
+            megicBtn.querySelector("span").textContent = "Processing..."; // Set the text to "Processing..."
+            progressBar.style.width = "0";                        // Reset the progress bar width
+            dropdownIcon.classList.add("d-none");                 // Hide the dropdown icon
+            cancelIcon.classList.remove("d-none");                // Show the cancel icon
+            processing = true;                                    // Set the processing flag
 
             // Simulate progress animation
             setTimeout(function () {
-                $progressBar.css("width", "100%");    // Fill the progress bar to 100%
+                progressBar.style.width = "100%";                 // Fill the progress bar to 100%
             }, 100);
 
             // Simulate the process completing after 2 seconds
             progressTimeout = setTimeout(function () {
-                $megicBtn.addClass("completed");      // Add completed state
-                $megicBtn.find("span").text("Completed 👍🏻"); // Set completed text
-                $cancelIcon.addClass("d-none");       // Hide the cancel icon
-                resetTimeout = setTimeout(resetButton, 1000); // Reset button after 1 second
+                megicBtn.classList.add("completed");              // Add completed state
+                megicBtn.querySelector("span").textContent = "Completed 👍🏻"; // Set completed text
+                cancelIcon.classList.add("d-none");               // Hide the cancel icon
+                resetTimeout = setTimeout(resetButton, 1000);     // Reset button after 1 second
             }, 2000); // You can adjust this time as needed
         }
     });
 
     // Click event for the cancel icon
-    $cancelIcon.on("click", function () {
+    cancelIcon.addEventListener("click", function () {
         if (processing) {
             clearTimeout(progressTimeout);  // Stop the progress when the cancel icon is clicked
             resetButton();                  // Reset the button immediately
         }
     });
 
-    // // If the button is clicked while in the submitting state, stop processing immediately
-    // $(".submitting").on("click", function () {
-    //     $megicBtn.addClass("d-none"); 
-    //     // if ($megicBtn.hasClass("submitting")) {
-    //     //     clearTimeout(progressTimeout);  // Stop the progress timeout
-    //     //     resetButton();  
-    //     //     $megicBtn.addClass("submitting2");   
-    //     //                     // Reset the button state to original
-    //     // }
-    // });
+    // Function to stop the processing when the button is clicked during the submitting state
+    document.addEventListener("click", function (event) {
+        if (megicBtn.classList.contains("submitting") && event.target === megicBtn) {
+            clearTimeout(progressTimeout);  // Stop the progress timeout
+            resetButton();                  // Reset to the original state
+        }
+    });
 });
-// If the button is clicked while in the submitting state, stop processing immediately
-// $(".progress-bar").on("click", function () {
-//     event.stopPropagation()
-//         $megicBtn.addClass("d-none"); 
-//         // if ($megicBtn.hasClass("submitting")) {
-//         //     clearTimeout(progressTimeout);  // Stop the progress timeout
-//         //     resetButton();  
-//         //     $megicBtn.addClass("submitting2");   
-//         //                     // Reset the button state to original
-//         // }
-//     });
 
     </script>
     <!-- Add cards -->
