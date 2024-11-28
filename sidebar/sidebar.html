@@ -299,525 +299,1966 @@
 </head>
 
 <body>
-    <div class="sidebar ">
-        <div class="d-flex align-items-center justify-content-between px-1">
-            <div>
-                <img src="https://mergeasy123.netlify.app/sidebar/logo.png" alt="" class="logo">
-            </div>
-            <div class="pe-2">
-                <a href="" class="text-dark mb-0 pb-0"><i class="bi bi-gear setting-icon mt-1"></i></a>
-            </div>
-        </div>
-        <hr>
-        <div class="tab mx-2">
-            <button class="tablinks" id="defaultOpen" onclick="homePage(event, 'Features')">Features</button>
-            <button class="tablinks" onclick="homePage(event, 'Templates')">Templates</button>
-        </div>
 
-        <div id="Features" class="tabcontent ">
-            <div class="features">
-                <!-- <h2 class="heading-main">
-                    Features
-                </h2> -->
-                <div class="search-input mt-2 py-1">
-                    <input type="search" name="" id="" class="w-100 searchbar" placeholder="Search or ask anything...">
+
+
+   <!--Feature Details Screen -->
+   <div id="ai-screen2"  class="bg-white px-2 py-3 rounded-2 ">
+    <div id="details-content">
+      <div class=" mb-2 ">
+        <a class="text-decoration-none">
+          <div class="d-flex align-items-center">
+            <div class="d-flex align-items-start">
+              <div class="feature-icon-div">
+                <img src="https://mergeasy123.netlify.app/sidebar/chatgpt-icon.png"
+                                                alt="chatgpt" class="feature-icon2">
+              </div>
+              <div>
+                <div class="d-flex align-items-start justify-content-between">
+                  <h3 class="heading-secondry">ChatGPT
+                    custom prompt</h3>
+                  <div class="credit-number ">
+                    <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                        alt>&nbsp;<span>3</span>
+                  </div>
                 </div>
-                <div class="mt-2 categories">
-                    <button class="gray cat">
-                        Core
-                    </button>
-                    <button class="blue cat">
-                        Loaders
-                    </button>
-                    <button class="green cat">
-                        Using AI ✨
-                    </button>
-                    <button class="orange cat">
-                        Modifiers
-                    </button>
-                    <button class="red cat">
-                        Writers
-                    </button>
-                    <button class="purple cat">
-                        Control Flow
-                    </button>
-                    <button class="pink cat">
-                        Advance
-                    </button>
+                <p class="text mb-0 pb-0">Lorem ipsum is
+                  to dolor sit, amet consectetur
+                  adipisicing. Lorem ipsum dolor sit
+                  amet.</p>
+                <a href class="tutorial"><i
+                                                    class="bi bi-play-circle"></i>&nbsp;Watch
+                  Full
+                  Tutorial</a>
+              </div>
+            </div>
+
+          </div>
+        </a>
+      </div>
+      <hr>
+      <h2 class="heading-primary">
+        Write Prompt
+      </h2>
+
+      <div class="position-relative">
+        <textarea id="cell_prompt_1" class="w-100 searchbar  write-prompt"></textarea>
+        <p class="text mb-0">Press # to select a variable cell</p>
+
+        <!-- Dropdown with options -->
+        <ul id="prompt-dropdown" class="dropdown-menu prompt-dropdown">
+          <li><a class="dropdown-item" href="#">Option 1</a></li>
+          <li><a class="dropdown-item" href="#">Option 2</a></li>
+          <li><a class="dropdown-item" href="#">Option 3</a></li>
+        </ul>
+      </div>
+
+      <h2 class="heading-primary mt-3">
+        Search Prompt Library
+      </h2>
+      <div class="search-input ">
+        <input type="search" name id="search_prompt_1" class="w-100 searchbar"
+                                placeholder="Search or ask anything...">
+
+      </div>
+      <div class="prompt-list mt-3">
+        <div class="card-bg mb-2 shadow-sm">
+          <a href class="text-decoration-none">
+            <div class="d-flex align-items-center position-relative">
+
+              <div class="pl-1">
+                <h3 class="heading-secondry heading-secondry2 ">GPT
+                  to Craft an Icebreaker
+                  Based
+                  on
+                  a Website 1</h3>
+
+                <p class="text mb-0 pb-0">Input company
+                  websites, we'll scrape the content
+                  and
+                  use GPT to
+                  generate a an icebreaker</p>
+              </div>
+
+              <div class="fav">
+                <i class="bi bi-star  toggle-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-bg mb-2 shadow-sm">
+          <a href class="text-decoration-none">
+            <div class="d-flex align-items-center position-relative">
+
+              <div class="pl-1">
+                <h3 class="heading-secondry heading-secondry2 ">GPT
+                  to Craft an Icebreaker
+                  Based
+                  on
+                  a Website 1</h3>
+
+                <p class="text mb-0 pb-0">Input company
+                  websites, we'll scrape the content
+                  and
+                  use GPT to
+                  generate a an icebreaker</p>
+              </div>
+
+              <div class="fav">
+                <i class="bi bi-star  toggle-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-bg mb-2 shadow-sm">
+          <a href class="text-decoration-none">
+            <div class="d-flex align-items-center position-relative">
+
+              <div class="pl-1">
+                <h3 class="heading-secondry heading-secondry2 ">GPT
+                  to Craft an Icebreaker
+                  Based
+                  on
+                  a Website 1</h3>
+
+                <p class="text mb-0 pb-0">Input company
+                  websites, we'll scrape the content
+                  and
+                  use GPT to
+                  generate a an icebreaker</p>
+              </div>
+
+              <div class="fav">
+                <i class="bi bi-star  toggle-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-bg mb-2 shadow-sm">
+          <a href class="text-decoration-none">
+            <div class="d-flex align-items-center position-relative">
+
+              <div class="pl-1">
+                <h3 class="heading-secondry heading-secondry2 ">GPT
+                  to Craft an Icebreaker
+                  Based
+                  on
+                  a Website 1</h3>
+
+                <p class="text mb-0 pb-0">Input company
+                  websites, we'll scrape the content
+                  and
+                  use GPT to
+                  generate a an icebreaker</p>
+              </div>
+
+              <div class="fav">
+                <i class="bi bi-star  toggle-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-bg mb-2 shadow-sm">
+          <a href class="text-decoration-none">
+            <div class="d-flex align-items-center position-relative">
+
+              <div class="pl-1">
+                <h3 class="heading-secondry heading-secondry2 ">GPT
+                  to Craft an Icebreaker
+                  Based
+                  on
+                  a Website 1</h3>
+
+                <p class="text mb-0 pb-0">Input company
+                  websites, we'll scrape the content
+                  and
+                  use GPT to
+                  generate a an icebreaker</p>
+              </div>
+
+              <div class="fav">
+                <i class="bi bi-star  toggle-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-bg mb-2 shadow-sm">
+          <a href class="text-decoration-none">
+            <div class="d-flex align-items-center position-relative">
+
+              <div class="pl-1">
+                <h3 class="heading-secondry heading-secondry2 ">GPT
+                  to Craft an Icebreaker
+                  Based
+                  on
+                  a Website 1</h3>
+
+                <p class="text mb-0 pb-0">Input company
+                  websites, we'll scrape the content
+                  and
+                  use GPT to
+                  generate a an icebreaker</p>
+              </div>
+
+              <div class="fav">
+                <i class="bi bi-star  toggle-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <h2 class="heading-primary mt-3">
+        Test Output
+      </h2>
+      <!-- <div class="search-input  output-div">
+        <input type="text" name id class="w-100 searchbar">
+        <p class="text mb-0 ">Press # to select a variable
+          cell</p>
+      </div> -->
+      <div class="w-100 ">
+        <select
+            id="output_prompt_1"
+            class=" form-select w-100 searchbar output-dropdown" >
+            <option selected>Select Column</option>
+            <option value="Column 1">Column 1</option>
+            <option value="Column 2">Column 2</option>
+            <option value="Column 3">Column 3</option>
+            <option value="Column 4">Column 4</option>
+        </select>
+      </div>
+      <hr>
+      <div class="accordion" id="accordionExample-1111">
+        <div class="accordion-item border-0 shadow-sm ">
+          <h2 class="accordion-header " id="heading1111">
+            <button class="accordion-button condition-header border-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse1111"
+                                        aria-expanded="true" aria-controls="collapse1111">
+                                        &nbsp;&nbsp;&nbsp;Run Settings
+                                    </button>
+          </h2>
+          <div id="collapse1111" class="accordion-collapse collapse show" aria-labelledby="heading1111"
+            data-bs-parent="#accordionExample-1111">
+            <div class="accordion-body condition-body">
+              <div class="card run-condition border-0">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5>Run Conditions</h5>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox"
+                                    id="flexSwitchCheckDefault" />
+                  </div>
+                </div>
+                <div>
+                  <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                </div>
+              </div>
+
+              <!-- Add Condition Card -->
+              <div class="card add-condition d-none mt-2 border-0 p-0">
+                <hr />
+                <div class="conditions-container">
+                  <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                  <!-- Condition 1 and Condition 2 will be appended here dynamically -->
                 </div>
 
-                <div class="features-list mt-2 ">
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
-                                            <div class="credit-number ">
-                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                                    alt="">&nbsp;<span>3</span>
-                                            </div>
-                                        </div>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                            adipisicing.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
-                                            <div class="credit-number ">
-                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                                    alt="">&nbsp;<span>3</span>
-                                            </div>
-                                        </div>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                            adipisicing.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
-                                            <div class="credit-number ">
-                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                                    alt="">&nbsp;<span>3</span>
-                                            </div>
-                                        </div>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                            adipisicing.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
-                                            <div class="credit-number ">
-                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                                    alt="">&nbsp;<span>3</span>
-                                            </div>
-                                        </div>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                            adipisicing.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
-                                            <div class="credit-number ">
-                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                                    alt="">&nbsp;<span>3</span>
-                                            </div>
-                                        </div>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                            adipisicing.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-
-                                    </div>
-                                    <div class="">
-                                        <div class="d-flex align-items-start justify-content-between">
-                                            <h3 class="heading-secondry ">ChatGPT custom prompt</h3>
-                                            <div class="credit-number ">
-                                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                                    alt="">&nbsp;<span>3</span>
-                                            </div>
-                                        </div>
-                                        <p class="text mb-0 pb-0">Lorem ipsum is to dolor sit, amet consectetur
-                                            adipisicing.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-start">
-                                <div class="feature-icon-div">
-                                    <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                        class="feature-icon">
-                                </div>
-                                <div>
-                                    <div class="d-flex align-items-start">
-                                        <h3 class="heading-secondry ">ChatGPT custom os is sit dolor
-                                            prompt
-                                        </h3>
-                                        <div class="credit-number ">
-                                            <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
-                                                alt="">&nbsp;<span>3</span>
-                                        </div>
-                                    </div>
-                                    <p class="text mb-0 pb-0">Lorem ipsum is dolor sit amet co nsectetur.</p>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <!-- <div class="card-bg  mb-3 shadow-sm ">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/chatgpt.png" alt="chatgpt"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry">ChatGPT custom prompt</h3>
-                                        <p class="text mb-0 pb-0">Create a custom ChatGPT prompt with dyamic data</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <i class="bi bi-chevron-right go-arrow"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
-                    <!-- <div class="mt-3 pt-2">
-                        <button class="w-100 load-more-btn">Load More&nbsp;<i class="bi bi-arrow-clockwise ms-1"></i></button>
-                    </div>
-                </div> -->
-                </div>
+                <!-- Buttons -->
+                <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                <hr class="last-line d-none" />
+                <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+              </div>
             </div>
+          </div>
         </div>
-        <div id="Templates" class="tabcontent ">
-            <div class="templates">
-                <!-- <h2 class="heading-main">
-                    Templates
-                </h2> -->
-                <div class="search-input mt-2 py-1">
-                    <input type="search" name="" id="" class="w-100 searchbar" placeholder="Search or ask anything...">
-                </div>
-                <div class="templates-list mt-3">
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website 1</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website 2</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website 3</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website 4</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website 5</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website 6</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card-bg mb-2 shadow-sm">
-                        <a href="" class="text-decoration-none">
-                            <div class="d-flex align-items-center position-relative">
-                                <div class="d-flex align-items-start">
-                                    <div class="feature-icon-div">
-                                        <img src="https://mergeasy123.netlify.app/sidebar/app-logo.jpg" alt="app logo"
-                                            class="feature-icon">
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-secondry heading-secondry2 ">GPT to Craft an Icebreaker Based
-                                            on
-                                            a Website</h3>
-
-                                        <p class="text mb-0 pb-0">Input company websites, we'll scrape the content and
-                                            use GPT to
-                                            generate a an icebreaker</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="h-100 mt-3">
-                                    <i class="bi bi-chevron-right go-arrow "></i>
-                                </div> -->
-                                <div class="fav">
-                                    <i class="bi bi-star  toggle-star"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+      </div>
 
 
-                </div>
-            </div>
-        </div>
-
-        <hr>
-       <div class="d-flex justify-content-between">
-        <div class="d-flex align-items-center">
-            <div class="upgrade-icon">
-                <img src="https://mergeasy123.netlify.app/sidebar/credit.png" alt="">&nbsp;&nbsp;
-            </div>
-            <div class="upgrade-text ">
-             1000/100 Credits left
-            </div>
-        </div>
-        <div class="d-flex align-items-center " >
-            <div class="upgrade-text ">
-               <a href="" class="">Free Credits</a>
-            </div>
-            <div class="upgrade-icon2">
-                &nbsp;&nbsp;<img src="https://mergeasy123.netlify.app/sidebar/prize.jpg" alt="">
-            </div>
-        </div>
-     
-       </div>
-        <div class="">
-            <button class="w-100 mt-2 upgrade-btn">UPGRADE</button>
-        </div>
     </div>
+  </div>
 
+              <!--Google Screen -->
+              <div id="google-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2">
+                <button onclick="goBack()" class="go-back">Go Back</button>
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/google.png"
+                                                            alt="chatgpt" class="feature-icon2">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry">Perform
+                                a Google Search </h3>
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0">Perform any
+                              kind of search query using
+                              Google’s search engine.</p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+
+                  <h2 class="heading-primary mt-3">
+                    Google Search Query
+                  </h2>
+                  <div class="search-input ">
+                    <input type="search" id="google_search_query_1" name id class="w-100 searchbar google_search_query"
+                        placeholder="Search or ask anything...">
+                </div>
+                <h2 class="heading-primary mt-3">
+        
+                    Number of Results
+                </h2>
+                <div class="search-input ">
+                    <input type="number" name id="google_no_of_results_1" class="w-100 searchbar" placeholder="10">
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Language
+                </h2>
+                <div class="search-input ">
+                    <input type="text" name class="w-100 searchbar" id="google_language_1" placeholder="English">
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Country
+                </h2>
+                <div class="search-input ">
+                    <input type="text" name id="google_country_1" class="w-100 searchbar" placeholder="US">
+                </div>
+                <h2 class="heading-primary mt-3">
+                  Test Output (Cell Range)
+                </h2>
+                <!-- <div class="search-input  output-div">
+                    <input type="text" id="google_output" class="w-100 searchbar">
+                    <p class="text mb-0 ">Press # to select a variable cell</p>
+                </div> -->
+                 <div class="w-100 ">
+        <select
+        id="test_output_cell_1" class=" form-select w-100 searchbar output-dropdown" >
+        <option selected>Select Column</option>
+        <option value="Column 1">Column 1</option>
+        <option value="Column 2">Column 2</option>
+        <option value="Column 3">Column 3</option>
+        <option value="Column 4">Column 4</option>
+        </select>
+        </div>
+                  <hr>
+                  <div class="accordion" id="accordionExample-11111">
+                    <div class="accordion-item border-0 shadow-sm ">
+                      <h2 class="accordion-header " id="heading11111">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse11111"
+                                                    aria-expanded="true" aria-controls="collapse11111">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse11111" class="accordion-collapse collapse show" aria-labelledby="heading11111"
+                        data-bs-parent="#accordionExample-11111">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                </div>
+              </div>
+
+
+              <!--Scrapper Screen -->
+              <div id="scrapper-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2 ">
+                <button onclick="goBack()" class="go-back">Go Back</button>
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/scrap.png"
+                                                            alt="chatgpt" class="feature-icon2">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry">Scrape
+                                a URL. </h3>
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0">Run a Zenrows
+                              scrape on any URL and retrieve the
+                              results.
+                            </p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+
+                  <h2 class="heading-primary mt-3">
+                    Scrapper (Cell Range)
+                </h2>
+                <div class="search-input ">
+                    <!-- <input type="text" name id class="w-100 searchbar" placeholder="A1:A3"> -->
+                    <select class="form-select  searchbar w-100" name="" id="scrapper_cell_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Output (Cell Range)
+                </h2>
+                <div class="search-input  output-div">
+                  <select class="form-select  searchbar w-100" name="" id="output_cell_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+                  </div>
+
+                  <div class="accordion" id="accordionExample-3333">
+                    <div class="accordion-item border-0 shadow-sm mt-3">
+                      <h2 class="accordion-header " id="heading3333">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse3333"
+                                                    aria-expanded="true" aria-controls="collapse3333">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse3333" class="accordion-collapse collapse show" aria-labelledby="heading3333"
+                        data-bs-parent="#accordionExample-3333">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+               <!--lead Screen -->
+               <div id="compaign-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2 ">
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/compaign.png"
+                                                            alt="chatgpt" class="feature-icon2">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry"> Add
+                                lead to Compaign
+                              </h3>
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0">Add a lead to
+                              a campaign in Instantly
+                              .</p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+                  <h2 class="heading-primary mt-3">
+                    Enter Your API Key
+                  </h2>
+                  <div class="search-input ">
+                    <input type="text" name id class="w-100 searchbar" placeholder="Enter Key...">
+                  </div>
+                  <div class="search-input ">
+                    <input type="text" name id="api_key_1" class="w-100 searchbar" placeholder="Enter Key...">
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Select Campaign ID
+                </h2>
+                <div class="search-input  output-div w-100">
+                    <!-- <input type="text" name="" id="" class="w-100 searchbar" placeholder="B1:B3"> -->
+                    <select class="form-select form-select searchbar w-100" name id="campaign_id_1">
+                        <option selected>Select ID</option>
+                        <option value>ID 1</option>
+                        <option value>ID 2</option>
+                        <option value>ID 3</option>
+                    </select>
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <div>
+                            <p class="text mb-0  pb-0">Skip if the key is in
+                                workpace</p>
+                        </div>
+                        <div>
+                            <label class="switch mt-1">
+                                <input id="is_workspace_1" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+    
+                    </div>
+                </div>
+                <h2 class="heading-primary mt-2">
+                    Email
+                </h2>
+                <div class="search-input ">
+                    <!-- <input type="email" name id class="w-100 searchbar" placeholder="Enter Email...">
+                    <p class="text mb-0  pb-0">Press # to select a variable
+                        cell</p> -->
+                      <select class="form-select  searchbar w-100" name="" id="lead_email_1">
+        <option selected>Select Email</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+    </select>
+                </div>
+                  <div>
+
+                    <div class="accordion mt-3 mb-2" id="accordionExample-auto">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOnea">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOnea"
+                                                        aria-expanded="false" aria-controls="collapseOnea">
+                                                        First Name
+                                                    </button>
+                        </h2>
+                        <div id="collapseOnea" class="accordion-collapse collapse " aria-labelledby="headingOnea"
+                          data-bs-parent="#accordionExample-auto">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading2a">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse2a"
+                                                        aria-expanded="false" aria-controls="collapse2a">
+                                                        Last Name
+                                                    </button>
+                        </h2>
+                        <div id="collapse2a" class="accordion-collapse collapse" aria-labelledby="heading2a"
+                          data-bs-parent="#accordionExample-auto">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading3a">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse3a"
+                                                        aria-expanded="false" aria-controls="collapse3a">
+                                                        Company Name
+                                                    </button>
+                        </h2>
+                        <div id="collapse3a" class="accordion-collapse collapse" aria-labelledby="heading3a"
+                          data-bs-parent="#accordionExample-auto">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading4a">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse4a"
+                                                        aria-expanded="false" aria-controls="collapse4a">
+                                                        Personalization
+                                                    </button>
+                        </h2>
+                        <div id="collapse4a" class="accordion-collapse collapse" aria-labelledby="heading4a"
+                          data-bs-parent="#accordionExample-auto">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading5a">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse5a"
+                                                        aria-expanded="false" aria-controls="collapse5a">
+                                                        Custom Variables
+                                                    </button>
+                        </h2>
+
+                        <div id="collapse5a" class="accordion-collapse collapse" aria-labelledby="heading5a"
+                          data-bs-parent="#accordionExample-auto">
+
+                          <div class="accordion-body p-0 mb-2 mt-1 variable-section">
+                            <div class="variables-wrapper-2 ">
+
+                            </div>
+                            <button class="w-100 addSmartlead-variable add-variable-2"
+                                                            id="">+
+                                                            Add New Variable Name and Variable
+                                                            Value
+                                                            Pair</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="accordion" id="accordionExample-4444">
+                    <div class="accordion-item border-0 shadow-sm ">
+                      <h2 class="accordion-header " id="heading4444">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse4444"
+                                                    aria-expanded="true" aria-controls="collapse4444">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse4444" class="accordion-collapse collapse show" aria-labelledby="heading4444"
+                        data-bs-parent="#accordionExample-4444">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <!--Smartlead Screen -->
+              <div id="smartlead-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2 ">
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/smartlead.jpeg"
+                                                            alt="chatgpt" class="feature-icon2">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry"> Add
+                                lead to Campaign
+
+                              </h3>
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0">Add a lead to
+                              a campaign in Smartlead
+                              .</p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+                  <h2 class="heading-primary mt-3">
+                    Enter Your API Key
+                </h2>
+                <div class="search-input ">
+                    <input type="text" name id="smart_api_key_1" class="w-100 searchbar" placeholder="Enter Key...">
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Select Copaign ID
+                </h2>
+                <div class="search-input  output-div w-100">
+                    <!-- <input type="text" name="" id="" class="w-100 searchbar" placeholder="B1:B3"> -->
+                    <select class="form-select form-select searchbar w-100" name id="campaign_id_1">
+                        <option selected>Select ID</option>
+                        <option value>ID 1</option>
+                        <option value>ID 2</option>
+                        <option value>ID 3</option>
+                    </select>
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <div>
+                            <p class="text mb-0  pb-0">Skip if the key is in
+                                workpace</p>
+                        </div>
+                        <div>
+                            <label class="switch mt-1">
+                                <input id="smart_is_workspace_1" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+    
+                    </div>
+                </div>
+                <h2 class="heading-primary mt-2">
+                    Email
+                </h2>
+                <div class="search-input ">
+                <select class="form-select  searchbar w-100" name="" id="smart_email_1">
+        <option selected>Select Email</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+    </select>
+                </div>
+                <div>
+                    <div class="accordion mt-3 mb-2" id="accordionExample-22">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading33c">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse33c"
+                                                        aria-expanded="false" aria-controls="collapse33c">
+                                                        First Name
+                                                    </button>
+                        </h2>
+                        <div id="collapse33c" class="accordion-collapse collapse " aria-labelledby="heading33c"
+                          data-bs-parent="#accordionExample-22">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading34c">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse34c"
+                                                        aria-expanded="false" aria-controls="collapse34c">
+                                                        Last Name
+                                                    </button>
+                        </h2>
+                        <div id="collapse34c" class="accordion-collapse collapse" aria-labelledby="heading34c"
+                          data-bs-parent="#accordionExample-22">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading35c">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse35c"
+                                                        aria-expanded="false" aria-controls="collapse35c">
+                                                        Company Name
+                                                    </button>
+                        </h2>
+                        <div id="collapse35c" class="accordion-collapse collapse" aria-labelledby="heading35c"
+                          data-bs-parent="#accordionExample-22">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading36c">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse36c"
+                                                        aria-expanded="false" aria-controls="collapse36c">
+                                                        Personalization
+                                                    </button>
+                        </h2>
+                        <div id="collapse36c" class="accordion-collapse collapse" aria-labelledby="heading36c"
+                          data-bs-parent="#accordionExample-22">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="search-input ">
+                              <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading37c">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse37c"
+                                                        aria-expanded="false" aria-controls="collapse37c">
+                                                        Custom Variables
+                                                    </button>
+                        </h2>
+
+                        <div id="collapse37c" class="accordion-collapse collapse" aria-labelledby="heading37c"
+                          data-bs-parent="#accordionExample-22">
+
+                          <div class="accordion-body p-0 mb-2 mt-1 custom-section">
+                            <div class="Smartleadvariables-wrapper-1">
+
+                            </div>
+                            <button
+                                                            class="w-100 addSmartlead-variable addSmartlead-variable-1">+
+                                                            Add New Variable Name and Variable
+                                                            Value
+                                                            Pair</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="accordion" id="accordionExample-5555">
+                    <div class="accordion-item border-0 shadow-sm ">
+                      <h2 class="accordion-header " id="heading5555">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse5555"
+                                                    aria-expanded="true" aria-controls="collapse5555">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse5555" class="accordion-collapse collapse show" aria-labelledby="heading5555"
+                        data-bs-parent="#accordionExample-5555">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+               <!--validate email Screen -->
+               <div id="email-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2 ">
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/email.jpg"
+                                                            alt="chatgpt" class="feature-icon2">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry">
+                                Validate Email
+                              </h3>
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0">Determine if
+                              an email address has a valid inbox
+                              (+
+                              catchall verification)</p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+
+                  <h2 class="heading-primary mt-3">
+                    Email
+                </h2>
+                <div class="search-input ">
+                   <select class="form-select  searchbar w-100" name="" id="validate_email_1">
+        <option selected>Select Email</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Output
+                </h2>
+                <div class="search-input  output-div">
+                 <select class="form-select  searchbar w-100" name="" id="validate_output_1">
+        <option selected>Select Output</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+                </div>
+
+
+                  <div class="accordion" id="accordionExample-6666">
+                    <div class="accordion-item border-0 shadow-sm mt-3">
+                      <h2 class="accordion-header " id="heading6666">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse6666"
+                                                    aria-expanded="true" aria-controls="collapse6666">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse6666" class="accordion-collapse collapse show" aria-labelledby="heading6666"
+                        data-bs-parent="#accordionExample-6666">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                </div>
+              </div>
+
+
+              <!--work email Screen -->
+              <div id="work-email-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2 ">
+                <button onclick="goBack()" class="go-back">Go Back</button>
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/work-email.png"
+                                                            alt="chatgpt" class="feature-icon3">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry">Find
+                                Work Email
+                              </h3>
+
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0">Access over 5
+                              data providers (including Findymail,
+                              Prospeo, Leadmagic, and more) to
+                              find work emails using a waterfall
+                              enrichment process</p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+                  <h2 class="heading-primary mt-3">
+                    First Name
+                </h2>
+                <div class="search-input ">
+                  <select class="form-select  searchbar w-100" name="" id="validate_fname_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+        
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Last Name
+                </h2>
+                <div class="search-input ">
+                     <select class="form-select  searchbar w-100" name="" id="validate_lname_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+        
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Company Domain
+                </h2>
+                <div class="search-input ">
+                   <select class="form-select  searchbar w-100" name="" id="validate_company_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+        
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Company Name (Optional)
+                </h2>
+                <div class="search-input ">
+                 <select class="form-select  searchbar w-100" name="" id="validate_company_op_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Linkedin URL (Optional)
+                </h2>
+                <div class="search-input ">
+                    <select class="form-select  searchbar w-100" name="" id="validate_linkedin_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+                </div>
+                <h2 class="heading-primary mt-3">
+                    Output
+                </h2>
+                <div class="search-input  output-div">
+                    <select class="form-select  searchbar w-100" name="" id="validate_output_1">
+        <option selected>Select Column</option>
+        <option value>Option 1</option>
+        <option value>Option 2</option>
+        <option value>Option 3</option>
+        </select>
+                    <!-- <p class="text mb-0 ">Press # to select a variable cell</p> -->
+                </div>
+        
+                  <!-- <div class="">
+                            <button class="w-100 mt-2 megic-btn">Let the magic begin ✨</button>
+                        </div> -->
+                  <!-- <div class="">
+                        <button id="ScrapBtn" class="w-100 mt-2 megic-btn">Search ✨</button>
+                    </div> -->
+                  <div class="accordion" id="accordionExample-7777">
+                    <div class="accordion-item border-0 shadow-sm mt-3">
+                      <h2 class="accordion-header " id="heading7777">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse7777"
+                                                    aria-expanded="true" aria-controls="collapse7777">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse7777" class="accordion-collapse collapse show" aria-labelledby="heading7777"
+                        data-bs-parent="#accordionExample-7777">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+
+               <!--LinkedIn Screen -->
+               <div id="linkedin-profile-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2 ">
+                <button onclick="goBack()" class="go-back">Go Back</button>
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/LinkedIn_logo_initials.png"
+                                                            alt="chatgpt" class="feature-icon2">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry">Enrich
+                                Linkedin Profile URL
+
+                              </h3>
+
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0"> Enrich a
+                              person's data using their LinkedIn
+                              profile URL
+                            </p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+                  <h2 class="heading-primary mt-3">
+                    Enter LinkedIn Profile URL
+                  </h2>
+                  <div class="search-input ">
+                    <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select URL</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                  </div>
+
+                  <div>
+
+                    <div class="accordion mt-3 mb-2" id="accordionExample1ab">
+                      <div class="accordion-item mt-3">
+                        <h2 class="accordion-header" id="headingOneac">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOneac"
+                                                        aria-expanded="false" aria-controls="collapseOneac">
+                                                        First Name
+                                                    </button>
+                        </h2>
+                        <div id="collapseOneac" class="accordion-collapse collapse " aria-labelledby="headingOneac"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-f-wrapper">
+                              <div class="more-f-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-f"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-f">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading2ac">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse2ac"
+                                                        aria-expanded="false" aria-controls="collapse2ac">
+                                                        Last Name
+                                                    </button>
+                        </h2>
+                        <div id="collapse2ac" class="accordion-collapse collapse" aria-labelledby="heading2ac"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-l-wrapper">
+                              <div class="more-l-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-l"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-l">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading3ac">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse3ac"
+                                                        aria-expanded="false" aria-controls="collapse3ac">
+                                                        Headline
+                                                    </button>
+                        </h2>
+                        <div id="collapse3ac" class="accordion-collapse collapse" aria-labelledby="heading3"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-j-wrapper">
+                              <div class="more-j-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-j"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-j">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading4ac">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse4ac"
+                                                        aria-expanded="false" aria-controls="collapse4ac">
+                                                        Company
+                                                    </button>
+                        </h2>
+                        <div id="collapse4ac" class="accordion-collapse collapse" aria-labelledby="heading4ac"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-c-wrapper">
+                              <div class="more-c-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-c"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-c">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading5ac">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse5ac"
+                                                        aria-expanded="false" aria-controls="collapse5ac">
+                                                        Add More
+                                                    </button>
+                        </h2>
+
+                        <div id="collapse5ac" class="accordion-collapse collapse" aria-labelledby="heading5ac"
+                          data-bs-parent="#accordionExample1ab">
+
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="linkedin-1a">
+                              <div class="more-m-wrappera">
+                                <div class="more-ma mb-2">
+                                  <div class="Smartvariable-card2">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                      <div>
+                                        <h3>Pair
+
+                                        </h3>
+                                      </div>
+                                      <div>
+                                        <i
+                                                                                    class="bi bi-trash-fill remove-more remove-ma"></i>
+                                      </div>
+                                    </div>
+                                    <div class="mb-2">
+                                      <label for
+                                                                                class="form-label text mb-0">Field</label>
+                                      <!-- <input type="text" class="w-100 searchbar" name id
+                                                                placeholder="Enter Field..." /> -->
+                                      <div class="search-input  output-div w-100">
+                                        <select
+                                                                                    class="form-select form-select searchbar w-100"
+                                                                                    name id>
+                                                                                    <option selected>Select
+                                                                                        Field</option>
+                                                                                    <option value>Field
+                                                                                        1</option>
+                                                                                    <option value>Field
+                                                                                        2</option>
+                                                                                    <option value>Field
+                                                                                        3</option>
+                                                                                </select>
+                                      </div>
+                                    </div>
+                                    <div class>
+                                      <label for
+                                                                                class="form-label text mb-0">Output</label>
+                                      <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                              <button class="w-100 add-more add-m-morea">+
+                                                                Add More</button>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="accordion" id="accordionExample-8888">
+                    <div class="accordion-item border-0 shadow-sm ">
+                      <h2 class="accordion-header " id="heading8888">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse8888"
+                                                    aria-expanded="true" aria-controls="collapse8888">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse8888" class="accordion-collapse collapse show" aria-labelledby="heading8888"
+                        data-bs-parent="#accordionExample-8888">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <!--LinkedIn Screen2 -->
+              <div id="linkedin-company-screen2" style="display: none;" class="bg-white px-2 py-3 rounded-2 ">
+                <div id="details-content">
+                  <div class=" mb-2 ">
+                    <a class="text-decoration-none">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                          <div class="feature-icon-div">
+                            <img src="https://mergeasy123.netlify.app/sidebar/LinkedIn_logo_initials.png"
+                                                            alt="chatgpt" class="feature-icon2">
+                          </div>
+                          <div class>
+                            <div class="d-flex align-items-start justify-content-between">
+                              <h3 class="heading-secondry">Enrich
+                                Linkedin Company URL
+
+                              </h3>
+
+                              <div class="credit-number ">
+                                <img src="https://mergeasy123.netlify.app/sidebar/credit.png"
+                                                                    alt>&nbsp;<span>3</span>
+                              </div>
+                            </div>
+                            <p class="text mb-0 pb-0"> Enrich a
+                              person's data using their LinkedIn
+                              profile URL
+                            </p>
+                            <a href class="tutorial"><i
+                                                                class="bi bi-play-circle"></i>&nbsp;Watch
+                              Full
+                              Tutorial</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </a>
+
+                  </div>
+                  <hr>
+                  <h2 class="heading-primary mt-3">
+                    Enter LinkedIn Profile URL
+                  </h2>
+                  <div class="search-input ">
+                    <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select URL</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                  </div>
+
+                  <div>
+
+                    <div class="accordion mt-3 mb-2" id="accordionExample1ab">
+                      <div class="accordion-item mt-3">
+                        <h2 class="accordion-header" id="headingOneab">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOneab"
+                                                        aria-expanded="false" aria-controls="collapseOneab">
+                                                        First Name
+                                                    </button>
+                        </h2>
+                        <div id="collapseOneab" class="accordion-collapse collapse " aria-labelledby="headingOneab"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-f-wrapper">
+                              <div class="more-f-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-f"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-f">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading2ab">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse2ab"
+                                                        aria-expanded="false" aria-controls="collapse2ab">
+                                                        Last Name
+                                                    </button>
+                        </h2>
+                        <div id="collapse2ab" class="accordion-collapse collapse" aria-labelledby="heading2ab"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-l-wrapper">
+                              <div class="more-l-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-l"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-l">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading3ab">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse3ab"
+                                                        aria-expanded="false" aria-controls="collapse3ab">
+                                                        Headline
+                                                    </button>
+                        </h2>
+                        <div id="collapse3ab" class="accordion-collapse collapse" aria-labelledby="heading3"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-j-wrapper">
+                              <div class="more-j-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-j"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-j">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading4ab">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse4ab"
+                                                        aria-expanded="false" aria-controls="collapse4ab">
+                                                        Company
+                                                    </button>
+                        </h2>
+                        <div id="collapse4ab" class="accordion-collapse collapse" aria-labelledby="heading4ab"
+                          data-bs-parent="#accordionExample1ab">
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="more-c-wrapper">
+                              <div class="more-c-name mb-2">
+                                <div class="mb-2">
+                                  <div class="d-flex justify-content-between">
+                                    <label for class="form-label text mb-0">Output
+                                                                            <span>1</span></label>
+                                    <div>
+                                      <i
+                                                                                class="bi bi-trash-fill remove-more remove-more-c"></i>
+                                    </div>
+                                  </div>
+                                  <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- <button class="w-100  add-more add-more-c">+
+                                        Add More</button> -->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item mt-1">
+                        <h2 class="accordion-header" id="heading5ab">
+                          <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse5ab"
+                                                        aria-expanded="false" aria-controls="collapse5ab">
+                                                        Add More
+                                                    </button>
+                        </h2>
+
+                        <div id="collapse5ab" class="accordion-collapse collapse" aria-labelledby="heading5ab"
+                          data-bs-parent="#accordionExample1ab">
+
+                          <div class="accordion-body p-0 mb-2 mt-1">
+                            <div class="linkedin-2">
+                              <div class="more-m-wrapperb">
+                                <div class="more-mb mb-2">
+                                  <div class="Smartvariable-card2">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                      <div>
+                                        <h3>Pair
+
+                                        </h3>
+                                      </div>
+                                      <div>
+                                        <i
+                                                                                    class="bi bi-trash-fill remove-more remove-mb"></i>
+                                      </div>
+                                    </div>
+                                    <div class="mb-2">
+                                      <label for
+                                                                                class="form-label text mb-0">Field</label>
+                                      <!-- <input type="text" class="w-100 searchbar" name id
+                                                            placeholder="Enter Field..." /> -->
+                                      <div class="search-input  output-div w-100">
+                                        <select
+                                                                                    class="form-select form-select searchbar w-100"
+                                                                                    name id>
+                                                                                    <option selected>Select
+                                                                                        Field</option>
+                                                                                    <option value>Field
+                                                                                        1</option>
+                                                                                    <option value>Field
+                                                                                        2</option>
+                                                                                    <option value>Field
+                                                                                        3</option>
+                                                                                </select>
+                                      </div>
+                                    </div>
+                                    <div class>
+                                      <label for
+                                                                                class="form-label text mb-0">Output</label>
+                                      <select class="form-select  searchbar w-100" name="" id="">
+                        <option selected>Select Column</option>
+                        <option value>Option 1</option>
+                        <option value>Option 2</option>
+                        <option value>Option 3</option>
+                    </select>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <button class="w-100 add-more add-m-moreb ">+
+                                                                Add More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="accordion" id="accordionExample-8888">
+                    <div class="accordion-item border-0 shadow-sm ">
+                      <h2 class="accordion-header " id="heading8888">
+                        <button class="accordion-button condition-header border-0" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse8888"
+                                                    aria-expanded="true" aria-controls="collapse8888">
+                                                    &nbsp;&nbsp;&nbsp;Run Settings
+                                                </button>
+                      </h2>
+                      <div id="collapse8888" class="accordion-collapse collapse show" aria-labelledby="heading8888"
+                        data-bs-parent="#accordionExample-8888">
+                        <div class="accordion-body condition-body">
+                          <div class="card run-condition border-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div>
+                                <h5>Run Conditions</h5>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox"
+                                                id="flexSwitchCheckDefault" />
+                              </div>
+                            </div>
+                            <div>
+                              <p class="mb-0 pb-0">Only Run this step if run conditions are met</p>
+                            </div>
+                          </div>
+
+                          <!-- Add Condition Card -->
+                          <div class="card add-condition d-none mt-2 border-0 p-0">
+                            <hr />
+                            <div class="conditions-container">
+                              <p class="no-condition-added mb-0">NO Run Conditions are Added</p>
+                              <!-- Condition 1 and Condition 2 will be appended here dynamically -->
+                            </div>
+
+                            <!-- Buttons -->
+                            <button class="btn btn-primary add-condition-btn">Add Condition</button>
+                            <hr class="last-line d-none" />
+                            <button class="btn btn-danger remove-all-btn d-none">Remove All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
     <script>
         function homePage(evt, cityName) {
             var i, tabcontent, tablinks;
